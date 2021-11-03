@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>승차권 예매하기</title>
+  <link rel="stylesheet" type="text/css" href="./css/layout.css">
+  <link rel="stylesheet" type="text/css" href="./css/01sub_style.css">
+  <style type="text/css">
+    .ticket_step {
+      margin-bottom: 45px;
+    }
+
+    .ticket_step>ul li {
+      float: left;
+      line-height: 82px;
+      text-align: center;
+    }
+
+    .ticket_step>ul {
+      width: 1200px;
+      height: 82px;
+      margin: 0 auto;
+      font-family: 'hangeulNuri-regular';
+      font-size: 18px;
+      color: #2d334a;
+    }
+
+    .ticket_step1 {
+      width: 389px;
+      height: 82px;
+      background: #fff;
+      border: 2px solid #fff;
+      border-bottom: 2px solid #999;
+      border-right: 0;
+    }
+
+    .ticket_step2 {
+      width: 387px;
+      height: 82px;
+      background: url(./images/tk_step_2.png) left center no-repeat, #fff;
+      border-bottom: 2px solid #999;
+      border-top: 2px solid #fff;
+    }
+
+    .ticket_step3 {
+      width: 394px;
+      height: 82px;
+      background: url(./images/tk_step_4.png) left center no-repeat, url(./images/tk_step3_onback.png) center repeat-x;
+      padding-left: 30px;
+    }
+
+    .ticket_step_none {
+      width: 30px;
+      height: 82px;
+      background: url(./images/tk_step_5.png) no-repeat;
+    }
+
+    div.ticket_step>ul li.on {
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header" class="header">
+    <h1 class="logo"><a href="#">버스타고</a></h1>
+
+    <nav class="gnb">
+      <h2 class="blind">주요메뉴</h2>
+      <ul>
+        <li class="menu1"><a href="#">승차권</a>
+          <ul>
+            <li><a href="#">예매하기</a></li>
+            <li><a href="#">조회/변경/취소</a></li>
+          </ul>
+        </li>
+        <li class="menu2"><a href="#">운행정보</a>
+          <ul>
+            <li><a href="#">노선안내</a></li>
+            <li><a href="#">터미널안내</a></li>
+            <li><a href="#">버스회사 안내</a></li>
+          </ul>
+        </li>
+        <li class="menu3"><a href="#">이용안내</a>
+          <ul>
+            <li><a href="#">서비스 소개</a></li>
+            <li><a href="#">취소 수수료 안내</a></li>
+            <li><a href="#">모바일 이용</a></li>
+          </ul>
+        </li>
+        <li class="menu4"><a href="#">고객지원</a>
+          <ul>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">자주묻는질문(FAQ)</a></li>
+            <li><a href="#">1:1 문의하기</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="topmenu">
+      <h2 class="blind">사용자메뉴</h2>
+      <ul>
+        <li><a class="sitemap" href="#">SITEMAP</a></li>
+        <li><a class="login" href="#">LOGIN</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="content" class="content">
+
+    <div class="cont_title_wrap">
+      <h2 class="cont_title">예매하기</h2>
+    </div>
+
+    <section class="lnb">
+      <div class="lnb_wrap">
+        <ul>
+          <li><a href="#" class="homepage">메인페이지 이동</a></li>
+          <li>
+            <div class="menu_on">
+              <a href="#" class="menu_1depth_on">승차권</a>
+              <ul class="blind">
+                <li><a href="#">승차권</a></li>
+                <li><a href="#">운행정보</a></li>
+                <li><a href="#">이용안내</a></li>
+                <li><a href="#">고객지원</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="menu_2depth">
+              <a href="#" class="menu_2depth_on">예매하기</a>
+              <ul class="blind">
+                <li><a href="#">예매하기</a></li>
+                <li><a href="#">조회/변경/취소</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="ticket_step">
+      <h3 class="blind">승차권 예매 단계</h3>
+      <ul>
+        <li class="ticket_step1">예매정보입력</li>
+        <li class="ticket_step2">결제하기</li>
+        <li class="ticket_step3 on">예매완료</li>
+        <li class="ticket_step_none"></li>
+      </ul>
+    </div>
+
+    <section class="reserve_finish">
+      <p><span>예매</span>가 완료되었습니다.</p>
+    </section>
+
+    <section class="user_reserve_inform">
+      <table summary="입력한 승차권 정보" class="final_ticket_inform">
+        <caption class="blind">예매한 승차권 정보</caption>
+        <thead>
+          <tr>
+            <th colspan="6">예매정보</th>
+          </tr>
+          <tr>
+            <th class="depart_place">출발지</th>
+            <th class="arrive_place">도착지</th>
+            <th class="depart_date">출발일</th>
+            <th class="depart_time">출발시간</th>
+            <th class="seat_number">좌석번호</th>
+            <th class="company">운수사(등급)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>출발터미널</td>
+            <td>도착터미널</td>
+            <td>YYYY-MM-DD</td>
+            <td>HH : MM</td>
+            <td>N 번</td>
+            <td>동해상사고속(우등)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="user_pay_inform">
+      <table summary="입력한 결제 정보" class="fianl_pay_inform">
+        <caption class="blind">승인된 결제 정보</caption>
+        <thead>
+          <tr>
+            <th colspan="4">결제정보</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>인원</th>
+            <td>성인 1명</td>
+            <th>카드구분</th>
+            <td>개인</td>
+          </tr>
+          <tr>
+            <th>매수</th>
+            <td>1매</td>
+            <th>승인일</th>
+            <td>YYYY-MM-DD</td>
+          </tr>
+          <tr>
+            <th>결제금액</th>
+            <td>20,2000 원</td>
+            <th>승인번호</th>
+            <td>210809010101010101</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="after_precaution_notice">
+      <div class="after_precaution_wrap">
+        <h3>유의사항</h3>
+        <ul class="after_precaution_list">
+          <li>- 인터넷 예매를 이용한 승차권의 발권 및 환불은 해당 승차권의 출발지 터미널에서만 가능합니다.</li>
+          <li>- 승차권 예매와 관련한 문의사항은 콜센터(1644-2992)로 문의해주시기 바랍니다.</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="button_complete_wrap">
+      <a href="#" class="button_inform_print">예매내역 인쇄</a>
+      <a href="#" class="button_movetohome">확인</a>
+    </div>
+
+
+    <aside class="quickmenu">
+      <a href="#" class="quick_tk">승차권 예매</a>
+      <a href="#" class="quick_confirm">조회/변경/취소</a>
+      <a href="#" class="quick_top">맨 위로 이동</a>
+    </aside>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="footer_top">
+      <h2>사이트 이용안내</h2>
+
+      <div class="footer_law">
+        <h3>약관 및 정책</h3>
+        <ul>
+          <li><a href="#">홈페이지 이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">이메일무단수집거부</a></li>
+          <li><a href="#">사업자정보</a></li>
+        </ul>
+      </div>
+
+      <div class="family_site">
+        <h3>Family Site</h3>
+        <ul class="blind">
+          <li><a href="http://www.molit.go.kr/portal.do" target="_blank">국토교통부</a></li>
+          <li><a href="http://www.visitkorea.or.kr/intro.html" target="_blank">한국관광공사</a></li>
+          <li><a href="http://www.bus.or.kr/" target="_blank">전국버스운송사업조합연합회</a></li>
+          <li><a href="http://www.sbus.or.kr/" target="_blank">서울특별시버스운송사업조합</a></li>
+          <li><a href="http://www.incheonbus.or.kr/" target="_blank">인천광역시버스운송사업조합</a></li>
+          <li><a href="http://www.daejeonbus.or.kr/" target="_blank">대전광역시버스운송사업조합</a></li>
+          <li><a href="http://www.ulsanbus.or.kr/" target="_blank">울산광역시버스운송사업조합</a></li>
+          <li><a href="http://www.gbus.or.kr/" target="_blank">경기도버스운송사업조합</a>
+          <li><a href="http://www.busta.or.kr/" target="_blank">전라북도버스운송사업조합</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer_bottom">
+      <div class="footer_bottom_cont1">
+        <p>로카모빌리티(주)</p>
+        <p>사업자등록번호:129-86-38970 통신판매업 2014-서울금천-1119</p>
+      </div>
+      <div class="footer_bottom_cont2">
+        <address>주소 : 서울시 동작구 보라매로5길 롯데타워 8층</address>
+        <p>이메일 : interoper@locamobility.co.kr</p>
+        <p>대표전화 : 1644-2992</p>
+      </div>
+
+      <p>COPYRIGHT ⓒ 2014 전국버스운송조합연합회 ALL RIGHTS RESERVED.</p>
+
+      <a href="#" class="mark_wa">웹 접근성 인증마크</a>
+      <a href="#" class="mark_isms">정보보호관리체계인증</a>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,242 @@
+/* 로그인 페이지 */
+/* 회원 로그인 */
+section.login_page{width:1200px; height: 640px; margin: 50px auto 200px;}
+
+form.member_login_part,
+form.nonmember_login_part {
+  width:595px; height:640px; border: 1px solid #bcbec4; border-radius: 5px;
+background:#fff; padding:60px 65px; float: left;}
+form.member_login_part {margin-right: 10px;}
+
+form.on {border: 1px solid #2d334a;
+  box-shadow: 2px -2px 10px 2px #c7c9cf;}
+
+.login_page legend {font-size: 30px; font-family: 'hangeulNuri-Bold'; color:#272343; width:230px; height:45px; background: linear-gradient(0deg, #bae8e8 45%, transparent 45%); text-align: center; margin-bottom: 30px;}
+
+p.login_desc,
+.creat_account p {font-family: 'hangeulNuri-regular'; font-size: 19px; color:#272343; text-align: center;}
+.member_login_part .login_desc{margin-bottom: 57px;}
+.nonmember_login_part .login_desc{margin-bottom: 37px;}
+
+.member_id_icon {display:block; width: 50px; height: 50px; text-indent: -9999px; background: url(../images/member_login_icon_id.jpg) center no-repeat; float: left;}
+.member_pw_icon {display:block; width: 50px; height: 50px; text-indent: -9999px; background: url(../images/member_login_icon_pw.jpg) center no-repeat; float: left;}
+p.member_id_wrap input,
+p.member_pw_wrap input {width:320px; height:40px; padding:15px 15px; border:1px solid #9c9fa9; border-radius: 5px; box-shadow: 0 -5px 10px -5px #9c9fa9 inset; float: right; margin: 5px 0; font-family: 'GmarketSansMedium'; font-size:18px; color:#2d334a}
+p.member_id_wrap,
+p.member_pw_wrap {width:390px; height:50px; margin: 0 auto 12px;}
+.member_login_button{width:390px; height: 40px; font-family: 'hangeulNuri-Bold'; font-size: 24px; color:#fff; background: #2d334a; border-radius: 5px; letter-spacing: 5px; text-indent: 5px; margin: 20px auto; display: block;}
+
+div.login_option{width:390px; height: 23px; margin: 0 auto;}
+.login_option input[type=checkbox]{display: none;}
+.login_option input[type=checkbox]+label{display: block; width:117px; line-height:23px; font-family: 'hangeulNuri-regular'; font-size: 18px; color:#272343; text-align: right; background: url(../images/sub_agree_check.png) left center no-repeat; float: left;}
+.login_option input[type=checkbox]:checked+label{background: url(../images/sub_agree_check_act.png) left center no-repeat;}
+.find_account a {font-family: 'hangeulNuri-regular'; font-size: 18px; color:#5a5959; }
+.find_account a:nth-child(2)::before{content:" | "}
+.find_account {float:right; line-height: 23px;}
+
+div.creat_account {border-top: 1px solid #9c9fa9; margin-top:20px; padding-top:20px;}
+.creat_account_button{width:390px; height: 40px; font-family: 'hangeulNuri-Bold'; font-size: 24px; color:#2d334a; background:#fff; border-radius: 5px; letter-spacing: 5px; text-indent: 5px; margin: 20px auto; display: block; border: 2px solid #2d334a; text-align: center;}
+
+/* 비회원 로그인 */
+ul.nonmember_user_wrap {font-size: 19px; position:relative;}
+/* .nonmember_user_wrap li:first-child{height:139px;} */
+/* .nonmember_user_wrap li:nth-child(2){position: relative;} */
+.nonmember_user_wrap input[type=radio]{display: none;}
+.nonmember_user_wrap input[type=radio]+label{display: block; width:200px; line-height:20px; text-align: right; background: url(../images/card_type_radio.jpg) left center no-repeat; padding-top: 3px; font-family: 'GmarketSansMedium'; color:#272343; margin-bottom: 40px;}
+.nonmember_user_wrap input[type=radio]:checked+label{background: url(../images/card_type_radio_act.jpg) left center no-repeat;}
+div.user_input_info {position:absolute; top: 0; right: 0;}
+
+div.user_card_no,
+div.user_private_info{width:390px; height:40px; margin: 0 auto;}
+.user_card_no label {font-family: 'hangeulNuri-Bold'; color:#2d334a; width:80px; line-height:40px; text-align: left; display:block; float:left}
+.user_card_no input{width:70px; height:40px; text-align: center; color:#2d334a; box-shadow: 0 -5px 10px -5px #9c9fa9 inset; border-radius: 5px; border:1px solid #9c9fa9; float: left; font-family: 'GmarketSansMedium'; font-size:18px; color:#2d334a;}
+.user_card_no span{font-family: 'hangeulNuri-Bold'; color:#2d334a; width:10px; line-height:40px; float:left; text-align: center;}
+.user_card_no p {font-family: 'GmarketSansLight'; text-indent: 80px; color: #9c9c9c; margin-top:10px; line-height: 40px; clear: both;}
+
+.user_check_button{width:390px; height: 40px; font-family: 'hangeulNuri-Bold'; font-size: 24px; color:#fff; background: #2d334a; border-radius: 5px; letter-spacing: 5px; text-indent: 5px; margin: 16px auto; display: block;}
+
+div.user_private_info label {font-family: 'hangeulNuri-Bold'; color:#2d334a; width:100px; line-height:40px; text-align: left; display:block; float:left}
+.private_birth,
+.private_phone {width:390px; height:40px; margin-bottom: 20px;}
+.private_birth input{width:135px; height:40px; text-align: center; color:#2d334a; box-shadow: 0 -5px 10px -5px #9c9fa9 inset; border-radius: 5px; border:1px solid #9c9fa9; float: left; font-family: 'GmarketSansMedium'; font-size:18px; color:#2d334a; margin-right: 10px;}
+.private_birth span{line-height: 40px; color: #9c9c9c;}
+.private_phone input{width:85px; height:40px; text-align: center; color:#2d334a; box-shadow: 0 -5px 10px -5px #9c9fa9 inset; border-radius: 5px; border:1px solid #9c9fa9; float: left; font-family: 'GmarketSansMedium'; font-size:18px; color:#2d334a;}
+.private_phone span{font-family: 'hangeulNuri-Bold'; color:#2d334a; width:10px; line-height:40px; float:left; text-align: center; margin:0 3px;}
+
+
+
+/* 회원가입 */
+/* 1단계 본인인증 */
+section.joinmember_step {width:1200px; margin: 0 auto 40px; height:82px;}
+
+section.self_certification{width:1200px; margin: 0 auto 70px; height:640px;
+border: 1px solid #2d334a; border-radius: 5px;box-shadow:3px -3px 8px 0 #c9c9c9; background: #fff; padding:55px 150px; color: #272343;}
+.self_certification h4{width:140px; height:40px; background: linear-gradient(0deg, #ffe44e 50%, transparent 50%); text-align: center;
+font-family: 'hangeulNuri-Bold'; margin: 0 auto 30px; font-size: 30px;}
+.self_certification p {font-size: 20px; font-family: 'hangeulNuri-regular'; margin:0 auto 35px;}
+ul.certification_type li {width:420px; height:290px; border: 2px solid #2d334a; border-radius: 5px; float: left; padding:25px 85px; position: relative;}
+ul.certification_type h5{text-align: center; font-family: 'hangeulNuri-regular'; font-size:24px;}
+.certification_type p{font-family: 'GmarketSansLight'; font-size:16px; width: fit-content; margin: 0 auto; position:absolute; bottom: 25px;}
+li.phone_certify {background: url(../images/certification_image_phone.jpg) center bottom 85px no-repeat,#fff; margin-right: 50px;}
+li.ipin_certify {background: url(../images/certification_image_ipin.jpg) center bottom 85px no-repeat,#fff;}
+li.phone_certify:hover,
+li.ipin_certify:hover {border:2px solid #ffe44e;}
+
+/* 2단계 약관동의 */
+section.membership_terms{width:1200px; margin: 0 auto 70px;
+  border: 1px solid #2d334a; border-radius: 5px;box-shadow:3px -3px 8px 0 #c9c9c9; background: #fff; padding:60px 55px; color: #272343;}
+
+.membership_terms h3{font-family: 'hangeulNuri-Bold'; font-size: 30px; text-align: center; width:fit-content; background: linear-gradient(0deg, #bae8e8 50%, transparent 50%); margin: 0 auto 25px;}
+div.text_terms{width:1090px; height:200px; border:1px solid #999; overflow-y: scroll; margin: 0 auto 20px; font-family:'GmarketSansLight'; font-size: 16px; padding:10px;}
+
+.membership_terms input[type=checkbox] {display: none;}
+.membership_terms label {font-family: 'hangeulNuri-Bold'; font-size: 20px;}
+div.agreement_wrap {float:right;}
+
+div.agreement_1 {height: 305px; margin-bottom: 60px;}
+.agreement_wrap.terms1 input[type=checkbox]+label {width:302px; line-height: 20px; background: url(../images/sub_agree_check.png) left center no-repeat; display: block; text-align: right;}
+.agreement_wrap.terms1 input[type=checkbox]:checked+label {background: url(../images/sub_agree_check_act.png) left center no-repeat;}
+
+div.agreement_2, div.agreement_3{height:365px; margin-bottom: 60px;}
+.agreement_2 p, .agreement_3 p{font-size: 20px; font-family: 'hangeulNuri-regular'; margin-bottom: 20px; text-align: right;}
+.agreement_wrap.terms2 input[type=checkbox]+label,
+.agreement_wrap.terms3 input[type=checkbox]+label {width:486px; line-height: 20px; background: url(../images/sub_agree_check.png) left center no-repeat; display: block; text-align: right;}
+.agreement_wrap.terms2 input[type=checkbox]:checked+label,
+.agreement_wrap.terms3 input[type=checkbox]:checked+label {background: url(../images/sub_agree_check_act.png) left center no-repeat;}
+
+div.agreement_all_wrap {width:1090px; height:72px; border-radius: 5px; border: 2px solid #2d334a; font-family: 'hangeulNuri-Bold'; font-size: 24px;; padding:22px 30px; margin-bottom: 60px;}
+.agreement_all_wrap p {line-height: 28px; float: left; width: fit-content;}
+.agreement_all_wrap input[type=checkbox]+label {width:126px; height: 31px; background: url(../images/sub_agree_check.png) left center no-repeat; background-size: contain; display: block; text-align: right; line-height: 28px;}
+.agreement_all_wrap input[type=checkbox]:checked+label {background: url(../images/sub_agree_check_act.png) left center no-repeat; background-size: contain;}
+
+div.step_button{width:490px; height:51px; margin:0 auto;}
+
+a.button_prev{width:235px; height:51px; background: #fff; font-family: 'GmarketSansMedium'; font-size:25px; line-height: 51px; margin:0 auto 70px; display: block; text-align: center; border-radius: 5px; border:5px solid #ffe44e; float: left;}
+
+a.button_next,
+button.button_membership_submmit{width:235px; height:51px; background: url(../images/sub_button_seatend.png) no-repeat; font-family: 'GmarketSansMedium'; font-size:25px; line-height: 55px; margin:0 auto 70px; display: block; text-align: center; float:right;}
+a.button_next:hover,
+button.button_membership_submmit:hover{background: url(../images/sub_button_seatend_act.png) no-repeat;}
+
+/* 회원 정보 입력 */
+section.membership_userinform{width:1200px; margin: 0 auto 70px;
+  border: 1px solid #2d334a; border-radius: 5px;box-shadow:3px -3px 8px 0 #c9c9c9; background: #fff; padding:60px 197px; color: #272343;}
+.user_input_form legend {display:block; width:120px; height:40px; text-align: center; margin:0 auto 50px; background: linear-gradient(0deg, #ffe44e 50%, transparent 50%); font-size: 30px; font-family: 'hangeulNuri-Bold';}
+.user_input_form label {font-size: 20px; font-family: 'hangeulNuri-Bold'; color:#272343; width:157px; height:30px; text-align: left; line-height: 30px; display: block;}
+.user_input_form input, div.domain_option_select {width:320px; height:30px; border:1px solid #2d334a; border-radius:5px; box-shadow: 0 -5px 10px -5px #9c9fa9 inset; padding:0 10px; font-family: 'GmarketSansMedium'; color:#2d334a; font-size: 16px;}
+button.userid_check{width:115px; height:30px; font-size: 18px; font-family: 'hangeulNuri-regular'; color:#fff; background: #2d334a; border-radius: 5px;
+margin-left: 20px;}
+span.add_desc{font-size: 18px; font-family: 'GmarketSansLight'; color:#8a8b8c; height:30px; line-height: 30px; padding-top:2px; margin-left: 20px;}
+span.connect_word{font-family: 'GmarketSansMedium'; font-size: 20px; color:#2d334a; display: block; width:20px; height:30px; text-align: center;
+line-height: 30px; padding-top:2px; margin: 0 10px;}
+
+li.list_user_birth input[type=radio] {display: none;}
+.list_user_birth input[type=radio]+label {width:65px; height:32px; font-size:18px; font-family: 'GmarketSansMedium'; color:#2d334a; text-align: right; line-height: 30px; display: block; padding-top:4px; background: url(../images/card_type_radio.jpg) left center no-repeat; margin-right: 20px;}
+.list_user_birth input[type=radio]:checked+label {background: url(../images/card_type_radio_act.jpg) left center no-repeat;}
+.list_user_birth input[type=text]:nth-child(2) {width:120px; height:30px;}
+.list_user_birth input[type=text] {width:85px; height:30px;}
+.list_user_birth input[type=text]+label{width:35px; height:30px; text-align: left; margin-left:5px; display: block;}
+.list_user_phone input[type=text] {width:90px; height:30px;}
+.list_user_email input[type=text],
+div.domain_option_select {width:200px; height:30px;}
+li.list_user_email {position:relative;}
+ul.email_domain_list {width:200px; height:180px; background: #fff; border: 1px solid #2d334a; color:#2d334a; font-family: 'GmarketSansMedium'; font-size: 16px; border-radius: 5px; padding: 5px 10px; position: absolute; top:30px; right:0;}
+div.domain_option_select {line-height: 30px; margin-left: 7px;}
+
+
+ul.all_input_wrap>li{width:804px; height:32px; margin: 0 auto 30px;}
+ul.all_input_wrap>li>* {float:left;}
+
+
+
+/* 회원가입 완료 */
+section.join_complete{width:1200px;height:150px; margin: 0 auto;
+  border-radius: 5px; border:5px solid #2d334a; background: #fff;
+  padding:45px 0; margin-bottom:60px;}
+.join_complete p {width:345px; height:50px; text-align: right; background: url(../images/complete_check_icon.png) left center no-repeat; margin: 0 auto; font-family: 'HangeulNuri-Bold'; font-size:24px; color:#666666; padding-top:10px;}
+.join_complete span{color:#272343;}
+
+a.button_move {display:block; width:195px; height:50px; background: url(../images/sub_movehome_button.jpg) center no-repeat; font-size:24px; font-family: 'GmarketSansMedium'; text-align: center; float:left; line-height: 57px;}
+a.button_move:hover {background: url(../images/sub_movehome_button_act.jpg) center no-repeat;}
+a.button_move.gohome {margin-right:20px;}
+
+div.complete_button{margin:0 auto; width:410px; height:50px; margin-bottom:200px;}
+
+
+/* 아이디 찾기 */
+/* 비밀번호 찾기 */
+section.login_lost_id,
+section.login_lost_id_result{width:595px; height:430px; border: 1px solid #2d334a; border-radius: 5px; background:#fff; box-shadow:3px -3px 8px 0 #c9c9c9; margin:0 auto 100px; padding:50px; color:#272343}
+.login_lost_id h3 {width:140px; height:40px; background: linear-gradient(0deg, #ffe44e 50%, transparent 50%); text-align: center; font-family: 'hangeulNuri-Bold'; font-size:30px; margin:0 auto 30px;}
+.login_lost_id>p,
+.login_lost_id_result>p {font-family: 'hangeulNuri-regular'; font-size: 20px; text-align: center; margin-bottom: 30px;}
+form.lost_idfind{width:493px; height:125px; margin:0 auto;}
+.lost_idfind .input_list_name,
+.lost_pwreset label {width:130px; height:31px; font-family: 'GmarketSansMedium'; font-size:20px; display: block; float: left; line-height: 35px;}
+.lost_idfind fieldset p{width: 493px; height: 31px; margin: 0 auto 18px; line-height: 31px;}
+.lost_idfind input[type=text],
+.lost_pwreset input[type=password] {width:205px; height:31px; border-radius: 5px;border:1px solid #2d334a; box-shadow: 0 -5px 10px -5px #9c9fa9 inset; padding:0 10px; font-family: 'GmarketSansMedium'; color:#2d334a; font-size: 16px;}
+.certify_type input[type=radio] {display:none;}
+.certify_type input[type=radio]:nth-child(2)+label {font-size:20px; color:#2d334a; width: 130px; height:31px; text-align: right; background: url(../images/card_type_radio.jpg) left center no-repeat; display: block; line-height: 35px; float:left; margin-right:40px;}
+.certify_type input[type=radio]:nth-child(4)+label {font-size:20px; color:#2d334a; width: 190px; height:31px; text-align: right; background: url(../images/card_type_radio.jpg) left center no-repeat; display: block; line-height: 35px; float: left;}
+.certify_type input[type=radio]:nth-child(4):checked+label,
+.certify_type input[type=radio]:nth-child(2):checked+label {background: url(../images/card_type_radio_act.jpg) left center no-repeat;}
+.button_certify_check,
+.button_userpw_reset,
+button.wd_complete {width:195px; height:50px; background: url(../images/sub_movehome_button.jpg) center no-repeat; font-size:24px; font-family: 'GmarketSansMedium'; text-align: center; line-height: 57px; margin:0 auto; display: block;}
+.button_certify_check:hover,
+.button_userpw_reset:hover,
+button.wd_complete:hover {background: url(../images/sub_movehome_button_act.jpg) center no-repeat;}
+
+
+/* 아이디찾기 결과 */
+.login_lost_id_result h3 {width:230px; height:40px; background: linear-gradient(0deg, #ffe44e 50%, transparent 50%); text-align: center; font-family: 'hangeulNuri-Bold'; font-size:30px; margin:0 auto 30px;}
+div.show_userid{width:493px; height:146px; text-align: center; padding-top:95px; background: url(../images/lost_id_result_back.jpg) top 20px center no-repeat; font-family: 'GmarketSansMedium';}
+div.idresult_button {width:420px; height:50px; margin: 0 auto;}
+div.idresult_button a,
+button.mp_user_chg {width:195px; height:50px; background: url(../images/sub_movehome_button.jpg) center no-repeat; font-size:24px; font-family: 'GmarketSansMedium'; text-align: center; line-height: 57px; float:left; display: block;}
+div.idresult_button a:hover,
+button.mp_user_chg:hover {background: url(../images/sub_movehome_button_act.jpg) center no-repeat;}
+div.idresult_button a:first-child {margin-right: 30px;}
+
+
+/* 비밀번호 재설정 */
+.lost_pwreset fieldset p {width: 335px; height: 45px; margin: 0 auto 18px; line-height: 31px;}
+.lost_pwreset fieldset p:nth-child(3){margin-bottom:38px;}
+.lost_pwreset span{display:block; width:180px; height:20px; font-size: 14px; margin-left:130px;}
+
+
+
+/* 마이페이지 */
+section.login_mypage{width:1200px; margin: 0 auto 180px; height:640px; border: 1px solid #2d334a; border-radius: 5px;box-shadow:3px -3px 8px 0 #c9c9c9; background: #fff; padding:60px 205px; color: #272343; font-family: 'GmarketSansMedium'; font-size:18px; position:relative;}
+.login_mypage h3 {width:185px; height:40px; background: linear-gradient(0deg, #ffe44e 50%, transparent 50%); text-align: center; font-family: 'hangeulNuri-Bold'; font-size:30px; margin:0 auto 50px;}
+form.user_change_inform label{width: 143px; height:30px; font-size: 20px; font-family: 'hangeulNuri-Bold'; display: block; float:left; line-height: 30px;}
+.user_change_inform input {width:320px; height:30px; border-radius:5px; border:1px solid #2d334a; box-shadow: 0 -5px 10px -5px #9c9fa9 inset; padding:0 10px; font-family: 'GmarketSansMedium'; color:#2d334a; font-size: 16px; float:left; background: #fff;}
+a.button_chgpw {width:115px; height:30px; background: #2d334a; font-family: 'hangeulNuri-regular'; font-size: 18px; color:#fff; border-radius: 5px; display: block; float:left; text-align: center;}
+.user_change_inform p {width:788px; height:30px; margin:0 auto 18px; line-height: 30px;}
+
+div.mp_email_part input{width:200px; height:30px;}
+.mp_email_part span {width:40px; height:30px; display: block; float:left; text-align: center; line-height: 30px;}
+div.email_domain_options {position:relative; margin:0 auto 50px; width:788px; height:30px;}
+div.email_domain_options button {width:200px; height:30px; border-radius:5px; border:1px solid #2d334a; box-shadow: 0 -5px 10px -5px #9c9fa9 inset; padding:0 10px; font-family: 'GmarketSansMedium'; color:#8a8b8c; font-size: 16px; float:left; background: #fff; text-align: left; margin-left:5px;}
+ul.domain_label_list {position:absolute; right:0px; top:30px; width:200px; height:180px;border-radius:5px; border:1px solid #2d334a; box-shadow: 0 -5px 10px -5px #9c9fa9 inset; padding:5px 10px; font-family: 'GmarketSansMedium'; color:#8a8b8c; font-size: 16px; background: #fff; text-align: left;}
+
+div.button_mp,
+div.button_wd {margin:0 auto; width:420px; height:50px;}
+button.mp_user_chg,
+button.wd_complete {line-height: 53px;}
+button.mp_chg_cancel,
+button.wd_cancel {width:195px; height:50px; background: #fff; font-size:24px; font-family: 'GmarketSansMedium'; text-align: center; line-height: 43px; float:left; display: block; border-radius: 5px; border:5px solid #ffea79; margin-right: 30px;}
+
+a.withdraw_membership{width:195px; height:50px; background: #2d334a; border-radius: 5px; font-size: 25px; color:#fff; font-family: 'GmarketSansMedium'; text-align: center; display:block; line-height: 50px; position: absolute; bottom:-80px; right:0;}
+
+
+/* 회원 탈퇴 */
+section.withdraw_membership_wrap h3 {font-family: 'GmarketSansBold'; font-size:20px; text-align: center; width:fit-content; height:30px; background: linear-gradient(0deg, #ffed00 20%, transparent 20%); margin: 0 auto 22px;}
+section.withdraw_membership_wrap {width:1200px; margin:0 auto;}
+form.reason_wrap input[type=radio] {display: none;}
+form.reason_wrap input[type=radio]+label {width:285px; height:50px; margin-right: 20px; background: #fff; border-radius: 5px; border:2px solid #2d334a; font-size: 20px; font-family: 'GmarketSansMedium';
+  text-align: center; display: block; color:#2d334a; line-height: 50px; cursor: pointer; float:left;}
+form.reason_wrap input[type=radio]:checked+label {background: #2d334a; color:#fff; border:0px;}
+form.reason_wrap input[type=radio]+label.reason4{margin-right:0;}
+.reason_wrap textarea {width:1200px; height:200px; margin:20px auto; border-radius: 5px; border: 2px solid #2d334a; font-family: 'GmarketSansMedium'; font-size: 18px; padding:5px 10px; line-height: 31px; resize: none;}

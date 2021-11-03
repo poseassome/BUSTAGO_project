@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>예매 내역 조회/변경/취소</title>
+  <link rel="stylesheet" type="text/css" href="./css/layout.css">
+  <link rel="stylesheet" type="text/css" href="./css/01sub_style.css">
+</head>
+
+<body>
+  <header id="header" class="header">
+    <h1 class="logo"><a href="#">버스타고</a></h1>
+
+    <nav class="gnb">
+      <h2 class="blind">주요메뉴</h2>
+      <ul>
+        <li class="menu1"><a href="#">승차권</a>
+          <ul>
+            <li><a href="#">예매하기</a></li>
+            <li><a href="#">조회/변경/취소</a></li>
+          </ul>
+        </li>
+        <li class="menu2"><a href="#">운행정보</a>
+          <ul>
+            <li><a href="#">노선안내</a></li>
+            <li><a href="#">터미널안내</a></li>
+            <li><a href="#">버스회사 안내</a></li>
+          </ul>
+        </li>
+        <li class="menu3"><a href="#">이용안내</a>
+          <ul>
+            <li><a href="#">서비스 소개</a></li>
+            <li><a href="#">취소 수수료 안내</a></li>
+            <li><a href="#">모바일 이용</a></li>
+          </ul>
+        </li>
+        <li class="menu4"><a href="#">고객지원</a>
+          <ul>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">자주묻는질문(FAQ)</a></li>
+            <li><a href="#">1:1 문의하기</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="topmenu">
+      <h2 class="blind">사용자메뉴</h2>
+      <ul>
+        <li><a class="sitemap" href="#">SITEMAP</a></li>
+        <li><a class="login" href="#">LOGIN</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="content" class="content">
+
+    <div class="cont_title_wrap">
+      <h2 class="cont_title">조회 / 변경 / 취소</h2>
+    </div>
+
+    <section class="lnb">
+      <div class="lnb_wrap">
+        <ul>
+          <li><a href="#" class="homepage">메인페이지 이동</a></li>
+          <li>
+            <div class="menu_on">
+              <a href="#" class="menu_1depth_on">승차권</a>
+              <ul class="blind">
+                <li><a href="#">승차권</a></li>
+                <li><a href="#">운행정보</a></li>
+                <li><a href="#">이용안내</a></li>
+                <li><a href="#">고객지원</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="menu_2depth">
+              <a href="#" class="menu_2depth_on">조회/변경/취소</a>
+              <ul class="blind">
+                <li><a href="#">예매하기</a></li>
+                <li><a href="#">조회/변경/취소</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="menu_introduce">예매완료한 승차권의 조회/변경/취소와 발권 및 영수증 출력을 확인하실 수 있습니다.</div>
+
+    <section class="askfor_tk_date">
+      <h3>조회기간</h3>
+      <form>
+        <div>
+          <h4 class="blind">날짜 기준</h4>
+          <div class="radio_date1_wrap">
+            <input type="radio" name="date_standard" id="date_reserve"><label for="date_reserve">예매일</label>
+          </div>
+          <div class="radio_date2_wrap">
+            <input type="radio" name="date_standard" id="date_depart"><label for="date_depart">출발일</label>
+          </div>
+        </div>
+        <div>
+          <h4 class="blind">조회 날짜 선택</h4>
+          <div class="start_date_wrap">
+            <input type="text" value="2021-08-10" readonly>
+            <a href="" class="start_date">시작일</a>
+          </div>
+
+          <div class="end_date_wrap">
+            <input type="text" value="2021-08-10" readonly>
+            <a href="" class="end_date">종료일</a>
+          </div>
+        </div>
+      </form>
+      <button type="submit" class="button_askfor_ticket">조회하기</button>
+      <p>*조회기간은 최대 2개월까지 가능합니다.</p>
+    </section>
+
+    <section class="reserve_history">
+      <table summary="기간별 예매 내역 조회" class="reserve_history_list">
+        <caption class="blind">지난 승차권 예매 내역 조회</caption>
+        <thead>
+          <tr>
+            <th colspan="9">예매내역</th>
+          </tr>
+          <tr>
+            <th class="dateof_reserve">예매일</th>
+            <th class="placeof_depart">출발지</th>
+            <th class="placeof_arrive">도착지</th>
+            <th class="dateof_depart">출발일</th>
+            <th class="timeof_depart">출발시간</th>
+            <th class="countof_tk">매수</th>
+            <th class="costof_all">금액</th>
+            <th class="stateof_tk">예매상태</th>
+            <th class="see_moredetail">더보기</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>YYYY-MM-DD</td>
+            <td>출발지</td>
+            <td>도착지</td>
+            <td>YYYY-MM-DD</td>
+            <td>HH : MM</td>
+            <td>1 매</td>
+            <td>20,200 원</td>
+            <td><a href="#" class="button_change_tk">변경</a><a href="#" class="button_cancel_tk">취소</a></td>
+            <td><button type="button" class="button_moredetail">상세내용</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="user_reservation_wrap">
+      <section class="user_reserve_inform">
+        <table summary="입력한 승차권 정보" class="final_ticket_inform">
+          <caption class="blind">예매한 승차권 정보</caption>
+          <thead>
+            <tr>
+              <th colspan="6">예매정보</th>
+            </tr>
+            <tr>
+              <th class="depart_place">출발지</th>
+              <th class="arrive_place">도착지</th>
+              <th class="depart_date">출발일</th>
+              <th class="depart_time">출발시간</th>
+              <th class="seat_number">좌석번호</th>
+              <th class="company">운수사(등급)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>출발터미널</td>
+              <td>도착터미널</td>
+              <td>YYYY-MM-DD</td>
+              <td>HH : MM</td>
+              <td>N 번</td>
+              <td>동해상사고속(우등)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="user_pay_inform">
+        <table summary="입력한 결제 정보" class="fianl_pay_inform">
+          <caption class="blind">승인된 결제 정보</caption>
+          <thead>
+            <tr>
+              <th colspan="4">결제정보</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>인원</th>
+              <td>성인 1명</td>
+              <th>카드구분</th>
+              <td>개인</td>
+            </tr>
+            <tr>
+              <th>매수</th>
+              <td>1매</td>
+              <th>승인일</th>
+              <td>YYYY-MM-DD</td>
+            </tr>
+            <tr>
+              <th>결제금액</th>
+              <td>20,2000 원</td>
+              <th>승인번호</th>
+              <td>210809010101010101</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <a href="#" class="button_inform_print">예매내역 인쇄</a>
+    </div>
+
+    <section class="confirm_precaution_notice">
+      <div class="confirm_precaution_wrap">
+        <h3>유의사항</h3>
+        <ol class="confirm_precaution_list">
+          <li>예매를 취소 또는 변경하시려면 예매취소 또는 예매변경 버튼을 누르세요.
+            <ul>
+              <li>- 예매취소 또는 변경 시 일반적으로 당사의 취소 처리가 완료되고 4~5일 후 카드사의 취소가 확인됩니다.</li>
+              <li>- 부분취소인 경우 해당 카드사의 환불 처리기준에 따라 별도의 안내(SMS 등)가 제공되지 않을 수 있으며, 해당 카드사에서 확인 바랍니다.</li>
+            </ul>
+          </li>
+          <li>예매된 상태에서 발권 또는 취소를 하지 않고, 출발시간이 지난 경우 “부도”로표시되며, 부도위약금(취소 수수료 및 부도위약금 내용 참고)이 청구됩니다.</li>
+          <li>예매한 승차권 발권시에는 반드시 예매한 카드를 지참해야 하며, 해당 터미널 매표창구에 예매된 사항이 있다고 말씀하시고 카드를 제시하시면 승차권을 발권받으실 수 있습니다.</li>
+          <li>소요시간은 참고용이며 도로 및 버스회사의 사정에 따라 변경될 수 있습니다.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="cancel_attention">
+      <div class="cancel_wrap">
+        <h3>취소수수료 및 부도위약금 안내</h3>
+        <table class="cancel_table" summary="승차권 취소에 대한 취소수수료 정보">
+          <caption class="blind">취소 시점에 따른 수수료 부과율</caption>
+          <thead>
+            <tr>
+              <th class="title1">구분</th>
+              <th class="title2">조건</th>
+              <th class="title3">수수료</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th rowspan="6">승차권<br>(모바일 승차권 포함)<br>발권 후 / 예매 후</th>
+              <td>지정차 출발 <span>2일 전까지</span></td>
+              <td rowspan="2" class="num_data">없음</td>
+            </tr>
+            <tr>
+              <td>승차권 발권 시점(예매 후 발권은 제외) 기준 <span>1시간 이내</span> 또는 예매시점 기준 <span>1시간 이내</span><br><br>승차권의 사용시간 변경은 지정차량
+                출발일에 동일한 목적지에 한하여 지정차량 출발
+                1시간 이전까지 1회만 가능하면, 이 경우는 수수료를 청구하지 아니한다.<br><span class="red_look">단, 지정차 출발 전에 한함</span></td>
+            </tr>
+            <tr>
+              <td>지정차 출발 <span>1일 전 ~ 1시간 이전까지</span></td>
+              <td class="num_data">5%</td>
+            </tr>
+            <tr>
+              <td>지정차 출발 <span>1시간 이내 ~ 출발 직전까지</span></td>
+              <td class="num_data">10%</td>
+            </tr>
+            <tr>
+              <td>지정차 출발 후 <span>6시간 이전까지</span></td>
+              <td class="num_data">30%</td>
+            </tr>
+            <tr>
+              <td>지정차 출발 후 <span>6시간 이후</span><br><span class="red_look">예매 및 모바일 승차권의 경우는 출발 6시간 이후 자동취소 (부도처리)</span>
+              </td>
+              <td class="num_data">100%</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="budo_discript">부도란? 예매 후 버스 출발시간 이전까지 발권 또는 취소를 하지 않은 경우 예매한 승차권을 무효 처리하는 것을 의미</p>
+      </div>
+    </section>
+
+    <aside class="quickmenu">
+      <a href="#" class="quick_tk">승차권 예매</a>
+      <a href="#" class="quick_confirm">조회/변경/취소</a>
+      <a href="#" class="quick_top">맨 위로 이동</a>
+    </aside>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="footer_top">
+      <h2>사이트 이용안내</h2>
+
+      <div class="footer_law">
+        <h3>약관 및 정책</h3>
+        <ul>
+          <li><a href="#">홈페이지 이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">이메일무단수집거부</a></li>
+          <li><a href="#">사업자정보</a></li>
+        </ul>
+      </div>
+
+      <div class="family_site">
+        <h3>Family Site</h3>
+        <ul class="blind">
+          <li><a href="http://www.molit.go.kr/portal.do" target="_blank">국토교통부</a></li>
+          <li><a href="http://www.visitkorea.or.kr/intro.html" target="_blank">한국관광공사</a></li>
+          <li><a href="http://www.bus.or.kr/" target="_blank">전국버스운송사업조합연합회</a></li>
+          <li><a href="http://www.sbus.or.kr/" target="_blank">서울특별시버스운송사업조합</a></li>
+          <li><a href="http://www.incheonbus.or.kr/" target="_blank">인천광역시버스운송사업조합</a></li>
+          <li><a href="http://www.daejeonbus.or.kr/" target="_blank">대전광역시버스운송사업조합</a></li>
+          <li><a href="http://www.ulsanbus.or.kr/" target="_blank">울산광역시버스운송사업조합</a></li>
+          <li><a href="http://www.gbus.or.kr/" target="_blank">경기도버스운송사업조합</a>
+          <li><a href="http://www.busta.or.kr/" target="_blank">전라북도버스운송사업조합</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer_bottom">
+      <div class="footer_bottom_cont1">
+        <p>로카모빌리티(주)</p>
+        <p>사업자등록번호:129-86-38970 통신판매업 2014-서울금천-1119</p>
+      </div>
+      <div class="footer_bottom_cont2">
+        <address>주소 : 서울시 동작구 보라매로5길 롯데타워 8층</address>
+        <p>이메일 : interoper@locamobility.co.kr</p>
+        <p>대표전화 : 1644-2992</p>
+      </div>
+
+      <p>COPYRIGHT ⓒ 2014 전국버스운송조합연합회 ALL RIGHTS RESERVED.</p>
+
+      <a href="#" class="mark_wa">웹 접근성 인증마크</a>
+      <a href="#" class="mark_isms">정보보호관리체계인증</a>
+    </div>
+  </footer>
+
+</body>
+
+</html>

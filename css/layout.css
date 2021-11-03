@@ -1,0 +1,210 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'HangeulNuri-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/HangeulNuri-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HangeulNuri-Regular';
+  src: url('../fonts/HangeulNuriR.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSansLight';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSansBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {box-sizing: border-box;}
+
+*:focus{outline: none;}
+
+body {font-family: "GmarketSansLight"; font-size: 18pt; line-height: 1.5;}
+
+button {cursor: pointer;}
+
+/* CSS Reset */
+body,h1,h2,h3,h4,h5,h6,p,div,ul,ol,li,dl,dt,dd {
+  margin: 0;
+  padding: 0;}
+
+a {text-decoration: none; color: #000;}
+
+button{border:none;}
+
+ul,ol,li {list-style: none;}
+
+address {font-style: normal;}
+
+fieldset, legend {border:0;padding:0;margin:0;}
+
+.blind {position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden;}
+
+
+/* Body 부분 */
+/* Header */
+.header {position: relative; height: 173px; border-top: 1px solid #ffffff; background: #fff; box-shadow: 15px 0px 30px rgba(0, 0, 0, 0.3);}
+
+.logo {width: 339px; position: relative; margin: auto; z-index: 10;}
+
+.logo a {width: 339px; height: 205px; background: url(../images/logo.png) no-repeat; text-indent: -9999px; display: block; position: absolute; top: 37px;}
+
+.gnb>ul {position: absolute; top: 107px; background: url(../images/gnb_back_trans.png) repeat-x;}
+
+.gnb {width: 1200px; margin: auto; position: relative;}
+
+.gnb>ul>li ul a:hover { font-family: 'GmarketSansMedium';}
+
+.menu1 {float: left; margin-right: 52px;}
+
+.menu1>a {width: 165px; height: 65px; background: url(../images/menu_01.jpg) no-repeat; text-indent: -9999px; display: block; margin-bottom: 10px;}
+
+.menu1 ul li {font-size: 18px; text-align: center; line-height: 40px;}
+
+.menu2 {float: left; margin-right: 371px;}
+
+.menu2>a {width: 186px; height: 65px; background: url(../images/menu_02.jpg) no-repeat; text-indent: -9999px; display: block; margin-bottom: 10px;}
+
+.menu2 ul li {font-size: 18px; text-align: center; line-height: 40px;}
+
+.menu3 {float: left; margin-right: 52px}
+
+.menu3>a {width: 184px; height: 65px; background: url(../images/menu_03.jpg) no-repeat; text-indent: -9999px; display: block; margin-bottom: 10px;}
+
+.menu3 ul li {font-size: 18px; text-align: center; line-height: 40px;}
+
+.menu4 {float: left;}
+
+.menu4>a {width: 186px; height: 65px; background: url(../images/menu_04.jpg) no-repeat; text-indent: -9999px; display: block; margin-bottom: 10px;}
+
+.menu4 ul li {font-size: 18px; text-align: center; line-height: 40px;}
+
+.topmenu {width: 1200px; margin: auto; position: relative;}
+
+.topmenu ul {position: absolute; top: 45px; right: 0px;}
+
+.topmenu li { float: left;}
+
+.sitemap {width: 101px; height: 20px; background: url(../images/sitemap_icon.jpg) no-repeat left; display: block; font-size: 15px; text-align: right; margin-right: 40px;}
+
+.login {width: 80px; height: 20px; background: url(../images/login_icon.jpg) no-repeat left; display: block; font-size: 15px; text-align: right; margin-right: 4px;}
+
+/* Quickmenu 이동 */
+.quickmenu a {display: block; width:100px; height:100px; border-radius: 50%; border:1px solid #2d334a;font-family: 'HangeulNuri-Bold'; font-size:9px; padding:73px 10px 10px; text-align: center;margin-bottom:20px;}
+a.quick_tk{ background:url(../images/quickmenu_draw1.png) bottom 25px center no-repeat, white;}
+a.quick_confirm{ background:url(../images/quickmenu_draw2.png) center no-repeat, white;}
+a.quick_top {background:url(../images/quick_side_top.jpg) center no-repeat, white;border:0; text-indent:-9999px;}
+aside.quickmenu{width:100px; height:340px;position:fixed;top:396px;left:50%;margin-left:650px;z-index:10;}
+
+
+/* main */
+/* (공통) Title */
+h2.cont_title{text-align:center; width:1200px; height:178px; padding: 102px 0 35px; margin:0 auto; background: url(../images/menu_title_draw.png) right bottom no-repeat; font-family: 'HangeulNuri-Bold'; size:35px;
+  text-shadow: -5px 0px 3px #fff,5px 0px 3px #fff,0px -5px 3px #fff,0px 5px 3px #fff,-5px -5px 3px #fff,5px 5px 3px #fff,5px -5px 3px #fff,-5px 5px 3px #fff;}
+
+div.cont_title_wrap{background: url(../images/menu_title_back.jpg) top center no-repeat, #c8edee;}
+
+/* (공통) LNB */
+.lnb_wrap a{
+  font-family: 'hangeulNuri-regular'; font-size:18px; color:#2d334a;}
+a.homepage{
+  width:90px;height:44px;
+  background: url(../images/home_icon.png) center no-repeat;
+  text-indent: -9999px; display: block;padding:0 15px;}
+a.menu_1depth_on, a.menu_2depth_on{
+  display:block;width:180px;
+  background: url(../images/lnb_down_icon.png) right 15px center no-repeat;padding-left:15px;border-left:1px solid #b4b4b4;}
+.menu_2depth_on{border-right:1px solid #b4b4b4;}
+.lnb_wrap>ul>li{
+  float:left;line-height: 44px;}
+.lnb_wrap>ul{
+  background: white;width:1200px;height:44px;}
+.lnb_wrap{
+  position:relative;width:1200px; margin:0 auto;}
+section.lnb{
+  width:100%;margin-bottom:45px;background: #fff;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);}
+div.menu_on>ul{
+  width:180px;height:135px;background:#fff;border:1px solid #f6f6f6; box-shadow: 3px 5px 3px #f6f6f6;padding: 0 15px;text-align: center;line-height: 30px;
+position:absolute;top:44px;}
+div.menu_2depth>ul{
+  width:180px;background:#fff;border:1px solid #f6f6f6; box-shadow: 3px 5px 3px #f6f6f6;padding: 0 15px;text-align: center;line-height: 30px;
+  position:absolute;top:44px;}
+div.menu_on>ul a:hover,
+div.menu_2depth>ul a:hover{
+  font-weight: bold;}
+
+/* 짧은 메뉴 소개 */
+div.menu_introduce{font-family: 'hangeulNuri-regular'; font-size:18px; color:#272343; width: 1200px; text-align: center; margin:0 auto 45px;}
+
+/* ((((( 사이트맵 ))))) */
+.sitemap_cont{background: linear-gradient(90deg, transparent 60%, #fff 40%),url(../images/line_draw.jpg) bottom repeat-x;}
+.map_row1, .map_row2{width:1200px; height: 294px;; margin:45px auto 35px;}
+.map_row2{background: url(../images/character_draw.png) left bottom 7px no-repeat, url(../images/tree_draw1.png) left 439px bottom 7px no-repeat,url(../images/tree_draw2.png) left 322px bottom 7px no-repeat,url(../images/tree_draw3.png) left 392px bottom 7px no-repeat;}
+li.menubox{
+  width:291px; height:294px; border:1px solid #2d334a; border-radius: 5px;
+  background: white; display: block; margin-right:12px;color:#272343;
+ text-align: center; padding:34px 52px;
+}
+li.menubox h3{font-family: 'GmarketSansMedium'; font-size:24px; background: linear-gradient(0deg, #ffd803 60%, transparent 40%);margin-bottom:28px;}
+li.menubox ul{font-family: 'GmarketSansLight'; font-size:20px;height:127px;}
+li.menubox ul li{margin-bottom:20px;line-height: 20px;}
+li.menubox ul li a {color:#272343;}
+li.menubox ul li a:hover{font-weight: bold;text-decoration: underline;text-underline-position: under;}
+.map_row1 .menubox{float:left;}
+li.menubox.end{margin:0;}
+.menubox_wrap{width:594px;height:294px;float:right;}
+.map_row2 .menubox{float:left;}
+
+/* footer */
+.footer {height: 383px; background: #fffceb; position: relative; margin-top: 40px;}
+
+.footer_top {position: relative; width: 1200px; margin: auto; z-index: 2;}
+
+.footer_bottom {position: relative; width: 1200px; margin: auto; font-family: 'hangeulNuri-regular'; color: #696969; font-size: 12px;}
+
+.footer_top li {font-family: 'GmarketSansMedium'; font-size: 16px; float: left; line-height: 93px; margin: 0 90px;}
+
+.footer_top h2 {width: 110px; height: 22px; background: url(../images/footer_logo1.png) no-repeat; text-indent: -9999px; position: absolute; top: 110px;}
+
+.footer_law h3 {width: 110px; height: 38px; background: url(../images/footer_logo2.png) no-repeat; text-indent: -9999px; position: absolute; top: 142px;}
+
+.family_site {background: white; width: 156px; height: 23px; border: 1px solid #696969; border-radius: 5px; position: absolute; top: 106px; right: 0;}
+
+.family_site h3 {line-height: 21px; font-size: 12px; font-family: 'hangeulNuri-regular'; color: #696969; font-weight: normal; padding: 0px 9px; background: url(../images/familysite_down.png) no-repeat 131px center;}
+
+.family_site ul {width: 156px; height: 171px; border: 1px solid #696969; border-radius: 5px; padding: 5px 9px; background: white; position: absolute; left: -1px;}
+
+.family_site ul a {font-family: 'hangeulNuri-regular'; color: #696969;}
+
+.family_site ul li {margin: 0; font-size: 10px; line-height: 18px;}
+
+.footer_bottom_cont1 {position: absolute; top: 110px; left: 145px; margin-bottom: 10px;}
+
+.footer_bottom_cont1 p { float: left; margin-right: 5px;}
+
+.footer_bottom_cont2 { position: absolute; top: 133px; left: 145px;}
+
+.footer_bottom>p {position: absolute; top: 204px; left: 145px;}
+
+.mark_wa {width: 76px; height: 54px; background: url(../images/wa.png) no-repeat; display: block; text-indent: -9999px; position: absolute; top: 163px; right: 83px;}
+
+.mark_isms {width: 60px; height: 54px; background: url(../images/isms.png) no-repeat; display: block; text-indent: -9999px; position: absolute; top: 163px; right: 0px;}

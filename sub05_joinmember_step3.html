@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BUSTAGO 회원가입</title>
+  <link rel="stylesheet" type="text/css" href="./css/layout.css">
+  <link rel="stylesheet" type="text/css" href="./css/05sub_style.css">
+  <style type="text/css">
+    .joinmember_step li {
+      float: left;
+      text-align: center;
+      line-height: 82px;
+      font-family: 'hangeulNuri-regular';
+      font-size: 18px;
+      color: #2d334a;
+    }
+
+    .joinmember_step .step1 {
+      width: 293px;
+      height: 82px;
+      background: #fff;
+      border-bottom: 2px solid #999999;
+    }
+
+    .joinmember_step .step2 {
+      width: 293px;
+      height: 82px;
+      background: url(./images/tk_step_2.png) left center no-repeat, #fff;
+      border-bottom: 2px solid #999999;
+    }
+
+    .joinmember_step .step3 {
+      width: 292px;
+      height: 82px;
+      background: url(./images/tk_step_4.png) left center no-repeat, url(./images/tk_step_onback.png) center;
+      color: #fff;
+      border: 2px solid #fff;
+      border-left: 0;
+      border-right: 0;
+    }
+
+    .joinmember_step .step4 {
+      width: 292px;
+      height: 82px;
+      background: url(./images/tk_step_1.png) left center no-repeat, #fff;
+      border-bottom: 2px solid #999999;
+    }
+
+    .joinmember_step .step_none {
+      background: url(./images/tk_step_3.png);
+      width: 30px;
+      height: 82px;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header" class="header">
+    <h1 class="logo"><a href="#">버스타고</a></h1>
+
+    <nav class="gnb">
+      <h2 class="blind">주요메뉴</h2>
+      <ul>
+        <li class="menu1"><a href="#">승차권</a>
+          <ul>
+            <li><a href="#">예매하기</a></li>
+            <li><a href="#">조회/변경/취소</a></li>
+          </ul>
+        </li>
+        <li class="menu2"><a href="#">운행정보</a>
+          <ul>
+            <li><a href="#">노선안내</a></li>
+            <li><a href="#">터미널안내</a></li>
+            <li><a href="#">버스회사 안내</a></li>
+          </ul>
+        </li>
+        <li class="menu3"><a href="#">이용안내</a>
+          <ul>
+            <li><a href="#">서비스 소개</a></li>
+            <li><a href="#">취소 수수료 안내</a></li>
+            <li><a href="#">모바일 이용</a></li>
+          </ul>
+        </li>
+        <li class="menu4"><a href="#">고객지원</a>
+          <ul>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">자주묻는질문(FAQ)</a></li>
+            <li><a href="#">1:1 문의하기</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="topmenu">
+      <h2 class="blind">사용자메뉴</h2>
+      <ul>
+        <li><a class="sitemap" href="#">SITEMAP</a></li>
+        <li><a class="login" href="#">LOGIN</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="content" class="content">
+    <div class="cont_title_wrap">
+      <h2 class="cont_title">회원가입</h2>
+    </div>
+
+    <section class="lnb">
+      <div class="lnb_wrap">
+        <ul>
+          <li><a href="#" class="homepage">메인페이지 이동</a></li>
+          <li>
+            <div class="menu_on">
+              <a href="#" class="menu_1depth_on">회원정보</a>
+              <ul class="blind">
+                <li><a href="#">회원정보</a></li>
+                <li><a href="#">약관 및 처리방침</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="menu_2depth">
+              <a href="#" class="menu_2depth_on">회원가입</a>
+              <ul class="blind">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">아이디 찾기</a></li>
+                <li><a href="#">비밀번호 찾기</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="joinmember_step">
+      <h3 class="blind">회원가입 절차</h3>
+      <ul>
+        <li class="step1">본인인증</li>
+        <li class="step2">약관동의</li>
+        <li class="step3">정보입력</li>
+        <li class="step4">가입완료</li>
+        <li class="step_none"></li>
+      </ul>
+    </section>
+
+    <section class="membership_userinform">
+      <form name="" action="" method="" class="user_input_form">
+        <fieldset>
+          <legend>회원정보</legend>
+          <ul class="all_input_wrap">
+            <li>
+              <label for="membership_id">아이디 *</label>
+              <input type="text" id="membership_id">
+              <button type="submit" class="userid_check">중복확인</button>
+              <span class="add_desc">(영문/숫자, 6~20자)</span>
+            </li>
+            <li>
+              <label for="membership_pw">비밀번호 *</label>
+              <input type="password" id="membership_pw">
+              <span class="add_desc">(영문/숫자/특수문자 조합, 6~20자)</span>
+            </li>
+            <li>
+              <label for="membership_pw_confirm">비밀번호 확인 *</label>
+              <input type="password" id="membership_pw_confirm">
+            </li>
+            <li>
+              <label for="membership_name">이름 *</label>
+              <input type="text" id="membership_name">
+            </li>
+            <li class="list_user_birth">
+              <label>생년월일 *</label>
+              <input type="text" id="membership_year" class="birth_year"><label for="membership_year">년</label>
+              <ul></ul>
+              <input type="text" id="membership_month" class="birth_month"><label for="membership_month">월</label>
+              <ul></ul>
+              <input type="text" id="membership_day" class="birth_day"><label for="membership_day">일</label>
+              <ul></ul>
+              <input type="radio" id="solar_cal" name="birth_cal_type"><label for="solar_cal">양력</label>
+              <input type="radio" id="lunar_cal" name="birth_cal_type"><label for="lunar_cal">음력</label>
+            </li>
+            <li class="list_user_phone">
+              <label for="membership_phone">휴대폰 번호</label>
+              <input type="text" id="membership_phone" maxlength="3">
+              <span class="connect_word"> - </span>
+              <input type="text" id="membership_phone" maxlength="4">
+              <span class="connect_word"> - </span>
+              <input type="text" id="membership_phone" maxlength="4">
+            </li>
+            <li>
+              <label for="membership_veteranno">보훈번호</label>
+              <input type="text" id="membershop_veteranno" maxlength="10" minlength="8">
+              <button type="submit" class="userid_check">중복확인</button>
+              <span class="add_desc">(8~10자리)</span>
+            </li>
+            <li class="list_user_email">
+              <label for="membership_emailid">이메일 *</label>
+              <input type="text" id="membership_emailid">
+              <span class="connect_word"> @ </span>
+              <input type="text" id="membership_emaildomain">
+              <div class="domain_option_select">직접 입력</div>
+              <ul class="email_domain_list">
+                <li><a href="">직접 입력</a></li>
+                <li><a href="">naver.com</a></li>
+                <li><a href="">hanmail.net</a></li>
+                <li><a href="">daum.net</a></li>
+                <li><a href="">nate.com</a></li>
+                <li><a href="">gmail.com</a></li>
+                <li><a href="">korea.com</a></li>
+              </ul>
+            </li>
+          </ul>
+        </fieldset>
+      </form>
+
+      <div class="step_button">
+        <a href="" class="button_prev">이전</a>
+        <button type="submit" class="button_membership_submmit">가입 완료</button>
+      </div>
+    </section>
+
+
+    <aside class="quickmenu">
+      <a href="#" class="quick_tk">승차권 예매</a>
+      <a href="#" class="quick_confirm">조회/변경/취소</a>
+      <a href="#" class="quick_top">맨 위로 이동</a>
+    </aside>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="footer_top">
+      <h2>사이트 이용안내</h2>
+
+      <div class="footer_law">
+        <h3>약관 및 정책</h3>
+        <ul>
+          <li><a href="#">홈페이지 이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">이메일무단수집거부</a></li>
+          <li><a href="#">사업자정보</a></li>
+        </ul>
+      </div>
+
+      <div class="family_site">
+        <h3>Family Site</h3>
+        <ul class="blind">
+          <li><a href="http://www.molit.go.kr/portal.do" target="_blank">국토교통부</a></li>
+          <li><a href="http://www.visitkorea.or.kr/intro.html" target="_blank">한국관광공사</a></li>
+          <li><a href="http://www.bus.or.kr/" target="_blank">전국버스운송사업조합연합회</a></li>
+          <li><a href="http://www.sbus.or.kr/" target="_blank">서울특별시버스운송사업조합</a></li>
+          <li><a href="http://www.incheonbus.or.kr/" target="_blank">인천광역시버스운송사업조합</a></li>
+          <li><a href="http://www.daejeonbus.or.kr/" target="_blank">대전광역시버스운송사업조합</a></li>
+          <li><a href="http://www.ulsanbus.or.kr/" target="_blank">울산광역시버스운송사업조합</a></li>
+          <li><a href="http://www.gbus.or.kr/" target="_blank">경기도버스운송사업조합</a>
+          <li><a href="http://www.busta.or.kr/" target="_blank">전라북도버스운송사업조합</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer_bottom">
+      <div class="footer_bottom_cont1">
+        <p>로카모빌리티(주)</p>
+        <p>사업자등록번호:129-86-38970 통신판매업 2014-서울금천-1119</p>
+      </div>
+      <div class="footer_bottom_cont2">
+        <address>주소 : 서울시 동작구 보라매로5길 롯데타워 8층</address>
+        <p>이메일 : interoper@locamobility.co.kr</p>
+        <p>대표전화 : 1644-2992</p>
+      </div>
+
+      <p>COPYRIGHT ⓒ 2014 전국버스운송조합연합회 ALL RIGHTS RESERVED.</p>
+
+      <a href="#" class="mark_wa">웹 접근성 인증마크</a>
+      <a href="#" class="mark_isms">정보보호관리체계인증</a>
+    </div>
+  </footer>
+</body>
+
+</html>

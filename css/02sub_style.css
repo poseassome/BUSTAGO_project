@@ -1,0 +1,106 @@
+/* 서브_운행정보 */
+/* 노선정보  입력칸 */
+section.route_search_wrap{width:1200px; height:331px; margin:0 auto 45px; background: #3f4764; padding:15px 20px; border-radius: 5px;}
+.route_search_wrap h3{text-align: center; height: 30px; color:#fff; font-size: 30px; font-family: 'HangeulNuri-Bold';margin: 10px 0 15px; line-height: 30px;}
+.user_route_input{width:1160px; height:248px; background: #fff; border-radius: 5px; padding: 45px 33px;}
+.user_route_input label{font-family: 'GmarketSansMedium'; font-size:24px; color:#2d334a; width:110px; display: block; text-align: left; float:left;}
+.route_input_list li>div{width:410px; height:30px; background: #fff; border: 1px solid #38405e; border-radius: 5px; padding:4px 8px; float:left;}
+.route_input_list input{width:300px; height:20px; line-height:20px; padding-top:5px; background:transparent; border:none; font-family: 'GmarketSansMedium'; font-size: 20px; color:#2d334a; float:left;}
+.route_input_list a.search_icon{width:20px; height:20px; background: url(../images/srch_icon.jpg) no-repeat; background-size: contain; text-indent: -9999px; float: right;}
+.route_input_list a.date_icon{width:20px; height:20px; background: url(../images/icon_date.jpg) no-repeat; background-size: contain; text-indent: -9999px; float: right;}
+.route_input_list a.clock_icon{width:20px; height:20px; background: url(../images/clck_icon.jpg) no-repeat; background-size: contain; text-indent: -9999px; float: right;}
+
+.route_input_list>li{width:520px; height:30px; float:left; margin-bottom: 30px;}
+.route_input_list>li:nth-child(2n-1){margin-right: 43px;}
+button.route_inform_search{width:523px; height:39px; font-family:'hangeulNuri-Bold'; font-size: 24px; color:#2d334a; background:url(../images/sub2_search_button.jpg) no-repeat; margin: 0 auto; display: block;}
+button.route_inform_search:hover{background:url(../images/sub2_search_button_act.jpg) no-repeat;}
+
+
+/* 조회 결과보기 */
+/* 입력 노선 */
+section.input_route{width:1200px; height: 82px; margin:0 auto; border:3px solid #bae8e8; background:#fff; text-align: center; font-family:'GmarketSansMedium'; font-size:28px; padding: 24px 0;}
+
+/* 운행정보 리스트 */
+section.route_drive_list {width:1200px; margin: 30px auto 0;}
+.drive_list_table {width:1200px; margin: 0 auto; font-size:20px; border-collapse: collapse; text-align: center;}
+.drive_list_table tr{height:55px; border:2px solid #b4b5bc; border-left: 0;border-right: 0;}
+.drive_list_table thead{font-family: 'GmarketSansMedium'; background: #e2f5f5;}
+th.th_time{width:190px;}
+th.th_corp{width:275px;}
+th.th_adult, .th_student, .th_kid{width:165px;}
+th.th_restseat{width:240px;}
+.drive_list_table td>span{font-family: 'GmarketSansMedium';}
+
+.table_moreinform {border-collapse: separate; border-spacing: 0; border: 2px solid #2d334a; width:1200px; height:202px; font-size:16px;}
+
+.table_moreinform tr:first-child>*{border-bottom: 2px solid #b4b5bc;}
+tr.click_moreinform .table_moreinform th {background: #e2f5f5; font-family: 'GmarketSansMedium';}
+.click_moreinform td{padding:0px;}
+
+.table_moreinform th{width:188px;}
+.table_moreinform tr:first-child td:nth-child(2) {width:275px;}
+.table_moreinform tr:first-child td:nth-child(2) {width:275px;}
+.table_moreinform ul {text-align: left; padding: 18px 45px;}
+
+section.board_paging {font-family: 'GmarketSansMedium'; font-size:20px; width:fit-content; height:17px; margin: 40px auto 90px;}
+a.move_nextpage {text-indent: -9999px; display: block; width:9px; height:17px; background: url(../images/page_moveicon_next.jpg) no-repeat;}
+a.move_lastpage {text-indent: -9999px; display: block; width:14px; height:17px; background: url(../images/page_moveicon_last.jpg) no-repeat;}
+a.move_prevpage {text-indent: -9999px; display: block; width:9px; height:17px; background: url(../images/page_moveicon_prev.jpg) no-repeat;}
+a.move_firstpage {text-indent: -9999px; display: block; width:14px; height:17px; background: url(../images/page_moveicon_first.jpg) no-repeat;}
+.board_paging li {float:left; margin:0 15px; line-height: 17px;}
+.board_paging ul {float: left;}
+a.page_no.on{font-family: 'GmarketSansBold';}
+
+
+
+/* 터미널 안내 */
+/* 지역 선택 */
+section.terminal_search_wrap {width:1200px; height:340px; background:#bae8e8; border-radius:5px; margin: 0 auto; padding:11px 20px;}
+.terminal_search_wrap a {display:block; width:260px; height:50px;
+   background: #fff; border: 2px solid #2d334a; border-radius: 5px;
+   font-family: 'GmarketSansMedium'; font-size: 20px; color:#2d334a;
+   text-align: center; line-height: 50px;}
+.terminal_search_wrap a.on {background: #2d334a; color:#fff;}
+.terminal_search_wrap ul {background: #fff; width:1160px; height:318px;  padding:13px 28px;}
+.terminal_search_wrap ul li{float:left; margin-right: 20px; margin-bottom: 9px;}
+.terminal_search_wrap ul li:nth-child(4n){margin-right: 0;}
+
+/* 터미널 검색창 */
+a.terminal_search_icon{display: block; width:19px; height:19px; background: url(../images/srch_icon.jpg) no-repeat; background-size: cover; text-indent: -9999px; float: right;}
+div.terminal_input_wrap input{border:0; color:#2d334a; background:#fff; float:left; width:250px; height:19px; font-family: 'GmarketSansMedium'; font-size: 18px; padding-top:5px;}
+div.terminal_input_wrap {width:410px; height:30px; background-color: #fff; border: 1px solid #2d334a; border-radius: 5px; padding:5px 8px; float: left;;}
+.search_keyword h4{font-family: 'GmarketSansMedium'; font-size: 18px; color:#2d334a; float: left; margin-right: 10px; padding-top:3px;}
+.search_keyword {width:fit-content; height: 31px; margin: 50px auto;}
+
+/* 터미널 리스트 표 */
+table.table_terminal_list,
+table.table_buscorp_list{width:1200px; margin:0 auto; font-size: 20px; text-align: center; border-collapse: collapse;}
+.table_terminal_list th,
+.table_buscorp_list th{font-family: 'GmarketSansMedium';}
+.table_terminal_list tr,
+.table_buscorp_list tr {height: 55px; border: 1px solid #b4b5bc; border-left: 0; border-right:0 ;}
+th.list_number{width: 96px;}
+th.list_area{width: 96px;}
+th.list_name{width:191px;}
+th.list_address{width:663px;}
+th.list_map{width: 154px;}
+.table_terminal_list tbody tr td:nth-child(4),
+.table_buscorp_list tbody tr td:nth-child(3) {text-align: left;}
+.table_terminal_list a.button_terminalmap,
+.table_buscorp_list a.button_corpwebsite {width: 94px; height:30px; display: block; border-radius: 5px; background-color: #272343; color: #fff;
+font-family: 'hangeulNuri-Bold'; font-size:16px; line-height: 30px; margin: auto; text-align: center;}
+
+/* 버스회사 리스트 검색창 */
+div.type_area h4 {width:130px; height:31px; background: #fff; border-radius: 5px; border:1px solid #2d334a; padding:5px;
+text-align: left; line-height: 23px; background: url(../images/sub_type_selectdown.jpg) right center no-repeat; border-right: 0;;}
+div.type_area ul {width:130px; height:220px; background: #fff; border-radius: 5px; border:1px solid #2d334a; padding:5px; font-family: 'GmarketSansMedium'; font-size:18px; position:absolute; top:31px;}
+.type_area {position: relative; float: left;}
+.type_area ul li {height:21px;}
+.type_area ul a {color:#adb2c4;}
+
+/* 버스회사 리스트 표 */
+th.list_corpname{width:138px;}
+th.list_corpaddress{width:626px;}
+th.list_corptel{width:205px;}
+th.list_corpweb{width: 135px;}
+.table_buscorp_list tbody tr td:nth-child(3) {padding:0 20px;}

@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>승차권 예매하기</title>
+  <link rel="stylesheet" type="text/css" href="./css/layout.css">
+  <link rel="stylesheet" type="text/css" href="./css/01sub_style.css">
+  <style type="text/css">
+    .ticket_step {
+      margin-bottom: 45px;
+    }
+
+    .ticket_step>ul li {
+      float: left;
+      line-height: 82px;
+      text-align: center;
+    }
+
+    .ticket_step>ul {
+      width: 1200px;
+      height: 82px;
+      margin: 0 auto;
+      font-family: 'hangeulNuri-regular';
+      font-size: 18px;
+      color: #2d334a
+    }
+
+    .ticket_step1 {
+      width: 389px;
+      height: 82px;
+      background: #2d334a;
+      border: 2px solid #fff;
+      border-right: 0;
+    }
+
+    .ticket_step2 {
+      width: 387px;
+      height: 82px;
+      background: url(./images/tk_step_1.png) left center no-repeat, #fff;
+      border-bottom: 2px solid #999;
+      border-top: 2px solid #fff;
+    }
+
+    .ticket_step3 {
+      width: 394px;
+      height: 82px;
+      background: url(./images/tk_step_2.png) left center no-repeat, #fff;
+      border-bottom: 2px solid #999;
+      ;
+      border-top: 2px solid #fff;
+      padding-left: 30px;
+    }
+
+    .ticket_step_none {
+      width: 30px;
+      height: 82px;
+      background: url(./images/tk_step_3.png) no-repeat;
+    }
+
+    div.ticket_step>ul li.on {
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header" class="header">
+    <h1 class="logo"><a href="#">버스타고</a></h1>
+
+    <nav class="gnb">
+      <h2 class="blind">주요메뉴</h2>
+      <ul>
+        <li class="menu1"><a href="#">승차권</a>
+          <ul>
+            <li><a href="#">예매하기</a></li>
+            <li><a href="#">조회/변경/취소</a></li>
+          </ul>
+        </li>
+        <li class="menu2"><a href="#">운행정보</a>
+          <ul>
+            <li><a href="#">노선안내</a></li>
+            <li><a href="#">터미널안내</a></li>
+            <li><a href="#">버스회사 안내</a></li>
+          </ul>
+        </li>
+        <li class="menu3"><a href="#">이용안내</a>
+          <ul>
+            <li><a href="#">서비스 소개</a></li>
+            <li><a href="#">취소 수수료 안내</a></li>
+            <li><a href="#">모바일 이용</a></li>
+          </ul>
+        </li>
+        <li class="menu4"><a href="#">고객지원</a>
+          <ul>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">자주묻는질문(FAQ)</a></li>
+            <li><a href="#">1:1 문의하기</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="topmenu">
+      <h2 class="blind">사용자메뉴</h2>
+      <ul>
+        <li><a class="sitemap" href="#">SITEMAP</a></li>
+        <li><a class="login" href="#">LOGIN</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="content" class="content">
+
+    <div class="cont_title_wrap">
+      <h2 class="cont_title">예매하기</h2>
+    </div>
+
+    <section class="lnb">
+      <div class="lnb_wrap">
+        <ul>
+          <li><a href="#" class="homepage">메인페이지 이동</a></li>
+          <li>
+            <div class="menu_on">
+              <a href="#" class="menu_1depth_on">승차권</a>
+              <ul class="blind">
+                <li><a href="#">승차권</a></li>
+                <li><a href="#">운행정보</a></li>
+                <li><a href="#">이용안내</a></li>
+                <li><a href="#">고객지원</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="menu_2depth">
+              <a href="#" class="menu_2depth_on">예매하기</a>
+              <ul class="blind">
+                <li><a href="#">예매하기</a></li>
+                <li><a href="#">조회/변경/취소</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="ticket_step">
+      <h3 class="blind">승차권 예매 단계</h3>
+      <ul>
+        <li class="ticket_step1 on">예매정보입력</li>
+        <li class="ticket_step2">결제하기</li>
+        <li class="ticket_step3">예매완료</li>
+        <li class="ticket_step_none"></li>
+      </ul>
+    </div>
+
+    <secction class="tk_inform_box">
+      <h3 class="blind">예매정보입력</h3>
+      <ul>
+        <li class="select_oneway">
+          <h4 class="select_on"><a href="#">편 도</a></h4>
+          <!-- <h4 class="select_off"><a href="#">편도</a></h4> -->
+
+          <form class="oneway_box" name="" action="" method="">
+            <fieldset>
+              <legend class="blind">터미널 검색</legend>
+
+              <label for="depart_search">출발지</label>
+              <div class="depart_input_wrap">
+                <input type="text" class="depart_input" id="depart_search" placeholder="출발지 검색">
+                <a href="#" class="search_icon">검색</a>
+              </div>
+              <label for="arrive_search">도착지</label>
+              <div class="arrive_input_wrap">
+                <input type="text" class="arrive_input" id="arrive_search" placeholder="도착지 검색">
+                <a href="#" class="search_icon">검색</a>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="blind">가는일정 선택</legend>
+
+              <label for="depart_date">가는 날</label>
+              <div class="date_select1">
+                <div class="depart_date_wrap">
+                  <input type="text" class="calendar" id="depart_date" value="2021-08-10" readonly>
+                  <a href="#" class="date_icon">선택</a>
+                </div>
+                <div class="month_wrap blind">
+                  <table summary="월별 달력" class="month_now">
+                    <caption>2021년 8월</caption>
+                    <a href="#" class="date_next">다음 달</a>
+                    <thead>
+                      <tr>
+                        <th>일</th>
+                        <th>월</th>
+                        <th>화</th>
+                        <th>수</th>
+                        <th>목</th>
+                        <th>금</th>
+                        <th>토</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td>9</td>
+                        <td><a href="#">10</a></td>
+                        <td><a href="#">11</a></td>
+                        <td><a href="#">12</a></td>
+                        <td><a href="#">13</a></td>
+                        <td><a href="#">14</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">15</a></td>
+                        <td><a href="#">16</a></td>
+                        <td><a href="#">17</a></td>
+                        <td><a href="#">18</a></td>
+                        <td><a href="#">19</a></td>
+                        <td><a href="#">20</a></td>
+                        <td><a href="#">21</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">22</a></td>
+                        <td><a href="#">21</a></td>
+                        <td><a href="#">23</a></td>
+                        <td><a href="#">24</a></td>
+                        <td><a href="#">25</a></td>
+                        <td><a href="#">26</a></td>
+                        <td><a href="#">27</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">28</a></td>
+                        <td><a href="#">29</a></td>
+                        <td><a href="#">30</a></td>
+                        <td><a href="#">31</a></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+
+                  </table>
+                  <table summary="월별 달력" class="month_next">
+                    <caption>2021년 9월</caption>
+                    <a href="#" class="date_prev">이전 달</a>
+                    <thead>
+                      <tr>
+                        <th>일</th>
+                        <th>월</th>
+                        <th>화</th>
+                        <th>수</th>
+                        <th>목</th>
+                        <th>금</th>
+                        <th>토</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="#">1</a></td>
+                        <td><a href="#">2</a></td>
+                        <td><a href="#">3</a></td>
+                        <td><a href="#">4</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">5</a></td>
+                        <td><a href="#">6</a></td>
+                        <td><a href="#">7</a></td>
+                        <td><a href="#">8</a></td>
+                        <td><a href="#">9</a></td>
+                        <td><a href="#">10</a></td>
+                        <td><a href="#">11</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">12</a></td>
+                        <td><a href="#">13</a></td>
+                        <td><a href="#">14</a></td>
+                        <td><a href="#">15</a></td>
+                        <td><a href="#">16</a></td>
+                        <td><a href="#">17</a></td>
+                        <td><a href="#">18</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">19</a></td>
+                        <td><a href="#">20</a></td>
+                        <td><a href="#">21</a></td>
+                        <td><a href="#">22</a></td>
+                        <td><a href="#">23</a></td>
+                        <td><a href="#">24</a></td>
+                        <td><a href="#">25</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">26</a></td>
+                        <td><a href="#">27</a></td>
+                        <td><a href="#">28</a></td>
+                        <td><a href="#">29</a></td>
+                        <td><a href="#">30</a></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <label for="depart_time">출발시간</label>
+              <div class="time_select1">
+                <div class="depart_time_wrap">
+                  <input type="text" class="time" id="depart_time" value="00:00" readonly>
+                  <a href="#" class="time_icon">선택</a>
+                </div>
+                <ul class="time_list1 blind">
+                  <li><a href="#">00:00</a></li>
+                  <li><a href="#">01:00</a></li>
+                  <li><a href="#">02:00</a></li>
+                  <li><a href="#">03:00</a></li>
+                  <li><a href="#">04:00</a></li>
+                  <li><a href="#">05:00</a></li>
+                  <li><a href="#">06:00</a></li>
+                  <li><a href="#">07:00</a></li>
+                  <li><a href="#">08:00</a></li>
+                  <li><a href="#">09:00</a></li>
+                  <li><a href="#">10:00</a></li>
+                  <li><a href="#">11:00</a></li>
+                  <li><a href="#">12:00</a></li>
+                  <li><a href="#">13:00</a></li>
+                  <li><a href="#">15:00</a></li>
+                  <li><a href="#">16:00</a></li>
+                  <li><a href="#">17:00</a></li>
+                  <li><a href="#">18:00</a></li>
+                  <li><a href="#">19:00</a></li>
+                  <li><a href="#">20:00</a></li>
+                  <li><a href="#">21:00</a></li>
+                  <li><a href="#">22:00</a></li>
+                  <li><a href="#">23:00</a></li>
+                </ul>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="blind">오는일정 선택</legend>
+
+              <label for="back_date">오는 날</label>
+              <div class="return_date_wrap">
+                <input type="text" class="calendar" id="back_date" disabled>
+              </div>
+
+              <label for="back_time">출발시간</label>
+              <div class="return_time_wrap">
+                <input type="text" class="time" id="back_time" disabled>
+              </div>
+            </fieldset>
+
+            <fieldset class="people_form">
+              <legend class="blind">인원선택</legend>
+
+              <label for="adult">성인</label>
+              <div class="people_select">
+                <div class="people_wrap">
+                  <input type="text" class="adult" id="adult" value="0명" readonly>
+                  <a href="#" class="people_down">선택</a>
+                </div>
+                <ul class="number_list opt1 blind">
+                  <li><a href="#">0명</a></li>
+                  <li><a href="#">1명</a></li>
+                  <li><a href="#">2명</a></li>
+                  <li><a href="#">3명</a></li>
+                  <li><a href="#">4명</a></li>
+                  <li><a href="#">5명</a></li>
+                  <li><a href="#">6명</a></li>
+                  <li><a href="#">7명</a></li>
+                  <li><a href="#">8명</a></li>
+                  <li><a href="#">9명</a></li>
+                  <li><a href="#">10명</a></li>
+                </ul>
+              </div>
+
+              <label for="student">중고생</label>
+              <div class="people_select">
+                <div class="people_wrap">
+                  <input type="text" class="student" id="student" value="0명" readonly>
+                  <a href="#" class="people_down">선택</a>
+                </div>
+                <ul class="number_list opt2 blind">
+                  <li><a href="#">0명</a></li>
+                  <li><a href="#">1명</a></li>
+                  <li><a href="#">2명</a></li>
+                  <li><a href="#">3명</a></li>
+                  <li><a href="#">4명</a></li>
+                  <li><a href="#">5명</a></li>
+                  <li><a href="#">6명</a></li>
+                  <li><a href="#">7명</a></li>
+                  <li><a href="#">8명</a></li>
+                  <li><a href="#">9명</a></li>
+                  <li><a href="#">10명</a></li>
+                </ul>
+              </div>
+
+              <label for="kid">아동</label>
+              <div class="people_select">
+                <div class="people_wrap kid">
+                  <input type="text" class="kid" id="kid" value="0명" readonly>
+                  <a href="#" class="people_down">선택</a>
+                </div>
+                <ul class="number_list opt3 blind">
+                  <li><a href="#">0명</a></li>
+                  <li><a href="#">1명</a></li>
+                  <li><a href="#">2명</a></li>
+                  <li><a href="#">3명</a></li>
+                  <li><a href="#">4명</a></li>
+                  <li><a href="#">5명</a></li>
+                  <li><a href="#">6명</a></li>
+                  <li><a href="#">7명</a></li>
+                  <li><a href="#">8명</a></li>
+                  <li><a href="#">9명</a></li>
+                  <li><a href="#">10명</a></li>
+                </ul>
+              </div>
+            </fieldset>
+            <button type="submit" value="search" class="tk_reserve">예 매 하 기</button>
+          </form>
+        </li>
+
+        <li class="select_return">
+          <h4 class="select_off"><a href="#">왕 복</a></h4>
+          <!-- <h4 class="select_on"><a href="#">왕 복</a></h4> -->
+          <!-- <form class="return_box" name="" action="" method="">
+            <fieldset>
+              <legend class="blind">터미널 검색</legend>
+
+              <label for="depart_input">출발지</label>
+              <div class="depart_input_wrap">
+                <input type="text" class="depart_input" id="depart_input" placeholder="출발지 검색">
+                <a href="#" class="search_icon">검색</a>
+              </div>
+
+              <label for="arrive_input">도착지</label>
+              <div class="arrive_input_wrap">
+                <input type="text" class="arrive_input" id="arrive_input" placeholder="도착지 검색">
+                <a href="#" class="search_icon">검색</a>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="blind">가는일정 선택</legend>
+
+              <label for="depart_date">가는날</label>
+              <div class="date_select1">
+                <div class="depart_date_wrap">
+                  <input type="text" class="calendar" id="depart_date" value="2021-08-10" readonly>
+                  <a href="#" class="date_icon">선택</a>
+                </div>
+                <div class="month_wrap">
+                  <table summary="월별 달력" class="month_now">
+                    <caption>2021년 8월</caption>
+                    <a href="#" class="date_next">다음 달</a>
+                    <thead>
+                      <tr>
+                        <th>일</th>
+                        <th>월</th>
+                        <th>화</th>
+                        <th>수</th>
+                        <th>목</th>
+                        <th>금</th>
+                        <th>토</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td>9</td>
+                        <td><a href="#">10</a></td>
+                        <td><a href="#">11</a></td>
+                        <td><a href="#">12</a></td>
+                        <td><a href="#">13</a></td>
+                        <td><a href="#">14</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">15</a></td>
+                        <td><a href="#">16</a></td>
+                        <td><a href="#">17</a></td>
+                        <td><a href="#">18</a></td>
+                        <td><a href="#">19</a></td>
+                        <td><a href="#">20</a></td>
+                        <td><a href="#">21</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">22</a></td>
+                        <td><a href="#">21</a></td>
+                        <td><a href="#">23</a></td>
+                        <td><a href="#">24</a></td>
+                        <td><a href="#">25</a></td>
+                        <td><a href="#">26</a></td>
+                        <td><a href="#">27</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">28</a></td>
+                        <td><a href="#">29</a></td>
+                        <td><a href="#">30</a></td>
+                        <td><a href="#">31</a></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+
+                  </table>
+                  <table summary="월별 달력" class="month_next">
+                    <caption>2021년 9월</caption>
+                    <a href="#" class="date_prev">이전 달</a>
+                    <thead>
+                      <tr>
+                        <th>일</th>
+                        <th>월</th>
+                        <th>화</th>
+                        <th>수</th>
+                        <th>목</th>
+                        <th>금</th>
+                        <th>토</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="#">1</a></td>
+                        <td><a href="#">2</a></td>
+                        <td><a href="#">3</a></td>
+                        <td><a href="#">4</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">5</a></td>
+                        <td><a href="#">6</a></td>
+                        <td><a href="#">7</a></td>
+                        <td><a href="#">8</a></td>
+                        <td><a href="#">9</a></td>
+                        <td><a href="#">10</a></td>
+                        <td><a href="#">11</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">12</a></td>
+                        <td><a href="#">13</a></td>
+                        <td><a href="#">14</a></td>
+                        <td><a href="#">15</a></td>
+                        <td><a href="#">16</a></td>
+                        <td><a href="#">17</a></td>
+                        <td><a href="#">18</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">19</a></td>
+                        <td><a href="#">20</a></td>
+                        <td><a href="#">21</a></td>
+                        <td><a href="#">22</a></td>
+                        <td><a href="#">23</a></td>
+                        <td><a href="#">24</a></td>
+                        <td><a href="#">25</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">26</a></td>
+                        <td><a href="#">27</a></td>
+                        <td><a href="#">28</a></td>
+                        <td><a href="#">29</a></td>
+                        <td><a href="#">30</a></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <label for="depart_time">출발시간</label>
+              <div class="time_select1">
+                <div class="depart_time_wrap">
+                  <input type="text" class="time" id="depart_time" value="00:00" readonly>
+                  <a href="#" class="time_icon">선택</a>
+                </div>
+                <ul class="time_list1">
+                  <li><a href="#">00:00</a></li>
+                  <li><a href="#">01:00</a></li>
+                  <li><a href="#">02:00</a></li>
+                  <li><a href="#">03:00</a></li>
+                  <li><a href="#">04:00</a></li>
+                  <li><a href="#">05:00</a></li>
+                  <li><a href="#">06:00</a></li>
+                  <li><a href="#">07:00</a></li>
+                  <li><a href="#">08:00</a></li>
+                  <li><a href="#">09:00</a></li>
+                  <li><a href="#">10:00</a></li>
+                  <li><a href="#">11:00</a></li>
+                  <li><a href="#">12:00</a></li>
+                  <li><a href="#">13:00</a></li>
+                  <li><a href="#">15:00</a></li>
+                  <li><a href="#">16:00</a></li>
+                  <li><a href="#">17:00</a></li>
+                  <li><a href="#">18:00</a></li>
+                  <li><a href="#">19:00</a></li>
+                  <li><a href="#">20:00</a></li>
+                  <li><a href="#">21:00</a></li>
+                  <li><a href="#">22:00</a></li>
+                  <li><a href="#">23:00</a></li>
+                </ul>
+              </div>
+            </fieldset>
+
+
+            <fieldset>
+              <legend class="blind">오는일정 선택</legend>
+
+              <label for="back_date">오는날</label>
+              <div class="date_select2">
+                <div class="return_date_wrap">
+                  <input type="text" class="calendar" id="back_date" value="2021-08-10">
+                  <a href="#" class="date_icon">선택</a>
+                </div>
+                <div class="month_wrap2">
+                  <table summary="월별 달력" class="month_now">
+                    <caption>2021년 8월</caption>
+                    <a href="#" class="date_next">다음 달</a>
+                    <thead>
+                      <tr>
+                        <th>일</th>
+                        <th>월</th>
+                        <th>화</th>
+                        <th>수</th>
+                        <th>목</th>
+                        <th>금</th>
+                        <th>토</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td>9</td>
+                        <td><a href="#">10</a></td>
+                        <td><a href="#">11</a></td>
+                        <td><a href="#">12</a></td>
+                        <td><a href="#">13</a></td>
+                        <td><a href="#">14</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">15</a></td>
+                        <td><a href="#">16</a></td>
+                        <td><a href="#">17</a></td>
+                        <td><a href="#">18</a></td>
+                        <td><a href="#">19</a></td>
+                        <td><a href="#">20</a></td>
+                        <td><a href="#">21</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">22</a></td>
+                        <td><a href="#">21</a></td>
+                        <td><a href="#">23</a></td>
+                        <td><a href="#">24</a></td>
+                        <td><a href="#">25</a></td>
+                        <td><a href="#">26</a></td>
+                        <td><a href="#">27</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">28</a></td>
+                        <td><a href="#">29</a></td>
+                        <td><a href="#">30</a></td>
+                        <td><a href="#">31</a></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+
+                  </table>
+                  <table summary="월별 달력" class="month_next">
+                    <caption>2021년 9월</caption>
+                    <a href="#" class="date_prev">이전 달</a>
+                    <thead>
+                      <tr>
+                        <th>일</th>
+                        <th>월</th>
+                        <th>화</th>
+                        <th>수</th>
+                        <th>목</th>
+                        <th>금</th>
+                        <th>토</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="#">1</a></td>
+                        <td><a href="#">2</a></td>
+                        <td><a href="#">3</a></td>
+                        <td><a href="#">4</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">5</a></td>
+                        <td><a href="#">6</a></td>
+                        <td><a href="#">7</a></td>
+                        <td><a href="#">8</a></td>
+                        <td><a href="#">9</a></td>
+                        <td><a href="#">10</a></td>
+                        <td><a href="#">11</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">12</a></td>
+                        <td><a href="#">13</a></td>
+                        <td><a href="#">14</a></td>
+                        <td><a href="#">15</a></td>
+                        <td><a href="#">16</a></td>
+                        <td><a href="#">17</a></td>
+                        <td><a href="#">18</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">19</a></td>
+                        <td><a href="#">20</a></td>
+                        <td><a href="#">21</a></td>
+                        <td><a href="#">22</a></td>
+                        <td><a href="#">23</a></td>
+                        <td><a href="#">24</a></td>
+                        <td><a href="#">25</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">26</a></td>
+                        <td><a href="#">27</a></td>
+                        <td><a href="#">28</a></td>
+                        <td><a href="#">29</a></td>
+                        <td><a href="#">30</a></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <label for="back_time">출발시간</label>
+              <div class="time_select2">
+                <div class="return_time_wrap">
+                  <input type="text" class="time" value="00:00" id="back_time" readonly>
+                  <a href="#" class="time_icon">선택</a>
+                </div>
+                <ul class="time_list2">
+                  <li><a href="#">00:00</a></li>
+                  <li><a href="#">01:00</a></li>
+                  <li><a href="#">02:00</a></li>
+                  <li><a href="#">03:00</a></li>
+                  <li><a href="#">04:00</a></li>
+                  <li><a href="#">05:00</a></li>
+                  <li><a href="#">06:00</a></li>
+                  <li><a href="#">07:00</a></li>
+                  <li><a href="#">08:00</a></li>
+                  <li><a href="#">09:00</a></li>
+                  <li><a href="#">10:00</a></li>
+                  <li><a href="#">11:00</a></li>
+                  <li><a href="#">12:00</a></li>
+                  <li><a href="#">13:00</a></li>
+                  <li><a href="#">15:00</a></li>
+                  <li><a href="#">16:00</a></li>
+                  <li><a href="#">17:00</a></li>
+                  <li><a href="#">18:00</a></li>
+                  <li><a href="#">19:00</a></li>
+                  <li><a href="#">20:00</a></li>
+                  <li><a href="#">21:00</a></li>
+                  <li><a href="#">22:00</a></li>
+                  <li><a href="#">23:00</a></li>
+                </ul>
+              </div>
+            </fieldset>
+
+
+            <fieldset class="people_form">
+              <legend class="blind">인원선택</legend>
+
+              <label for="adult">성인</label>
+              <div class="people_select">
+                <div class="people_wrap">
+                  <input type="text" class="adult" value="0명" id="adult" readonly>
+                  <a href="#" class="people_down">선택</a>
+                </div>
+                <ul class="number_list opt1">
+                  <li><a href="#">0명</a></li>
+                  <li><a href="#">1명</a></li>
+                  <li><a href="#">2명</a></li>
+                  <li><a href="#">3명</a></li>
+                  <li><a href="#">4명</a></li>
+                  <li><a href="#">5명</a></li>
+                  <li><a href="#">6명</a></li>
+                  <li><a href="#">7명</a></li>
+                  <li><a href="#">8명</a></li>
+                  <li><a href="#">9명</a></li>
+                  <li><a href="#">10명</a></li>
+                </ul>
+              </div>
+
+              <label for="student">중고생</label>
+              <div class="people_select">
+                <div class="people_wrap">
+                  <input type="text" class="student" id="student" value="0명" readonly>
+                  <a href="#" class="people_down">선택</a>
+                </div>
+                <ul class="number_list opt2">
+                  <li><a href="#">0명</a></li>
+                  <li><a href="#">1명</a></li>
+                  <li><a href="#">2명</a></li>
+                  <li><a href="#">3명</a></li>
+                  <li><a href="#">4명</a></li>
+                  <li><a href="#">5명</a></li>
+                  <li><a href="#">6명</a></li>
+                  <li><a href="#">7명</a></li>
+                  <li><a href="#">8명</a></li>
+                  <li><a href="#">9명</a></li>
+                  <li><a href="#">10명</a></li>
+                </ul>
+              </div>
+
+              <label for="kid">아동</label>
+              <div class="people_select">
+                <div class="people_wrap kid">
+                  <input type="text" class="kid" id="kid" value="0명" readonly>
+                  <a href="#" class="people_down">선택</a>
+                </div>
+                <ul class="number_list opt3">
+                  <li><a href="#">0명</a></li>
+                  <li><a href="#">1명</a></li>
+                  <li><a href="#">2명</a></li>
+                  <li><a href="#">3명</a></li>
+                  <li><a href="#">4명</a></li>
+                  <li><a href="#">5명</a></li>
+                  <li><a href="#">6명</a></li>
+                  <li><a href="#">7명</a></li>
+                  <li><a href="#">8명</a></li>
+                  <li><a href="#">9명</a></li>
+                  <li><a href="#">10명</a></li>
+                </ul>
+              </div>
+            </fieldset>
+
+            <button type="submit" value="search" class="tk_reserve">예 매 하 기</button>
+          </form> -->
+        </li>
+      </ul>
+    </secction>
+
+    <section class="ticket_attention">
+      <div class="attention_wrap">
+        <h3>승차권 예매 시 주의사항</h3>
+        <ol class="attention_list">
+          <li>당일 출발하는 차량의 출발 시각 20분 이전까지 예매가 가능합니다.</li>
+          <li>[중고생] 요금으로 예매 후 승차 시에는 학생증(청소년증)을 지참하셔야 합니다.</li>
+          <li>예매(또는 취소)단꼐에서 회선장애나 기타 통신장애 발생 시 예매(취소)여부를<br> 조회를 통해 반드시 확인하시지 않으신 경우에 부도위약금이 청구될 수 있으니 유의하시기 바랍니다.</li>
+          <li>선택하신 좌석은 실제 좌석과 상이 할 수 있습니다.</li>
+          <li>승객들의 원활한 승차 수송을 위하여 10분전까지 발권하여 주시기 바랍니다.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="cancel_attention">
+      <div class="cancel_wrap">
+        <h3>취소수수료 및 부도위약금 안내</h3>
+        <table class="cancel_table" summary="승차권 취소에 대한 취소수수료 정보">
+          <caption class="blind">취소 시점에 따른 수수료 부과율</caption>
+          <thead>
+            <tr>
+              <th class="title1">구분</th>
+              <th class="title2">조건</th>
+              <th class="title3">수수료</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th rowspan="6">승차권<br>(모바일 승차권 포함)<br>발권 후 / 예매 후</th>
+              <td>지정차 출발 <span>2일 전까지</span></td>
+              <td rowspan="2" class="num_data">없음</td>
+            </tr>
+            <tr>
+              <td>승차권 발권 시점(예매 후 발권은 제외) 기준 <span>1시간 이내</span> 또는 예매시점 기준 <span>1시간 이내</span><br><br>승차권의 사용시간 변경은 지정차량
+                출발일에 동일한 목적지에 한하여 지정차량 출발
+                1시간 이전까지 1회만 가능하면, 이 경우는 수수료를 청구하지 아니한다.<br><span class="red_look">단, 지정차 출발 전에 한함</span></td>
+            </tr>
+            <tr>
+              <td>지정차 출발 <span>1일 전 ~ 1시간 이전까지</span></td>
+              <td class="num_data">5%</td>
+            </tr>
+            <tr>
+              <td>지정차 출발 <span>1시간 이내 ~ 출발 직전까지</span></td>
+              <td class="num_data">10%</td>
+            </tr>
+            <tr>
+              <td>지정차 출발 후 <span>6시간 이전까지</span></td>
+              <td class="num_data">30%</td>
+            </tr>
+            <tr>
+              <td>지정차 출발 후 <span>6시간 이후</span><br><span class="red_look">예매 및 모바일 승차권의 경우는 출발 6시간 이후 자동취소 (부도처리)</span>
+              </td>
+              <td class="num_data">100%</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="budo_discript">부도란? 예매 후 버스 출발시간 이전까지 발권 또는 취소를 하지 않은 경우 예매한 승차권을 무효 처리하는 것을 의미</p>
+      </div>
+    </section>
+
+
+    <aside class="quickmenu">
+      <a href="#" class="quick_tk">승차권 예매</a>
+      <a href="#" class="quick_confirm">조회/변경/취소</a>
+      <a href="#" class="quick_top">맨 위로 이동</a>
+    </aside>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="footer_top">
+      <h2>사이트 이용안내</h2>
+
+      <div class="footer_law">
+        <h3>약관 및 정책</h3>
+        <ul>
+          <li><a href="#">홈페이지 이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">이메일무단수집거부</a></li>
+          <li><a href="#">사업자정보</a></li>
+        </ul>
+      </div>
+
+      <div class="family_site">
+        <h3>Family Site</h3>
+        <ul class="blind">
+          <li><a href="http://www.molit.go.kr/portal.do" target="_blank">국토교통부</a></li>
+          <li><a href="http://www.visitkorea.or.kr/intro.html" target="_blank">한국관광공사</a></li>
+          <li><a href="http://www.bus.or.kr/" target="_blank">전국버스운송사업조합연합회</a></li>
+          <li><a href="http://www.sbus.or.kr/" target="_blank">서울특별시버스운송사업조합</a></li>
+          <li><a href="http://www.incheonbus.or.kr/" target="_blank">인천광역시버스운송사업조합</a></li>
+          <li><a href="http://www.daejeonbus.or.kr/" target="_blank">대전광역시버스운송사업조합</a></li>
+          <li><a href="http://www.ulsanbus.or.kr/" target="_blank">울산광역시버스운송사업조합</a></li>
+          <li><a href="http://www.gbus.or.kr/" target="_blank">경기도버스운송사업조합</a>
+          <li><a href="http://www.busta.or.kr/" target="_blank">전라북도버스운송사업조합</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer_bottom">
+      <div class="footer_bottom_cont1">
+        <p>로카모빌리티(주)</p>
+        <p>사업자등록번호:129-86-38970 통신판매업 2014-서울금천-1119</p>
+      </div>
+      <div class="footer_bottom_cont2">
+        <address>주소 : 서울시 동작구 보라매로5길 롯데타워 8층</address>
+        <p>이메일 : interoper@locamobility.co.kr</p>
+        <p>대표전화 : 1644-2992</p>
+      </div>
+
+      <p>COPYRIGHT ⓒ 2014 전국버스운송조합연합회 ALL RIGHTS RESERVED.</p>
+
+      <a href="#" class="mark_wa">웹 접근성 인증마크</a>
+      <a href="#" class="mark_isms">정보보호관리체계인증</a>
+    </div>
+  </footer>
+
+</body>
+
+</html>

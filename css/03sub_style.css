@@ -1,0 +1,57 @@
+/* 서비스 소개 */
+section.service_introduction {width:1200px; margin: 0 auto; font-size: 20px;}
+section.service_introduction h3 {font-family: 'HangeulNuri-Bold'; font-size:48px; color:#272343; text-align: center; margin-bottom: 50px;}
+.service_introduction .sentence1 {font-family: 'GmarketSansMedium'; text-align: center; width:1200px; height:220px; background: url(../images/sub_service_image1.jpg) bottom center no-repeat; margin-bottom: 70px;}
+.service_introduction .sentence1 span{background: linear-gradient(0deg,#ffe44e 60%, transparent 40%);}
+.service_introduction .sentence2 p {width:837px; margin: 0 auto; margin-bottom: 30px;}
+.service_introduction .sentence2 span {font-family: 'GmarketSansMedium'; color:#2d334a;}
+.cscenter_info{width: 1200px; height: 228px; background: url(../images/sub_service_image2.jpg) center no-repeat; padding-top:110px; text-align: center; margin-bottom: 70px;}
+.cscenter_info p:first-child {line-height: 25px; margin-bottom: 10px;}
+.cscenter_info p:nth-child(2) {font-family: 'HangeulNuri-Bold'; font-size:30px; color: #272343;}
+
+
+/* 취소 수수료 안내 */
+section.cancel_attention{margin-bottom: 70px;}
+section.cancel_attention h3 {font-family: 'GmarketSansBold'; font-size:20px; color:#272343; margin-bottom:24px; text-align: center;}
+
+.cancel_wrap{width:1200px; margin:0 auto;padding:0 15px;
+font-size:20px;position:relative; background: url(../images/sub_yellowline2.jpg) center top 25px no-repeat, #fff;}
+
+table.cancel_table th,
+table.cancel_table td{
+  border:1px solid #b4b5bc; padding:13px;}
+table.cancel_table {border-collapse: collapse;color:#272343; font-size: 20px;}
+table.cancel_table thead,
+table.cancel_table tbody span{font-family: 'GmarketSansMedium';}
+table.cancel_table tbody {font-family: 'GmarketSansLight';}
+table.cancel_table th.title1{width:214px; height:40px;}
+table.cancel_table th.title2{width:795px;}
+table.cancel_table th.title3{width:173px;}
+table.cancel_table td.num_data{text-align: center;}
+table.cancel_table span.red_look {color:#f00;}
+p.budo_discript{margin:15px 0;}
+
+div.confirm_list {font-size: 20px; width:1200px; height:175px; margin: 0 auto; padding:0 15px; margin-top: 60px; color:#272343; background: url(../images/sub_confirmlist_yellowline.jpg) left top 25px no-repeat, #fff;}
+div.confirm_list h4 {font-family: 'GmarketSansBold'; width:95px; height:30px; float:left;}
+div.confirm_list ol {float:right; width:994px;}
+.confirm_list ol li{list-style: decimal;}
+div.confirm_list_wrap {background: linear-gradient(90deg, transparent 50%, #fff 50%), url(../images/sub_yellowline1.jpg) left top 25px repeat-x;}
+
+
+
+/* 모바일 이용 */
+div.moblie_way {width:935px; height:331px; margin:0 auto 30px; padding-left:284px; background: url(../images/sub_moblie_image.png) left center no-repeat; color:#272343; text-align: center;}
+.moblie_way h3,
+.possible_service h3 {font-family: 'GmarketSansBold'; font-size:20px; text-align: center; width:fit-content; height:30px; background: linear-gradient(0deg, #ffed00 20%, transparent 20%); margin: 0 auto 22px;}
+.moblie_way ul{font-size: 18px; background: #fff; box-shadow: 3px 3px 5px  #bae8e8;}
+.moblie_way ul h4{font-family: 'GmarketSansMedium'; border-bottom:1px solid #b4b5bc; line-height: 40px; margin-bottom: 6px;}
+.moblie_way ul li{border:1px solid #b4b5bc; width:650px; height:80px;}
+.moblie_way ul li:nth-child(2){height:105px;}
+
+.possible_service ul{width:935px; height: 130px; font-family: 'GmarketSansMedium'; font-size:17px; color:#272343; text-align: center; margin: 0 auto 70px; padding:0 17px;}
+.possible_service ul li{width:90px; height:130px; padding-top:105px; float: left; margin: 0 45px;}
+.reserve_icon{background: url(../images/sub_moblie_ticket.png) top center no-repeat;}
+.search_icon{background: url(../images/sub_moblie_search.png) top center no-repeat;}
+.cancel_icon{background: url(../images/sub_moblie_cancel.png) top center no-repeat;}
+.mypage_icon{background: url(../images/sub_moblie_member.png) top center no-repeat;}
+.terminal_icon{background: url(../images/sub_moblie_map.png) top center no-repeat;}

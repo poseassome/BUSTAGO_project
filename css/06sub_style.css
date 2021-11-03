@@ -1,0 +1,63 @@
+/* 홈페이지 이용약관 */
+section.terms_page_list {width:1200px; height:208px; border:1px solid #c9c9c9; box-shadow: 3px 3px 5px 0 #bae8e8; margin: 0 auto 45px; padding:20px 50px;}
+section.terms_page_list ol,
+.terms_privacy_list ol {counter-reset: ol_list; font-size: 18px;}
+.terms_page_list ol li::before,
+.terms_privacy_list ol li::before {counter-increment: ol_list; content: "제 " counter(ol_list) "조 ";  font-family: 'hangeulNuri-regular';}
+.terms_page_list ol li a,
+.terms_privacy_list ol li a {color:#272343; font-family: 'hangeulNuri-Bold';}
+.terms_page_list ol>div {float:left; width:273px;}
+section.terms_text{width:1200px; margin:0 auto; font-size: 20px; font-family: 'GmarketSansLight'; clear: both;}
+.term_subtitle {font-family: 'GmarketSansMedium';}
+.term_title {font-family: 'GmarketSansBold';}
+
+ol.circle_number {counter-reset: ol-counter; list-style: none; padding: 0; margin: 0; font-size: 20px;}
+ol.circle_number>li {font-size: 20px; padding-left: 25px; position: relative;}
+ol.circle_number>li:before {content: counter(ol-counter); counter-increment: ol-counter;background-color: #fff; border: 1px solid #000; border-radius: 50%; height: 16px; width: 16px; color: #000; font-size: 12px; line-height: 20px; position: absolute; top: 3px; left: 0; text-align: center;}
+
+ol.decimal_number>li {list-style: decimal; list-style-position: inside;}
+
+a.a_blue{color:#0000ff;}
+
+/* 개인정보 처리방침 */
+div.privacy_introduce {text-align: left; font-family: 'hangeulNuri-regular'; font-size:18px; color:#272343; width: 1200px; margin:0 auto 45px;}
+.privacy_introduce ul li {font-size: 20px; padding-left: 20px; position: relative;}
+.privacy_introduce ul li::before {content:" *"; height: 16px; width: 16px; color: #000; font-size: 20px; line-height: 20px; position: absolute; top: 10px; left: 0; text-align: center;}
+
+section.terms_privacy_list {width:1200px; height:287px; border:1px solid #c9c9c9; box-shadow: 3px 3px 5px 0 #bae8e8; margin: 0 auto 45px; padding:20px 50px;}
+.terms_privacy_list ol>div {float:left; width:546px;}
+.terms_privacy_list p {font-size: 18px; font-family: 'hangeulNuri-regular'; height:40px;}
+
+ol.open_number {counter-reset: olcounter; list-style: none; padding: 0; margin: 0; font-size: 20px;}
+ol.open_number>li,
+ul.none_list>li {font-size: 20px; padding-left: 25px; position: relative;}
+ol.open_number>li:before {content: counter(olcounter)")"; counter-increment: olcounter; color: #000; font-size: 20px; line-height: 20px; position: absolute; top: 5px; left: 0; text-align: center;}
+ul.none_list>li::before {content:"- ";color: #000; font-size: 20px; line-height: 20px; position: absolute; top: 5px; left: 0; text-align: center;}
+
+table{width:1200px; border-collapse: collapse; border-top:1px solid #c9c9c9;}
+th, td {border-bottom: 1px solid #c9c9c9; border-left: 1px solid #c9c9c9; padding:10px;}
+th:first-child {border-left: none;}
+span.table_bf {font-family: 'GmarketSansMedium';}
+tr {height:50px;}
+
+table.privacy_collect thead th:first-child{width:217px;}
+table.get_info th{width:415px; text-align: left;}
+table.privacy_reposal caption {text-align: left;}
+.privacy_reposal th {text-align: left;}
+.privacy_reposal th:first-child {width:415px;}
+.privacy_reposal th:nth-child(2) {width:580px;}
+table.officer_info th.special{border-left:1px solid #c9c9c9;}
+.officer_info tr:first-child th:first-child {width:220px;}
+.officer_info tr:nth-child(2) th {width:245px;}
+
+span.report_fb{display: inline-block; width:200px; text-align: left; padding:0 32px; font-weight: bold;}
+
+
+
+/* 이메일무단수집거부 */
+section.terms_email{width:1200px; height:345px; border:1px solid #c9c9c9; box-shadow: 3px 3px 5px 0 #bae8e8; margin: 0 auto 100px; padding:20px 50px; font-size: 20px;}
+
+
+/* lnb width */
+a.menu_2depth_on{width:200px;}
+div.menu_2depth>ul{width:200px;}
