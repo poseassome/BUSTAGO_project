@@ -671,48 +671,13 @@ fieldset, legend {border:0;padding:0;margin:0;}
   margin-bottom: 5px;
 }
 
-.event_wrap {
-  width: 590px;
-  height: 400px;
-  background: white;
-  position: relative;
-  float: right;
-  padding: 141px 24px 57px 29px;
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
-}
+.event_wrap {width: 590px; height: 400px; background: white; position: relative; float: right; box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3); overflow: hidden;}
 
-.event1 {
-  width: 590px;
-  height: 400px;
-  background: url(../images/event_image_01.jpg) no-repeat;
-  display: block;
-  text-indent: -9999px;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-}
-
-.event2 {
-  width: 590px;
-  height: 400px;
-  background: url(../images/event_image_02.jpg) no-repeat;
-  display: block;
-  text-indent: -9999px;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-}
-
-.event3 {
-  width: 590px;
-  height: 400px;
-  background: url(../images/event_image_03.jpg) no-repeat;
-  display: block;
-  text-indent: -9999px;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-}
+.event_wrap ul {width:590px; height:400px; position: absolute; left:0;}
+.event_wrap ul li {width:590px; height:400px; float:left;}
+.event1 {width: 590px; height: 400px; background: url(../images/event_image_01.jpg) no-repeat; display: block; text-indent: -9999px;}
+.event2 {width: 590px; height: 400px; background: url(../images/event_image_02.jpg) no-repeat; display: block; text-indent: -9999px;}
+.event3 {width: 590px; height: 400px; background: url(../images/event_image_03.jpg) no-repeat; display: block; text-indent: -9999px;}
 
 .event_prev {
   width: 35px;
