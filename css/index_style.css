@@ -14,6 +14,9 @@ address {font-style: normal;}
 fieldset, legend {border:0;padding:0;margin:0;}
 input:focus{outline:none;}
 button {cursor: pointer;}
+ul::-webkit-scrollbar{width:10px;}
+ul::-webkit-scrollbar-thumb{background: #c9c9c9; border-radius: 5px; border:2px solid transparent; background-clip: padding-box;}
+ul::-webkit-scrollbar-track{background: transparent;}
 .blind {position: absolute;clip: rect(0 0 0 0);width: 1px; height: 1px;margin: -1px;overflow: hidden;}
 
 /* 작성용 가리기 */
@@ -21,16 +24,8 @@ button {cursor: pointer;}
 /* .tk_return, */
 /* .tk_check, */
 .month_wrap,
-.month_wrap2,
-.time_list1,
-.time_list2,
-.number_list
-{ position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;}
+.month_wrap2
+{ position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden;}
 
 /* header */
 .header {position: relative;height: 173px;border-top: 1px solid #ffffff;background: #fff;box-shadow: 15px 0px 30px rgba(0, 0, 0, 0.3);}
@@ -249,28 +244,9 @@ button {cursor: pointer;}
 }
 
 .tk_place input,
-.tk_date1 input,
-.tk_date2 input {
-  font-size: 16px;
-  font-family: 'GmarketSansMedium';
-  color: #272343;
-  width: 137px;
-  height: 23px;
-  line-height: 23px;
-  border: none;
-  background: transparent;
-  margin-top: 2px;
-  float: left;
-}
+.tk_date1 input, .tk_date2 input {font-size: 16px; font-family: 'GmarketSansMedium'; color: #272343; width: 137px; height: 23px; line-height: 23px; border: none; background: transparent; margin-top: 2px; float: left;}
 
-.search_icon {
-  width: 23px;
-  height: 23px;
-  background: url(../images/srch_icon.jpg) no-repeat;
-  display: block;
-  text-indent: -9999px;
-  float: right;
-}
+.search_icon {width: 23px; height: 23px; background: url(../images/srch_icon.jpg) no-repeat; display: block; text-indent: -9999px; float: right;}
 
 .tk_date1,
 .tk_date2,
@@ -279,27 +255,11 @@ button {cursor: pointer;}
   padding-top: 40px;
 }
 
-.date_icon {
-  width: 23px;
-  height: 23px;
-  background: url(../images/icon_date.jpg) no-repeat;
-  display: block;
-  text-indent: -9999px;
-  float: right;
-}
+.date_icon {width: 23px; height: 23px; background: url(../images/icon_date.jpg) no-repeat; display: block; text-indent: -9999px; float: right;}
 
-.time_icon {
-  width: 23px;
-  height: 23px;
-  background: url(../images/clck_icon.jpg) no-repeat;
-  display: block;
-  text-indent: -9999px;
-  float: right;
-}
+.time_icon {width: 23px; height: 23px; background: url(../images/clck_icon.jpg) no-repeat; display: block; text-indent: -9999px; float: right;}
 .date_select1,.time_select1,
-.date_select2, .time_select2 {
-  position: relative;
-}
+.date_select2, .time_select2 {position: relative;}
 
 .month_wrap {
   background-color: white;
@@ -365,26 +325,9 @@ button {cursor: pointer;}
   left: 17px;
 }
 
-.time_list1, .time_list2 {
-  background-color: white;
-  width: 175px;
-  height: 237px;
-  font-size: 16px;
-  padding: 7px;
-  white-space: nowrap;
-  overflow-y: scroll;
-  border: 1px solid #2d334a;
-  border-radius: 5px;
-  position: absolute;
-  right: 3px;
-  top: 33px;
-  z-index: 2;
-}
+.time_list1, .time_list2 {background-color: white; width: 174px; height: 237px; font-size: 16px; padding: 7px; white-space: nowrap; overflow-y: scroll; border: 1px solid #2d334a; border-radius: 5px; position: absolute; right: 4px; top: 32px; z-index: 3; display: none;}
 
-.time_list1 a, .time_list2 a {
-  font-family: 'GmarketSansMedium';
-  color: #9aa0b7;
-}
+.time_list1 a, .time_list2 a {font-family: 'GmarketSansMedium'; color: #9aa0b7;}
 
 .return_date_wrap,
 .return_time_wrap {
@@ -401,107 +344,21 @@ button {cursor: pointer;}
   margin-right: 43px;
 }
 
-.people_wrap {
-  background-color: white;
-  width: 90px;
-  height: 33px;
-  border: 1px solid #2d334a;
-  border-radius: 5px;
-  padding-left: 5px;
-  float: left;
-  margin-right: 51px;
-  margin-left: 19px;
-}
+.people_wrap {background-color: white; width: 90px; height: 33px; border: 1px solid #2d334a; border-radius: 5px; padding-left: 5px; float: left; margin-right: 51px; margin-left: 19px;}
+.people div.kid {margin-right: 0px;}
+.people_wrap input {font-size: 16px; font-family: 'GmarketSansMedium'; color: #272343; width: 50px; height: 23px; line-height: 23px; border: none; background: transparent; margin-top: 6px; float: left;}
+.people label {width: fit-content;}
+.people_down {width: 30px; height: 31px; background: url(../images/people_down_icon.png) center no-repeat; display: block; border-left: 1px solid #2d334a; text-indent: -9999px; float: right;}
+.people_select {position: relative;}
+.number_list {width: 90px; height: 130px; background: white; border: 1px solid #2d334a; border-radius: 5px; font-size: 16px; padding: 7px; line-height: 21px; z-index:2; overflow-y: scroll; display: none;}
+.number_list a {font-family: 'GmarketSansMedium'; color: #9aa0b7;}
+.opt1 {position: absolute; top: 32px; left: 53.5px;}
+.opt2 {position: absolute; top: 32px; left: 265.5px;}
+.opt3 {position: absolute; top: 32px; left: 460.5px;}
 
-.people div.kid {
-  margin-right: 0px;
-}
-
-.people_wrap input {
-  font-size: 16px;
-  font-family: 'GmarketSansMedium';
-  color: #272343;
-  width: 50px;
-  height: 23px;
-  line-height: 23px;
-  border: none;
-  background: transparent;
-  margin-top: 6px;
-  float: left;
-}
-
-.people label {
-  width: fit-content;
-}
-
-.people_down {
-  width: 30px;
-  height: 31px;
-  background: url(../images/people_down_icon.png) center no-repeat;
-  display: block;
-  border-left: 1px solid #2d334a;
-  text-indent: -9999px;
-  float: right;
-}
-
-.people_select {
-  position: relative;
-}
-
-.number_list {
-  width: 90px;
-  height: 237px;
-  background: white;
-  border: 1px solid #2d334a;
-  border-radius: 10px;
-  font-size: 16px;
-  padding: 7px;
-  line-height: 21px;
-  z-index:2;
-}
-
-.number_list a {
-  font-family: 'GmarketSansMedium';
-  color: #9aa0b7;
-}
-
-.opt1 {
-  position: absolute;
-  top: 33px;
-  left: 54px;
-}
-
-.opt2 {
-  position: absolute;
-  top: 33px;
-  left: 265px;
-}
-
-.opt3 {
-  position: absolute;
-  top: 33px;
-  left: 460px;
-}
-
-.tk_button,
-.tk_button_get {
-  clear: both;
-  position: absolute;
-  bottom: 24px;
-}
-
-.tk_reserve {
-  width: 553px;
-  height: 55px;
-  background: url(../images/tk_reserve_button.png) no-repeat;
-  display: block;
-  text-indent: -9999px;
-  border:none;
-}
-
-.tk_reserve:hover {
-  background: url(../images/tk_reserve_button_act.png);
-}
+.tk_button, .tk_button_get {clear: both; position: absolute; bottom: 24px;}
+.tk_reserve {width: 553px; height: 55px; background: url(../images/tk_reserve_button.png) no-repeat; display: block; text-indent: -9999px; border:none;}
+.tk_reserve:hover {background: url(../images/tk_reserve_button_act.png);}
 
 .card_inform input {width: 81px; height: 33px; border: 1px solid #2d334a; border-radius: 5px; background: white; text-align: center; font-size: 16px; font-family: 'GmarketSansMedium'; color: #272343; padding: 5px;}
 .birth {width: 140px; height: 33px; border: 1px solid #2d334a; border-radius: 5px; background: white; font-size: 16px; font-family: 'GmarketSansMedium'; color: #272343; padding: 5px;}

@@ -41,6 +41,45 @@ $(document).ready(function () {
   });
 
 
+  // $(".people_down").click(function () {
+  //   $(".number_list").not($(this).parent(".people_wrap").next()).slideUp('fast');
+  //   $(this).parent(".people_wrap").next().slideToggle(200);
+  // });
+  $("input+a").click(function () {
+    $(".form_on>ul>li ul").not($(this).parent().next()).slideUp('fast');
+    $(this).parent().next().slideToggle(200);
+  });
+  // $(".number_list a").hover(function () {
+  //   $(this).css({ color: "#272343", "font-weight": "bold" });
+  // }, function () {
+  //   $(this).css({ color: "" });
+  // });
+  $("form>ul>li ul a").hover(function () {
+    $(this).css({ color: "#272343", "font-weight": "bold" });
+  }, function () {
+    $(this).css({ color: "" });
+  });
+  // $(".number_list a").click(function () {
+  //   var text = $(this).text();
+  //   $(this).parents(".people_select").find("input").val(text);
+  //   $(this).parents(".number_list").slideUp(200);
+  // });
+  $("form>ul>li ul a").click(function () {
+    var text = $(this).text();
+    $("div").has(this).find("input").val(text);
+    $(this).closest("ul").slideUp(200);
+  });
+  $(document).click(function (e) {
+    if (!$(e.target).is("input+a")) {
+      var container = $(".form_on>ul>li ul");
+      container.slideUp(0);
+    };
+  });
+
+  $(".depart_date_wrap").click(function () {
+    $(this).datepicker();
+  });
+
 
   // Cont2
   var width = $(".event_wrap ul li").width();

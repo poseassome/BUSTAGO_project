@@ -7,7 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BUSTAGO</title>
   <link rel="stylesheet" type="text/css" href="./css/index_style.css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script type="text/javascript" src="./script/index.js"></script>
 </head>
 
@@ -98,12 +100,12 @@
                   <div class="date_select1">
                     <div class="depart_date_wrap">
                       <input type="text" class="calendar" id="depart_date" value="2021-08-10" readonly>
-                      <a href="#" class="date_icon">선택</a>
+                      <a href="#javascript:void(0);" class="date_icon">선택</a>
                     </div>
-                    <div class="month_wrap blind">
+                    <!-- <div class="month_wrap blind">
                       <table summary="월별 달력" class="month_now">
                         <caption>2021년 8월</caption>
-                        <a href="#" class="date_next">다음 달</a>
+                        <a href="javascript:void(0);" class="date_next">다음 달</a>
                         <thead>
                           <tr>
                             <th>일</th>
@@ -166,7 +168,7 @@
                       </table>
                       <table summary="월별 달력" class="month_next">
                         <caption>2021년 9월</caption>
-                        <a href="#" class="date_prev">이전 달</a>
+                        <a href="javascript:void(0);" class="date_prev">이전 달</a>
                         <thead>
                           <tr>
                             <th>일</th>
@@ -227,39 +229,39 @@
                         </tbody>
 
                       </table>
-                    </div>
+                    </div> -->
                   </div>
 
                   <label for="depart_time">출발시간</label>
                   <div class="time_select1">
                     <div class="depart_time_wrap">
                       <input type="text" class="ow_time" id="depart_time" value="00:00" readonly>
-                      <a href="#" class="time_icon">선택</a>
+                      <a href="javascript:void(0);" class="time_icon">선택</a>
                     </div>
-                    <ul class="time_list1 blind">
-                      <li><a href="#">00:00</a></li>
-                      <li><a href="#">01:00</a></li>
-                      <li><a href="#">02:00</a></li>
-                      <li><a href="#">03:00</a></li>
-                      <li><a href="#">04:00</a></li>
-                      <li><a href="#">05:00</a></li>
-                      <li><a href="#">06:00</a></li>
-                      <li><a href="#">07:00</a></li>
-                      <li><a href="#">08:00</a></li>
-                      <li><a href="#">09:00</a></li>
-                      <li><a href="#">10:00</a></li>
-                      <li><a href="#">11:00</a></li>
-                      <li><a href="#">12:00</a></li>
-                      <li><a href="#">13:00</a></li>
-                      <li><a href="#">15:00</a></li>
-                      <li><a href="#">16:00</a></li>
-                      <li><a href="#">17:00</a></li>
-                      <li><a href="#">18:00</a></li>
-                      <li><a href="#">19:00</a></li>
-                      <li><a href="#">20:00</a></li>
-                      <li><a href="#">21:00</a></li>
-                      <li><a href="#">22:00</a></li>
-                      <li><a href="#">23:00</a></li>
+                    <ul class="time_list1">
+                      <li><a href="javascript:void(0);">00:00</a></li>
+                      <li><a href="javascript:void(0);">01:00</a></li>
+                      <li><a href="javascript:void(0);">02:00</a></li>
+                      <li><a href="javascript:void(0);">03:00</a></li>
+                      <li><a href="javascript:void(0);">04:00</a></li>
+                      <li><a href="javascript:void(0);">05:00</a></li>
+                      <li><a href="javascript:void(0);">06:00</a></li>
+                      <li><a href="javascript:void(0);">07:00</a></li>
+                      <li><a href="javascript:void(0);">08:00</a></li>
+                      <li><a href="javascript:void(0);">09:00</a></li>
+                      <li><a href="javascript:void(0);">10:00</a></li>
+                      <li><a href="javascript:void(0);">11:00</a></li>
+                      <li><a href="javascript:void(0);">12:00</a></li>
+                      <li><a href="javascript:void(0);">13:00</a></li>
+                      <li><a href="javascript:void(0);">15:00</a></li>
+                      <li><a href="javascript:void(0);">16:00</a></li>
+                      <li><a href="javascript:void(0);">17:00</a></li>
+                      <li><a href="javascript:void(0);">18:00</a></li>
+                      <li><a href="javascript:void(0);">19:00</a></li>
+                      <li><a href="javascript:void(0);">20:00</a></li>
+                      <li><a href="javascript:void(0);">21:00</a></li>
+                      <li><a href="javascript:void(0);">22:00</a></li>
+                      <li><a href="javascript:void(0);">23:00</a></li>
                     </ul>
                   </div>
                 </fieldset>
@@ -289,20 +291,20 @@
                   <div class="people_select">
                     <div class="people_wrap">
                       <input type="text" class="adult" id="adult" value="0명" readonly>
-                      <a href="#" class="people_down">선택</a>
+                      <a href="javascript:void(0);" class="people_down">선택</a>
                     </div>
-                    <ul class="number_list opt1 blind">
-                      <li><a href="#">0명</a></li>
-                      <li><a href="#">1명</a></li>
-                      <li><a href="#">2명</a></li>
-                      <li><a href="#">3명</a></li>
-                      <li><a href="#">4명</a></li>
-                      <li><a href="#">5명</a></li>
-                      <li><a href="#">6명</a></li>
-                      <li><a href="#">7명</a></li>
-                      <li><a href="#">8명</a></li>
-                      <li><a href="#">9명</a></li>
-                      <li><a href="#">10명</a></li>
+                    <ul class="number_list opt1">
+                      <li><a href="javascript:void(0);">0명</a></li>
+                      <li><a href="javascript:void(0);">1명</a></li>
+                      <li><a href="javascript:void(0);">2명</a></li>
+                      <li><a href="javascript:void(0);">3명</a></li>
+                      <li><a href="javascript:void(0);">4명</a></li>
+                      <li><a href="javascript:void(0);">5명</a></li>
+                      <li><a href="javascript:void(0);">6명</a></li>
+                      <li><a href="javascript:void(0);">7명</a></li>
+                      <li><a href="javascript:void(0);">8명</a></li>
+                      <li><a href="javascript:void(0);">9명</a></li>
+                      <li><a href="javascript:void(0);">10명</a></li>
                     </ul>
                   </div>
 
@@ -310,20 +312,20 @@
                   <div class="people_select">
                     <div class="people_wrap">
                       <input type="text" class="student" id="student" value="0명" readonly>
-                      <a href="#" class="people_down">선택</a>
+                      <a href="javascript:void(0);" class="people_down">선택</a>
                     </div>
-                    <ul class="number_list opt2 blind">
-                      <li><a href="#">0명</a></li>
-                      <li><a href="#">1명</a></li>
-                      <li><a href="#">2명</a></li>
-                      <li><a href="#">3명</a></li>
-                      <li><a href="#">4명</a></li>
-                      <li><a href="#">5명</a></li>
-                      <li><a href="#">6명</a></li>
-                      <li><a href="#">7명</a></li>
-                      <li><a href="#">8명</a></li>
-                      <li><a href="#">9명</a></li>
-                      <li><a href="#">10명</a></li>
+                    <ul class="number_list opt2">
+                      <li><a href="javascript:void(0);">0명</a></li>
+                      <li><a href="javascript:void(0);">1명</a></li>
+                      <li><a href="javascript:void(0);">2명</a></li>
+                      <li><a href="javascript:void(0);">3명</a></li>
+                      <li><a href="javascript:void(0);">4명</a></li>
+                      <li><a href="javascript:void(0);">5명</a></li>
+                      <li><a href="javascript:void(0);">6명</a></li>
+                      <li><a href="javascript:void(0);">7명</a></li>
+                      <li><a href="javascript:void(0);">8명</a></li>
+                      <li><a href="javascript:void(0);">9명</a></li>
+                      <li><a href="javascript:void(0);">10명</a></li>
                     </ul>
                   </div>
 
@@ -331,20 +333,20 @@
                   <div class="people_select">
                     <div class="people_wrap kid">
                       <input type="text" class="kid" id="kid" value="0명" readonly>
-                      <a href="#" class="people_down">선택</a>
+                      <a href="javascript:void(0);" class="people_down">선택</a>
                     </div>
-                    <ul class="number_list opt3 blind">
-                      <li><a href="#">0명</a></li>
-                      <li><a href="#">1명</a></li>
-                      <li><a href="#">2명</a></li>
-                      <li><a href="#">3명</a></li>
-                      <li><a href="#">4명</a></li>
-                      <li><a href="#">5명</a></li>
-                      <li><a href="#">6명</a></li>
-                      <li><a href="#">7명</a></li>
-                      <li><a href="#">8명</a></li>
-                      <li><a href="#">9명</a></li>
-                      <li><a href="#">10명</a></li>
+                    <ul class="number_list opt3">
+                      <li><a href="javascript:void(0);">0명</a></li>
+                      <li><a href="javascript:void(0);">1명</a></li>
+                      <li><a href="javascript:void(0);">2명</a></li>
+                      <li><a href="javascript:void(0);">3명</a></li>
+                      <li><a href="javascript:void(0);">4명</a></li>
+                      <li><a href="javascript:void(0);">5명</a></li>
+                      <li><a href="javascript:void(0);">6명</a></li>
+                      <li><a href="javascript:void(0);">7명</a></li>
+                      <li><a href="javascript:void(0);">8명</a></li>
+                      <li><a href="javascript:void(0);">9명</a></li>
+                      <li><a href="javascript:void(0);">10명</a></li>
                     </ul>
                   </div>
                 </fieldset>
@@ -521,32 +523,32 @@
                   <div class="time_select1">
                     <div class="depart_time_wrap">
                       <input type="text" class="ow_time" id="depart_time" value="00:00" readonly>
-                      <a href="#" class="time_icon">선택</a>
+                      <a href="javascript:void(0);" class="time_icon">선택</a>
                     </div>
-                    <ul class="time_list1 blind">
-                      <li><a href="#">00:00</a></li>
-                      <li><a href="#">01:00</a></li>
-                      <li><a href="#">02:00</a></li>
-                      <li><a href="#">03:00</a></li>
-                      <li><a href="#">04:00</a></li>
-                      <li><a href="#">05:00</a></li>
-                      <li><a href="#">06:00</a></li>
-                      <li><a href="#">07:00</a></li>
-                      <li><a href="#">08:00</a></li>
-                      <li><a href="#">09:00</a></li>
-                      <li><a href="#">10:00</a></li>
-                      <li><a href="#">11:00</a></li>
-                      <li><a href="#">12:00</a></li>
-                      <li><a href="#">13:00</a></li>
-                      <li><a href="#">15:00</a></li>
-                      <li><a href="#">16:00</a></li>
-                      <li><a href="#">17:00</a></li>
-                      <li><a href="#">18:00</a></li>
-                      <li><a href="#">19:00</a></li>
-                      <li><a href="#">20:00</a></li>
-                      <li><a href="#">21:00</a></li>
-                      <li><a href="#">22:00</a></li>
-                      <li><a href="#">23:00</a></li>
+                    <ul class="time_list1">
+                      <li><a href="javascript:void(0);">00:00</a></li>
+                      <li><a href="javascript:void(0);">01:00</a></li>
+                      <li><a href="javascript:void(0);">02:00</a></li>
+                      <li><a href="javascript:void(0);">03:00</a></li>
+                      <li><a href="javascript:void(0);">04:00</a></li>
+                      <li><a href="javascript:void(0);">05:00</a></li>
+                      <li><a href="javascript:void(0);">06:00</a></li>
+                      <li><a href="javascript:void(0);">07:00</a></li>
+                      <li><a href="javascript:void(0);">08:00</a></li>
+                      <li><a href="javascript:void(0);">09:00</a></li>
+                      <li><a href="javascript:void(0);">10:00</a></li>
+                      <li><a href="javascript:void(0);">11:00</a></li>
+                      <li><a href="javascript:void(0);">12:00</a></li>
+                      <li><a href="javascript:void(0);">13:00</a></li>
+                      <li><a href="javascript:void(0);">15:00</a></li>
+                      <li><a href="javascript:void(0);">16:00</a></li>
+                      <li><a href="javascript:void(0);">17:00</a></li>
+                      <li><a href="javascript:void(0);">18:00</a></li>
+                      <li><a href="javascript:void(0);">19:00</a></li>
+                      <li><a href="javascript:void(0);">20:00</a></li>
+                      <li><a href="javascript:void(0);">21:00</a></li>
+                      <li><a href="javascript:void(0);">22:00</a></li>
+                      <li><a href="javascript:void(0);">23:00</a></li>
                     </ul>
                   </div>
                 </fieldset>
@@ -695,32 +697,32 @@
                   <div class="time_select2">
                     <div class="back_time_wrap">
                       <input type="text" class="rt_time" value="00:00" id="back_time" readonly>
-                      <a href="#" class="time_icon">선택</a>
+                      <a href="javascript:void(0);" class="time_icon">선택</a>
                     </div>
-                    <ul class="time_list2 blind">
-                      <li><a href="#">00:00</a></li>
-                      <li><a href="#">01:00</a></li>
-                      <li><a href="#">02:00</a></li>
-                      <li><a href="#">03:00</a></li>
-                      <li><a href="#">04:00</a></li>
-                      <li><a href="#">05:00</a></li>
-                      <li><a href="#">06:00</a></li>
-                      <li><a href="#">07:00</a></li>
-                      <li><a href="#">08:00</a></li>
-                      <li><a href="#">09:00</a></li>
-                      <li><a href="#">10:00</a></li>
-                      <li><a href="#">11:00</a></li>
-                      <li><a href="#">12:00</a></li>
-                      <li><a href="#">13:00</a></li>
-                      <li><a href="#">15:00</a></li>
-                      <li><a href="#">16:00</a></li>
-                      <li><a href="#">17:00</a></li>
-                      <li><a href="#">18:00</a></li>
-                      <li><a href="#">19:00</a></li>
-                      <li><a href="#">20:00</a></li>
-                      <li><a href="#">21:00</a></li>
-                      <li><a href="#">22:00</a></li>
-                      <li><a href="#">23:00</a></li>
+                    <ul class="time_list2">
+                      <li><a href="javascript:void(0);">00:00</a></li>
+                      <li><a href="javascript:void(0);">01:00</a></li>
+                      <li><a href="javascript:void(0);">02:00</a></li>
+                      <li><a href="javascript:void(0);">03:00</a></li>
+                      <li><a href="javascript:void(0);">04:00</a></li>
+                      <li><a href="javascript:void(0);">05:00</a></li>
+                      <li><a href="javascript:void(0);">06:00</a></li>
+                      <li><a href="javascript:void(0);">07:00</a></li>
+                      <li><a href="javascript:void(0);">08:00</a></li>
+                      <li><a href="javascript:void(0);">09:00</a></li>
+                      <li><a href="javascript:void(0);">10:00</a></li>
+                      <li><a href="javascript:void(0);">11:00</a></li>
+                      <li><a href="javascript:void(0);">12:00</a></li>
+                      <li><a href="javascript:void(0);">13:00</a></li>
+                      <li><a href="javascript:void(0);">15:00</a></li>
+                      <li><a href="javascript:void(0);">16:00</a></li>
+                      <li><a href="javascript:void(0);">17:00</a></li>
+                      <li><a href="javascript:void(0);">18:00</a></li>
+                      <li><a href="javascript:void(0);">19:00</a></li>
+                      <li><a href="javascript:void(0);">20:00</a></li>
+                      <li><a href="javascript:void(0);">21:00</a></li>
+                      <li><a href="javascript:void(0);">22:00</a></li>
+                      <li><a href="javascript:void(0);">23:00</a></li>
                     </ul>
                   </div>
                 </fieldset>
@@ -734,20 +736,20 @@
                   <div class="people_select">
                     <div class="people_wrap">
                       <input type="text" class="adult" value="0명" id="adult" readonly>
-                      <a href="#" class="people_down">선택</a>
+                      <a href="javascript:void(0);" class="people_down">선택</a>
                     </div>
-                    <ul class="number_list opt1 blind">
-                      <li><a href="#">0명</a></li>
-                      <li><a href="#">1명</a></li>
-                      <li><a href="#">2명</a></li>
-                      <li><a href="#">3명</a></li>
-                      <li><a href="#">4명</a></li>
-                      <li><a href="#">5명</a></li>
-                      <li><a href="#">6명</a></li>
-                      <li><a href="#">7명</a></li>
-                      <li><a href="#">8명</a></li>
-                      <li><a href="#">9명</a></li>
-                      <li><a href="#">10명</a></li>
+                    <ul class="number_list opt1">
+                      <li><a href="javascript:void(0);">0명</a></li>
+                      <li><a href="javascript:void(0);">1명</a></li>
+                      <li><a href="javascript:void(0);">2명</a></li>
+                      <li><a href="javascript:void(0);">3명</a></li>
+                      <li><a href="javascript:void(0);">4명</a></li>
+                      <li><a href="javascript:void(0);">5명</a></li>
+                      <li><a href="javascript:void(0);">6명</a></li>
+                      <li><a href="javascript:void(0);">7명</a></li>
+                      <li><a href="javascript:void(0);">8명</a></li>
+                      <li><a href="javascript:void(0);">9명</a></li>
+                      <li><a href="javascript:void(0);">10명</a></li>
                     </ul>
                   </div>
 
@@ -755,20 +757,20 @@
                   <div class="people_select">
                     <div class="people_wrap">
                       <input type="text" class="student" id="student" value="0명" readonly>
-                      <a href="#" class="people_down">선택</a>
+                      <a href="javascript:void(0);" class="people_down">선택</a>
                     </div>
-                    <ul class="number_list opt2 blind">
-                      <li><a href="#">0명</a></li>
-                      <li><a href="#">1명</a></li>
-                      <li><a href="#">2명</a></li>
-                      <li><a href="#">3명</a></li>
-                      <li><a href="#">4명</a></li>
-                      <li><a href="#">5명</a></li>
-                      <li><a href="#">6명</a></li>
-                      <li><a href="#">7명</a></li>
-                      <li><a href="#">8명</a></li>
-                      <li><a href="#">9명</a></li>
-                      <li><a href="#">10명</a></li>
+                    <ul class="number_list opt2">
+                      <li><a href="javascript:void(0);">0명</a></li>
+                      <li><a href="javascript:void(0);">1명</a></li>
+                      <li><a href="javascript:void(0);">2명</a></li>
+                      <li><a href="javascript:void(0);">3명</a></li>
+                      <li><a href="javascript:void(0);">4명</a></li>
+                      <li><a href="javascript:void(0);">5명</a></li>
+                      <li><a href="javascript:void(0);">6명</a></li>
+                      <li><a href="javascript:void(0);">7명</a></li>
+                      <li><a href="javascript:void(0);">8명</a></li>
+                      <li><a href="javascript:void(0);">9명</a></li>
+                      <li><a href="javascript:void(0);">10명</a></li>
                     </ul>
                   </div>
 
@@ -776,20 +778,20 @@
                   <div class="people_select">
                     <div class="people_wrap kid">
                       <input type="text" class="kid" id="kid" value="0명" readonly>
-                      <a href="#" class="people_down">선택</a>
+                      <a href="javascript:void(0);" class="people_down">선택</a>
                     </div>
-                    <ul class="number_list opt3 blind">
-                      <li><a href="#">0명</a></li>
-                      <li><a href="#">1명</a></li>
-                      <li><a href="#">2명</a></li>
-                      <li><a href="#">3명</a></li>
-                      <li><a href="#">4명</a></li>
-                      <li><a href="#">5명</a></li>
-                      <li><a href="#">6명</a></li>
-                      <li><a href="#">7명</a></li>
-                      <li><a href="#">8명</a></li>
-                      <li><a href="#">9명</a></li>
-                      <li><a href="#">10명</a></li>
+                    <ul class="number_list opt3">
+                      <li><a href="javascript:void(0);">0명</a></li>
+                      <li><a href="javascript:void(0);">1명</a></li>
+                      <li><a href="javascript:void(0);">2명</a></li>
+                      <li><a href="javascript:void(0);">3명</a></li>
+                      <li><a href="javascript:void(0);">4명</a></li>
+                      <li><a href="javascript:void(0);">5명</a></li>
+                      <li><a href="javascript:void(0);">6명</a></li>
+                      <li><a href="javascript:void(0);">7명</a></li>
+                      <li><a href="javascript:void(0);">8명</a></li>
+                      <li><a href="javascript:void(0);">9명</a></li>
+                      <li><a href="javascript:void(0);">10명</a></li>
                     </ul>
                   </div>
                 </fieldset>
