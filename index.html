@@ -7,9 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BUSTAGO</title>
   <link rel="stylesheet" type="text/css" href="./css/index_style.css">
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="./css/jquery-ui.css">
+  <!-- <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
   <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+  <script type="text/javascript" src="./script/jquery-ui.js"></script>
   <script type="text/javascript" src="./script/index.js"></script>
 </head>
 
@@ -99,8 +101,8 @@
                   <label for="depart_date">가는날</label>
                   <div class="date_select1">
                     <div class="depart_date_wrap">
-                      <input type="text" class="calendar" id="depart_date" value="2021-08-10" readonly>
-                      <a href="#javascript:void(0);" class="date_icon">선택</a>
+                      <input type="text" class="calendar" id="depart_date" value="" readonly>
+                      <!-- <a href="#javascript:void(0);" class="date_icon">선택</a> -->
                     </div>
                     <!-- <div class="month_wrap blind">
                       <table summary="월별 달력" class="month_now">
@@ -273,10 +275,10 @@
 
                   <label for="back_date">오는날</label>
                   <div class="return_date_wrap">
-                    <input type="text" class="calendar" id="back_date" disabled>
+                    <input type="text" class="calendar" id="" disabled>
                   </div>
 
-                  <label for="back_time">출발시간</label>
+                  <label for=" back_time">출발시간</label>
                   <div class="return_time_wrap">
                     <input type="text" class="rt_time" id="back_time" disabled>
                   </div>
@@ -388,9 +390,9 @@
                   <div class="date_select1">
                     <div class="depart_date_wrap">
                       <input type="text" class="calendar" id="depart_date" value="2021-08-10" readonly>
-                      <a href="#" class="date_icon">선택</a>
+                      <!-- <a href="#" class="date_icon">선택</a> -->
                     </div>
-                    <div class="month_wrap blind">
+                    <!-- <div class="month_wrap blind">
                       <table summary="월별 달력" class="month_now">
                         <caption>2021년 8월</caption>
                         <a href="#" class="date_next">다음 달</a>
@@ -516,7 +518,7 @@
                           </tr>
                         </tbody>
                       </table>
-                    </div>
+                    </div> -->
                   </div>
 
                   <label for="depart_time">출발시간</label>
@@ -561,10 +563,10 @@
                   <label for="back_date">오는날</label>
                   <div class="date_select2">
                     <div class="back_date_wrap">
-                      <input type="text" class="calendar" id="back_date" value="2021-08-10">
-                      <a href="#" class="date_icon">선택</a>
+                      <input type="text" class="calendar" id="back_date" value="">
+                      <!-- <a href="#" class="date_icon">선택</a> -->
                     </div>
-                    <div class="month_wrap2 blind">
+                    <!-- <div class="month_wrap2 blind">
                       <table summary="월별 달력" class="month_now">
                         <caption>2021년 8월</caption>
                         <a href="#" class="date_next">다음 달</a>
@@ -690,7 +692,7 @@
                           </tr>
                         </tbody>
                       </table>
-                    </div>
+                    </div> -->
                   </div>
 
                   <label for="back_time">출발시간</label>
@@ -810,9 +812,7 @@
               <form class="confirm_box1" name="" aciton="" method="">
                 <fieldset>
                   <legend>카드번호로 조회하기</legend>
-
                   <label for="card_no">카드번호</label>
-
                   <input type="text" id="card_no" class="card_no" maxlength="4" title="카드번호 첫번째 4자리">
                   <span>-</span>
                   <input type="text" class="card_no" maxlength="4" title="카드번호 두번째 4자리">
@@ -820,7 +820,6 @@
                   <input type="text" class="card_no" maxlength="4" title="카드번호 세번째 4자리">
                   <span>-</span>
                   <input type="text" class="card_no" maxlength="4" title="카드번호 네번째 4자리">
-
                 </fieldset>
               </form>
             </li>
@@ -839,8 +838,9 @@
                   <div class="phone_info">
                     <label for="phone_no">휴대폰번호</label>
                     <input type="text" id="phone_no" class="phone_no" maxlength="3">
-                    <span class="hyphen">-</span><input type="text" class="phone_no" maxlength="4"><span
-                      class="hyphen">-</span>
+                    <span class="hyphen">-</span>
+                    <input type="text" class="phone_no" maxlength="4">
+                    <span class="hyphen">-</span>
                     <input type="text" class="phone_no" maxlength="4">
                   </div>
                 </fieldset>
@@ -853,7 +853,6 @@
         </li>
       </ul>
     </section>
-
 
     <section class="main_cont2">
       <div class="main_cont2_wrap">
@@ -892,7 +891,6 @@
       </div>
     </section>
 
-
     <section class="main_cont3">
       <h2><a href="sub03_cancellation_fee.html" class="cancel">취소수수료 안내<img src="images/cancel_act.png"
             alt="취소수수료 안내 이미지"></a></h2>
@@ -917,7 +915,6 @@
           <li><a href="#">사업자정보</a></li>
         </ul>
       </div>
-
 
       <div class="family_site">
         <h3>Family Site</h3>

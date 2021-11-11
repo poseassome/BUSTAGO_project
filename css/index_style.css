@@ -254,14 +254,15 @@ ul::-webkit-scrollbar-track{background: transparent;}
   clear: both;
   padding-top: 40px;
 }
+img.ui-datepicker-trigger{float:right;}
 
-.date_icon {width: 23px; height: 23px; background: url(../images/icon_date.jpg) no-repeat; display: block; text-indent: -9999px; float: right;}
+/* .date_icon {width: 23px; height: 23px; background: url(../images/icon_date.jpg) no-repeat; display: block; text-indent: -9999px; float: right;} */
 
 .time_icon {width: 23px; height: 23px; background: url(../images/clck_icon.jpg) no-repeat; display: block; text-indent: -9999px; float: right;}
 .date_select1,.time_select1,
 .date_select2, .time_select2 {position: relative;}
 
-.month_wrap {
+/* .month_wrap {
   background-color: white;
   width: 260px;
   height: 237px;
@@ -274,7 +275,7 @@ ul::-webkit-scrollbar-track{background: transparent;}
   top: 33px;
   padding: 8px;
   z-index: 2;
-}
+} */
 
 .month_wrap2 {
   background-color: white;
@@ -327,7 +328,7 @@ ul::-webkit-scrollbar-track{background: transparent;}
 
 .time_list1, .time_list2 {background-color: white; width: 174px; height: 237px; font-size: 16px; padding: 7px; white-space: nowrap; overflow-y: scroll; border: 1px solid #2d334a; border-radius: 5px; position: absolute; right: 4px; top: 32px; z-index: 3; display: none;}
 
-.time_list1 a, .time_list2 a {font-family: 'GmarketSansMedium'; color: #9aa0b7;}
+.time_list1 a, .time_list2 a {font-family: 'GmarketSansMedium'; color: #9aa0b7; display: block; width: 100%;}
 
 .return_date_wrap,
 .return_time_wrap {
@@ -351,7 +352,7 @@ ul::-webkit-scrollbar-track{background: transparent;}
 .people_down {width: 30px; height: 31px; background: url(../images/people_down_icon.png) center no-repeat; display: block; border-left: 1px solid #2d334a; text-indent: -9999px; float: right;}
 .people_select {position: relative;}
 .number_list {width: 90px; height: 130px; background: white; border: 1px solid #2d334a; border-radius: 5px; font-size: 16px; padding: 7px; line-height: 21px; z-index:2; overflow-y: scroll; display: none;}
-.number_list a {font-family: 'GmarketSansMedium'; color: #9aa0b7;}
+.number_list a {font-family: 'GmarketSansMedium'; color: #9aa0b7; display: block; width: 100%;}
 .opt1 {position: absolute; top: 32px; left: 53.5px;}
 .opt2 {position: absolute; top: 32px; left: 265.5px;}
 .opt3 {position: absolute; top: 32px; left: 460.5px;}
