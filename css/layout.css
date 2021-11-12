@@ -34,85 +34,62 @@
 }
 
 * {box-sizing: border-box;}
-
 *:focus{outline: none;}
-
 body {font-family: "GmarketSansLight"; font-size: 18pt; line-height: 1.5;}
-
 button {cursor: pointer;}
 
 /* CSS Reset */
 body,h1,h2,h3,h4,h5,h6,p,div,ul,ol,li,dl,dt,dd {
   margin: 0;
   padding: 0;}
-
 a {text-decoration: none; color: #000;}
-
 button{border:none;}
-
 ul,ol,li {list-style: none;}
-
 address {font-style: normal;}
-
 fieldset, legend {border:0;padding:0;margin:0;}
-
 .blind {position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden;}
 
 
 /* Body 부분 */
 /* Header */
-.header {position: relative; height: 173px; border-top: 1px solid #ffffff; background: #fff; box-shadow: 15px 0px 30px rgba(0, 0, 0, 0.3);}
+.header {position: relative;height: 173px;border-top: 1px solid #ffffff;background: #fff;box-shadow: 15px 0px 30px rgba(0, 0, 0, 0.3); z-index: 30;}
+.logo {width: 339px;position: relative;margin: auto;z-index: 10;}
+.logo a {width: 339px;height: 205px;background: url(../images/logo.png) no-repeat;text-indent: -9999px;display: block;position: absolute;top: 37px;}
 
-.logo {width: 339px; position: relative; margin: auto; z-index: 10;}
-
-.logo a {width: 339px; height: 205px; background: url(../images/logo.png) no-repeat; text-indent: -9999px; display: block; position: absolute; top: 37px;}
-
-.gnb>ul {position: absolute; top: 107px; background: url(../images/gnb_back_trans.png) repeat-x;}
-
-.gnb {width: 1200px; margin: auto; position: relative;}
-
-.gnb>ul>li ul a:hover { font-family: 'GmarketSansMedium';}
+.gnb>ul {position: absolute;top:107px;background: url(../images/gnb_back_trans.png) repeat-x;}
+.gnb {width: 1200px;margin:auto;position: relative;}
+.gnb>ul>li ul a:hover {font-family: 'GmarketSansMedium';}
 
 .menu1 {float: left; margin-right: 52px;}
-
-.menu1>a {width: 165px; height: 65px; background: url(../images/menu_01.jpg) no-repeat; text-indent: -9999px; display: block; margin-bottom: 10px;}
-
-.menu1 ul li {font-size: 18px; text-align: center; line-height: 40px;}
-
-.menu2 {float: left; margin-right: 371px;}
-
-.menu2>a {width: 186px; height: 65px; background: url(../images/menu_02.jpg) no-repeat; text-indent: -9999px; display: block; margin-bottom: 10px;}
-
-.menu2 ul li {font-size: 18px; text-align: center; line-height: 40px;}
-
-.menu3 {float: left; margin-right: 52px}
-
-.menu3>a {width: 184px; height: 65px; background: url(../images/menu_03.jpg) no-repeat; text-indent: -9999px; display: block; margin-bottom: 10px;}
-
-.menu3 ul li {font-size: 18px; text-align: center; line-height: 40px;}
-
+.menu1>a {width: 165px;height: 65px;background: url(../images/menu_01.jpg) no-repeat;text-indent: -9999px;display: block;margin-bottom: 10px;}
+.menu1 ul li {font-size: 18px;text-align: center;line-height: 40px;}
+.menu2 {float: left;margin-right: 371px;}
+.menu2>a {width: 186px;height: 65px;background: url(../images/menu_02.jpg) no-repeat;text-indent: -9999px;display: block;margin-bottom: 10px;}
+.menu2 ul li {font-size: 18px;text-align: center;line-height: 40px;}
+.menu3 {float: left;margin-right: 52px;}
+.menu3>a {width: 184px;height: 65px;background: url(../images/menu_03.jpg) no-repeat;text-indent: -9999px;display: block;margin-bottom: 10px;}
+.menu3 ul li {font-size: 18px;text-align: center;line-height: 40px;}
 .menu4 {float: left;}
-
-.menu4>a {width: 186px; height: 65px; background: url(../images/menu_04.jpg) no-repeat; text-indent: -9999px; display: block; margin-bottom: 10px;}
-
-.menu4 ul li {font-size: 18px; text-align: center; line-height: 40px;}
-
-.topmenu {width: 1200px; margin: auto; position: relative;}
-
-.topmenu ul {position: absolute; top: 45px; right: 0px;}
-
-.topmenu li { float: left;}
-
-.sitemap {width: 101px; height: 20px; background: url(../images/sitemap_icon.jpg) no-repeat left; display: block; font-size: 15px; text-align: right; margin-right: 40px;}
-
-.login {width: 80px; height: 20px; background: url(../images/login_icon.jpg) no-repeat left; display: block; font-size: 15px; text-align: right; margin-right: 4px;}
+.menu4>a {width: 186px;height: 65px;background: url(../images/menu_04.jpg) no-repeat;text-indent: -9999px;display: block;margin-bottom: 10px;}
+.menu4 ul li {font-size: 18px;text-align: center;line-height: 40px;}
+.topmenu {width: 1200px;margin: auto;position: relative;}
+.topmenu ul {position: absolute;top: 45px;right: 0px;}
+.topmenu li {float: left;}
+.sitemap {width: 101px;height: 20px;background: url(../images/sitemap_icon.jpg) no-repeat left;display: block;font-size: 15px;text-align: right;margin-right: 40px;}
+.login {width: 80px;height: 20px;background: url(../images/login_icon.jpg) no-repeat left;display: block;font-size: 15px;text-align: right;margin-right: 4px;}
+.mypage {width: 105px;height: 20px;background: url(../images/login_icon.jpg) no-repeat left;display: block;font-size: 15px;text-align: right;margin-right: 4px;}
+.logout {width: 100px;height: 20px;background: url(../images/logout_icon.jpg) no-repeat left;display: block;font-size: 15px;text-align: right;margin-right: 4px;
+}
 
 /* Quickmenu 이동 */
 .quickmenu a {display: block; width:100px; height:100px; border-radius: 50%; border:1px solid #2d334a;font-family: 'HangeulNuri-Bold'; font-size:9px; padding:73px 10px 10px; text-align: center;margin-bottom:20px;}
 a.quick_tk{ background:url(../images/quickmenu_draw1.png) bottom 25px center no-repeat, white;}
 a.quick_confirm{ background:url(../images/quickmenu_draw2.png) center no-repeat, white;}
 a.quick_top {background:url(../images/quick_side_top.jpg) center no-repeat, white;border:0; text-indent:-9999px;}
-aside.quickmenu{width:100px; height:340px;position:fixed;top:396px;left:50%;margin-left:650px;z-index:10;}
+/* .quickmenu{width:100px; height:340px;position:fixed;top:430px;left:50%;margin-left:650px;z-index:10;} */
+.quickmenu{width:100px; height:340px;position:fixed;right: 20px; bottom: 50px;z-index:10;}
+.quickmenu.on {position: absolute; bottom: 0px;}
+.content {position: relative;}
 
 
 /* main */
@@ -123,15 +100,10 @@ h2.cont_title{text-align:center; width:1200px; height:178px; padding: 102px 0 35
 div.cont_title_wrap{background: url(../images/menu_title_back.jpg) top center no-repeat, #c8edee;}
 
 /* (공통) LNB */
-.lnb_wrap a{
-  font-family: 'hangeulNuri-regular'; font-size:18px; color:#2d334a;}
-a.homepage{
-  width:90px;height:44px;
-  background: url(../images/home_icon.png) center no-repeat;
-  text-indent: -9999px; display: block;padding:0 15px;}
-a.menu_1depth_on, a.menu_2depth_on{
-  display:block;width:180px;
-  background: url(../images/lnb_down_icon.png) right 15px center no-repeat;padding-left:15px;border-left:1px solid #b4b4b4;}
+.lnb_wrap a{font-family: 'hangeulNuri-regular'; font-size:18px; color:#2d334a;}
+a.homepage{width:90px;height:44px; background: url(../images/home_icon.png) center no-repeat; text-indent: -9999px; display: block;padding:0 15px;}
+.menu_on > ul, .menu_2depth >ul {display: none;}
+a.menu_1depth_on, a.menu_2depth_on{display:block;width:180px; background: url(../images/lnb_down_icon.png) right 15px center no-repeat;padding-left:15px;border-left:1px solid #b4b4b4;}
 .menu_2depth_on{border-right:1px solid #b4b4b4;}
 .lnb_wrap>ul>li{
   float:left;line-height: 44px;}
@@ -176,35 +148,19 @@ li.menubox.end{margin:0;}
 
 /* footer */
 .footer {height: 383px; background: #fffceb; position: relative; margin-top: 40px;}
-
 .footer_top {position: relative; width: 1200px; margin: auto; z-index: 2;}
-
 .footer_bottom {position: relative; width: 1200px; margin: auto; font-family: 'hangeulNuri-regular'; color: #696969; font-size: 12px;}
-
-.footer_top li {font-family: 'GmarketSansMedium'; font-size: 16px; float: left; line-height: 93px; margin: 0 90px;}
-
+.footer_top .footer_law li {font-family: 'GmarketSansMedium'; font-size: 16px; float: left; line-height: 93px; margin: 0 90px;}
 .footer_top h2 {width: 110px; height: 22px; background: url(../images/footer_logo1.png) no-repeat; text-indent: -9999px; position: absolute; top: 110px;}
-
 .footer_law h3 {width: 110px; height: 38px; background: url(../images/footer_logo2.png) no-repeat; text-indent: -9999px; position: absolute; top: 142px;}
-
 .family_site {background: white; width: 156px; height: 23px; border: 1px solid #696969; border-radius: 5px; position: absolute; top: 106px; right: 0;}
-
-.family_site h3 {line-height: 21px; font-size: 12px; font-family: 'hangeulNuri-regular'; color: #696969; font-weight: normal; padding: 0px 9px; background: url(../images/familysite_down.png) no-repeat 131px center;}
-
-.family_site ul {width: 156px; height: 171px; border: 1px solid #696969; border-radius: 5px; padding: 5px 9px; background: white; position: absolute; left: -1px;}
-
-.family_site ul a {font-family: 'hangeulNuri-regular'; color: #696969;}
-
-.family_site ul li {margin: 0; font-size: 10px; line-height: 18px;}
-
+.family_site h3 {cursor: pointer; line-height: 21px; height: 21px; font-size: 12px; font-family: 'hangeulNuri-regular'; color: #696969; font-weight: normal; padding: 0px 9px; background: url(../images/familysite_down.png) no-repeat 131px center;}
+.family_site ul { width: 156px; height: 185px; border: 1px solid #696969; border-radius: 5px; padding: 5px 9px; background: white; position: absolute; left: -1px; display: none;}
+.family_site ul a { font-family: 'hangeulNuri-regular'; color: #696969;}
+.family_site ul li { margin: 0; font-size: 10px; line-height: 19px;}
 .footer_bottom_cont1 {position: absolute; top: 110px; left: 145px; margin-bottom: 10px;}
-
-.footer_bottom_cont1 p { float: left; margin-right: 5px;}
-
-.footer_bottom_cont2 { position: absolute; top: 133px; left: 145px;}
-
+.footer_bottom_cont1 p {float: left; margin-right: 5px;}
+.footer_bottom_cont2 {position: absolute; top: 133px; left: 145px;}
 .footer_bottom>p {position: absolute; top: 204px; left: 145px;}
-
 .mark_wa {width: 76px; height: 54px; background: url(../images/wa.png) no-repeat; display: block; text-indent: -9999px; position: absolute; top: 163px; right: 83px;}
-
-.mark_isms {width: 60px; height: 54px; background: url(../images/isms.png) no-repeat; display: block; text-indent: -9999px; position: absolute; top: 163px; right: 0px;}
+.mark_isms { width: 60px; height: 54px; background: url(../images/isms.png) no-repeat; display: block; text-indent: -9999px; position: absolute; top: 163px; right: 0px;}

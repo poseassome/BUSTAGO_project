@@ -1,4 +1,3 @@
-
 /* 예매하기 서브페이지 */
 /* 예매 정보입력칸 */
 .tk_inform_box {display: block; margin-bottom:45px;}
@@ -8,16 +7,19 @@
 .tk_inform_box>ul>li{float:left;width:577px;height:59px;font-family: 'HangeulNuri-Bold'; font-size:30px;}
 .tk_inform_box>ul>li h4{word-spacing:50px; text-align:center; line-height:59px;}
 
-.select_oneway h4.select_on{background: url(../images/sub_oneway_on.png) no-repeat;color:#393567;}
-.select_oneway h4.select_off a{color:#fff;}
+.select_oneway h4.select_on{background: url(../images/sub_oneway_on.png) no-repeat;}
+.select_oneway h4 a{color:#fff;}
+.select_oneway h4.select_on a{color:#272343;}
 
 .select_return {margin-left:6px;}
-.select_return h4.select_off a{color:#fff;}
-.select_return h4.select_on{background: url(../images/sub_return_on.png) no-repeat;color:#393567;}
+.select_return h4  a{color:#fff;}
+.select_return h4.select_on{background: url(../images/sub_return_on.png) no-repeat;}
+.select_return h4.select_on a{color:#272343;}
 
 
-.oneway_box{width:1160px; height:290px;margin:0 auto; background: #fff;border-radius: 0 5px 5px 5px; padding:40px 28px;position:absolute;top:76px; right:20px;}
-.return_box{width:1160px; height:290px;margin:0 auto; background: #fff;border-radius:5px 0 5px 5px; padding:40px 28px;position:absolute;top:76px; right:20px;}
+
+.oneway_box{width:1160px; height:290px;margin:0 auto; background: #fff;border-radius: 0 5px 5px 5px; padding:40px 28px;position:absolute;top:76px; right:20px; display:none;}
+.return_box{width:1160px; height:290px;margin:0 auto; background: #fff;border-radius:5px 0 5px 5px; padding:40px 28px;position:absolute;top:76px; right:20px; display:none;}
 
 .oneway_box label, .return_box label{font-family: 'GmarketSansMedium'; font-size: 24px; color:#2d334a; float:left; width: 115px; height: 31px;}
 fieldset.people_form label{width:fit-content; margin-right:11px;}

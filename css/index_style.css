@@ -27,7 +27,6 @@ ul::-webkit-scrollbar-track{background: transparent;}
 .gnb>ul {position: absolute;top:107px;background: url(../images/gnb_back_trans.png) repeat-x;}
 .gnb {width: 1200px;margin:auto;position: relative;}
 .gnb>ul>li ul a:hover {font-family: 'GmarketSansMedium';}
-/* .submenu{display: none;} */
 
 .menu1 {float: left; margin-right: 52px;}
 .menu1>a {width: 165px;height: 65px;background: url(../images/menu_01.jpg) no-repeat;text-indent: -9999px;display: block;margin-bottom: 10px;}
@@ -60,7 +59,7 @@ ul::-webkit-scrollbar-track{background: transparent;}
 
 .tk_on {background: #fff; color: #272343;}
 .tk_off {background: #272343; color: #fff;}
-.tk_off:hover{background: #fff; color: #272343;}
+/* .tk_off:hover{background: #fff; color: #272343;} */
 .form_off{display: none;}
 
 .oneway_on {width: 239px; height: 133px; border-radius: 0 0 0 30px; display: block; letter-spacing: 44px; text-indent: 44px; text-align: center; line-height: 133px; font-family: 'HangeulNuri-Bold'; font-size: 30px; position: absolute; left: 362px; top: 0;}
