@@ -33,190 +33,28 @@ div.arrive_input_wrap, div.depart_time_wrap, div.return_time_wrap {
 
 .oneway_box div.return_date_wrap, .oneway_box div.return_time_wrap {background:#b4b5bc;}
 
-.search_icon {
-  width: 23px; height: 23px;
-  background: url(../images/srch_icon.jpg) no-repeat; background-size: cover;
-  display: block;
-  text-indent: -9999px;
-  float: right;
-  line-height: 31px;
-}
+.search_icon {width: 23px; height: 23px; background: url(../images/srch_icon.jpg) no-repeat; background-size: cover; display: block; text-indent: -9999px; float: right; line-height: 31px;}
 
-.depart_input, .arrive_input, .calendar, .time {
-  width:180px; height: 23px; border:none;
-  font-size: 20px;
-  margin-top:2px;
-  font-family: 'GmarketSansMedium';
-  color: #272343;
-  line-height: 23px;
-  background: transparent;
-  float: left;
-}
-div.people_wrap{
-  width:82px; height:31px; background:#fff;
-  border:1px solid #2d334a; border-radius: 5px; float:left; margin-right:43px;}
+.depart_input, .arrive_input, .calendar, .time { width:180px; height: 23px; border:none; font-size: 20px; margin-top:2px; font-family: 'GmarketSansMedium'; color: #272343; line-height: 23px; background: transparent; float: left;}
+div.people_wrap{width:82px; height:31px; background:#fff; border:1px solid #2d334a; border-radius: 5px; float:left; margin-right:43px;}
+input.adult, input.student, input.kid {width:40px; height:23px; margin-left:2px; border:none; font-size: 20px; margin-top:5px; font-family: 'GmarketSansMedium'; color: #272343; line-height: 23px; background: transparent; float: left;}
 
-input.adult, input.student, input.kid {
-  width:40px; height:23px;
-  margin-left:2px;
-  border:none;
-  font-size: 20px;
-  margin-top:5px;
-  font-family: 'GmarketSansMedium';
-  color: #272343;
-  line-height: 23px;
-  background: transparent;
-  float: left;
-}
+form.oneway_box fieldset, form.return_box fieldset{margin-bottom:30px; position:relative;}
 
-form.oneway_box fieldset, form.return_box fieldset{
-  margin-bottom:30px; position:relative;}
-
-.date_icon {
-  width: 23px;
-  height: 23px;
-  background: url(../images/icon_date.jpg) no-repeat;
-  display: block;
-  text-indent: -9999px;
-  float: right;
-}
-
-.time_icon {
-  width: 23px;
-  height: 23px;
-  background: url(../images/clck_icon.jpg) no-repeat;
-  display: block;
-  text-indent: -9999px;
-  float: right;
-}
-
-.people_down {
-  width: 30px;
-  height: 29px;
-  background: url(../images/people_down_icon.png) center no-repeat;
-  display: block;
-  border-left: 1px solid #2d334a;
-  text-indent: -9999px;
-  float: right;
-}
+.time_icon {width: 23px; height: 23px; background: url(../images/clck_icon.jpg) no-repeat; display: block; text-indent: -9999px; float: right;}
+.people_down {width: 30px; height: 29px; background: url(../images/people_down_icon.png) center no-repeat; display: block; border-left: 1px solid #2d334a; text-indent: -9999px; float: right;}
 
 button.tk_reserve{width:523px; height:39px; background:url(../images/sub_tk_reserve_button.jpg) no-repeat; border:none;font-family: 'HangeulNuri-Bold'; font-size:24px; color:#2d334a; word-spacing:20px; position:absolute;right:28px;bottom:34px;}
 button.tk_reserve:hover{background:url(../images/sub_tk_reserve_button_act.jpg) no-repeat;}
 
-
 /* 달력, 시간, 인원수 옵션 */
-.month_wrap tbody, .month_wrap2 tbody {font-family: 'GmarketSansLight';}
-.month_wrap {
-  background-color: white;
-  width: 260px;
-  height: 237px;
-  border-radius: 10px;
-  border: 1px solid #2d334a;
-  font-size: 18px;
-  text-align: center;
-  position: absolute;
-  left: 266px;
-  top: 31px;
-  padding: 8px;
-  z-index: 2;
-}
-
-.month_wrap2 {
-  background-color: white;
-  width: 260px;
-  height: 237px;
-  border-radius: 10px;
-  border: 1px solid #2d334a;
-  font-size: 18px;
-  text-align: center;
-  position: absolute;
-  left: 266px;
-  top: 31px;
-  padding: 8px;
-  z-index: 2;
-}
-
-.month_now caption,
-.month_now thead,
-.month_next caption,
-.month_next thead {
-  font-family: 'GmarketSansMedium';
-}
-
-.month_now,
-.month_next {
-  margin: 0 auto;
-  border-spacing: 3px;
-  width: 242px;
-}
-
-.date_next {
-  width: 21px;
-  height: 19px;
-  background: url(../images/date_next.jpg) no-repeat;
-  display: block;
-  text-indent: -9999px;
-  position: absolute;
-  right: 17px;
-}
-
-.date_prev {
-  width: 21px;
-  height: 19px;
-  background: url(../images/date_prev.jpg) no-repeat;
-  display: block;
-  text-indent: -9999px;
-  position: absolute;
-  left: 17px;
-}
-
-.time_list1, .time_list2 {
-  background-color: white;
-  width: 411px;
-  height: 237px;
-  font-size: 20px;
-  padding: 7px;
-  white-space: nowrap;
-  overflow-y: scroll;
-  border: 1px solid #2d334a;
-  border-radius: 10px;
-  position: absolute;
-  right: 0px;
-  top: 31px;
-  z-index: 2;
-}
-
-.time_list1 a, .time_list2 a {
-  font-family: 'GmarketSansMedium'; color: #9aa0b7;
-}
-
-.number_list {
-  width: 82px;
-  height: 315px;
-  background: white;
-  border: 1px solid #2d334a;
-  border-radius: 5px;
-  font-size: 20px;
-  padding: 7px;
-  line-height: 25px;
-  z-index:2;
-}
-
-.number_list a {
-  font-family: 'GmarketSansMedium'; color: #9aa0b7;
-}
-
-.opt1 {
-  position: absolute; top: 31px; left: 57px;
-}
-
-.opt2 {
-  position: absolute; top: 31px; left: 262px;
-}
-
-.opt3 {
-  position: absolute; top: 31px; left: 444px;
-}
+.time_list1, .time_list2 {background-color: white; width: 411px; height: 237px; font-size: 20px; padding: 7px; white-space: nowrap; overflow-y: scroll; border: 1px solid #2d334a; border-radius: 5px; position: absolute; right: 0px; top: 31px; z-index: 2; display: none}
+.time_list1 a, .time_list2 a {font-family: 'GmarketSansMedium'; color: #9aa0b7;}
+.number_list {width: 82px; height: 130px; background: white; border: 1px solid #2d334a; border-radius: 5px; font-size: 20px; padding: 7px; line-height: 25px; z-index:2; overflow-y: scroll; display: none;}
+.number_list a {font-family: 'GmarketSansMedium'; color: #9aa0b7;}
+.opt1 {position: absolute; top: 31px; left: 57px;}
+.opt2 {position: absolute; top: 31px; left: 262px;}
+.opt3 {position: absolute; top: 31px; left: 444px;}
 
 
 /* 예매 시 주의사항 */
@@ -308,8 +146,6 @@ ul.seat_col li:first-child{margin-bottom: 6px;}
 ul.seat_col li:last-child {margin-top:68px;}
 ul.seat_col.last li{margin-bottom: 6px;}
 ul.seat_col.last li:last-child {margin-top:0;}
-
-
 
 
 /* 결제하기 서브페이지 */

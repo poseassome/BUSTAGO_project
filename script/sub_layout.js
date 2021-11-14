@@ -40,15 +40,4 @@ $(document).ready(function () {
   $(".family_site").mouseleave(function () {
     $(".family_site ul").slideUp(500);
   });
-
-
-  // sub01
-  $(".tk_inform_box>ul>li>h4>a").first().parent().addClass("select_on");
-  $(".tk_inform_box>ul>li>h4>a").first().parents("li").find("form").fadeIn(0);
-  $(".tk_inform_box>ul>li>h4>a").click(function () {
-    $(".tk_inform_box>ul>li>h4>a").parent().removeClass("select_on");
-    $(this).parent().addClass("select_on");
-    $(".tk_inform_box>ul>li>h4>a").parents("li").find("form").fadeOut(0);
-    $(this).parents("li").find("form").fadeIn(0);
-  });
 });

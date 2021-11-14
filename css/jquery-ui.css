@@ -463,6 +463,7 @@ a.ui-button:active,
 ----------------------------------*/
 
 /* states and images */
+.ui-datepicker-trigger{cursor: pointer; background: transparent; border: none; padding:0; float: right;}
 .ui-icon {
 	width: 16px;
 	height: 16px;
