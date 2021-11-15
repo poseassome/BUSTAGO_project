@@ -120,11 +120,10 @@ section.lnb{
   width:100%;margin-bottom:45px;background: #fff;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);}
 div.menu_on>ul{
-  width:180px;height:135px;background:#fff;border:1px solid #f6f6f6; box-shadow: 3px 5px 3px #f6f6f6;padding: 0 15px;text-align: center;line-height: 30px;
-position:absolute;top:44px;}
+  width:180px;height:135px;background:#fff;border:1px solid #f6f6f6; box-shadow: 3px 5px 3px #f6f6f6;padding: 0 15px;text-align: center;line-height: 30px; position:absolute;top:44px; z-index: 5;}
 div.menu_2depth>ul{
   width:180px;background:#fff;border:1px solid #f6f6f6; box-shadow: 3px 5px 3px #f6f6f6;padding: 0 15px;text-align: center;line-height: 30px;
-  position:absolute;top:44px;}
+  position:absolute;top:44px; z-index:5;}
 div.menu_on>ul a:hover,
 div.menu_2depth>ul a:hover{
   font-weight: bold;}

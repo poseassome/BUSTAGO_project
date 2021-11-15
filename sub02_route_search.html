@@ -125,8 +125,8 @@
             <li>
               <label for="leave_time">출발시간</label>
               <div class="time_wrap">
-                <input type="text" value="00:00">
-                <a href="#" class="clock_icon">검색</a>
+                <input type="text" value="00:00" id="leave_time">
+                <a href="javascript:void(0);" class="clock_icon">검색</a>
               </div>
               <ul class="time_list">
                 <li><a href="javascript:void(0);">00:00</a></li>
@@ -156,12 +156,12 @@
             </li>
           </ul>
         </fieldset>
-        <button type="submit" class="route_inform_search">조회하기</button>
+        <button type="button" class="route_inform_search">조회하기</button>
       </form>
     </section>
 
     <section class="input_route">
-      <span>출발지</span><span> → </span><span>도착지</span>
+      <span class="start">출발지</span><span> → </span><span class="end">도착지</span>
     </section>
 
     <section class="route_drive_list">
