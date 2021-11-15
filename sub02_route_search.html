@@ -8,6 +8,11 @@
   <title>BUSTAGO 노선 검색</title>
   <link rel="stylesheet" type="text/css" href="./css/layout.css">
   <link rel="stylesheet" type="text/css" href="./css/02sub_style.css">
+  <link rel="stylesheet" type="text/css" href="./css/jquery-ui.css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="./script/jquery-ui.js"></script>
+  <script type="text/javascript" src="./script/sub_layout.js"></script>
+  <script type="text/javascript" src="./script/sub02.js"></script>
 </head>
 
 <body>
@@ -17,27 +22,27 @@
     <nav class="gnb">
       <h2 class="blind">주요메뉴</h2>
       <ul>
-        <li class="menu1"><a href="sub01_ticket_reservation_step1.html">승차권</a>
+        <li class="menu1"><a href="javascript:void(0);">승차권</a>
           <ul class="submenu">
             <li><a href="sub01_ticket_reservation_step1.html">예매하기</a></li>
             <li><a href="sub05_login.html">조회/변경/취소</a></li>
           </ul>
         </li>
-        <li class="menu2"><a href="sub02_route_search.html">운행정보</a>
+        <li class="menu2"><a href="javascript:void(0);">운행정보</a>
           <ul class="submenu">
             <li><a href="sub02_route_search.html">노선안내</a></li>
             <li><a href="sub02_terminal_search .html">터미널안내</a></li>
             <li><a href="sub02_company_search.html">버스회사 안내</a></li>
           </ul>
         </li>
-        <li class="menu3"><a href="sub03_introduce_service.html">이용안내</a>
+        <li class="menu3"><a href="javascript:void(0);">이용안내</a>
           <ul class="submenu">
             <li><a href="sub03_introduce_service.html">서비스 소개</a></li>
             <li><a href="sub03_cancellation_fee.html">취소 수수료 안내</a></li>
             <li><a href="sub03_moblieservice.html">모바일 이용</a></li>
           </ul>
         </li>
-        <li class="menu4"><a href="sub04_notice.html">고객지원</a>
+        <li class="menu4"><a href="javascript:void(0);">고객지원</a>
           <ul class="submenu">
             <li><a href="sub04_notice.html">공지사항</a></li>
             <li><a href="sub04_faq.html">자주묻는질문(FAQ)</a></li>
@@ -68,8 +73,8 @@
           <li><a href="index.html" class="homepage">메인페이지 이동</a></li>
           <li>
             <div class="menu_on">
-              <a href="#" class="menu_1depth_on">운행정보</a>
-              <ul class="blind">
+              <a href="javascript:void(0);" class="menu_1depth_on">운행정보</a>
+              <ul>
                 <li><a href="sub01_ticket_reservation_step1.html">승차권</a></li>
                 <li><a href="sub02_route_search.html">운행정보</a></li>
                 <li><a href="sub03_introduce_service.html">이용안내</a></li>
@@ -79,8 +84,8 @@
           </li>
           <li>
             <div class="menu_2depth">
-              <a href="sub02_route_search.html" class="menu_2depth_on">노선안내</a>
-              <ul class="blind">
+              <a href="javascript:void(0);" class="menu_2depth_on">노선안내</a>
+              <ul>
                 <li><a href="sub02_route_search.html">노선안내</a></li>
                 <li><a href="sub02_terminal_search .html">터미널안내</a></li>
                 <li><a href="sub02_company_search.html">버스회사 안내</a></li>
@@ -114,14 +119,40 @@
             <li>
               <label for="leave_day">가는 날</label>
               <div class="day_wrap">
-                <input type="text" id="leave_day" value="2021-08-10" readonly><a href="#" class="date_icon">검색</a>
+                <input type="text" id="leave_day" value="" readonly>
               </div>
             </li>
             <li>
               <label for="leave_time">출발시간</label>
-              <div>
-                <input type="text" value="00 : 00"><a href="#" class="clock_icon">검색</a>
+              <div class="time_wrap">
+                <input type="text" value="00:00">
+                <a href="#" class="clock_icon">검색</a>
               </div>
+              <ul class="time_list">
+                <li><a href="javascript:void(0);">00:00</a></li>
+                <li><a href="javascript:void(0);">01:00</a></li>
+                <li><a href="javascript:void(0);">02:00</a></li>
+                <li><a href="javascript:void(0);">03:00</a></li>
+                <li><a href="javascript:void(0);">04:00</a></li>
+                <li><a href="javascript:void(0);">05:00</a></li>
+                <li><a href="javascript:void(0);">06:00</a></li>
+                <li><a href="javascript:void(0);">07:00</a></li>
+                <li><a href="javascript:void(0);">08:00</a></li>
+                <li><a href="javascript:void(0);">09:00</a></li>
+                <li><a href="javascript:void(0);">10:00</a></li>
+                <li><a href="javascript:void(0);">11:00</a></li>
+                <li><a href="javascript:void(0);">12:00</a></li>
+                <li><a href="javascript:void(0);">13:00</a></li>
+                <li><a href="javascript:void(0);">15:00</a></li>
+                <li><a href="javascript:void(0);">16:00</a></li>
+                <li><a href="javascript:void(0);">17:00</a></li>
+                <li><a href="javascript:void(0);">18:00</a></li>
+                <li><a href="javascript:void(0);">19:00</a></li>
+                <li><a href="javascript:void(0);">20:00</a></li>
+                <li><a href="javascript:void(0);">21:00</a></li>
+                <li><a href="javascript:void(0);">22:00</a></li>
+                <li><a href="javascript:void(0);">23:00</a></li>
+              </ul>
             </li>
           </ul>
         </fieldset>

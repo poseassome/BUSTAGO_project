@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  // sub01
+  //// sub01
   // tab
   $(".tk_inform_box>ul>li>h4>a").first().parent().addClass("select_on");
   $(".tk_inform_box>ul>li>h4>a").first().parents("li").find("form").fadeIn(0);
@@ -35,7 +35,6 @@ $(document).ready(function () {
   });
   $("#depart_date, #depart_date_r, #back_date").datepicker('setDate', 'today');
 
-
   // Options
   $(document).click(function (e) {
     if (!$(e.target).is("input+a")) {
@@ -60,4 +59,38 @@ $(document).ready(function () {
     $("div").has(this).find("input").val(text);
     $(this).closest("ul").slideUp(200);
   });
+
+  // 정보 입력 유효성 검사
+  $(".oneway_box button.tk_reserve").click(function () {
+    if ($("#depart_search").val() == "") {
+      alert("출발지를 입력해주세요.");
+      $("#depart_search").focus();
+      return false;
+    } if ($("#arrive_search").val() == "") {
+      alert("도착지를 입력해주세요.");
+      $("#arrive_search").focus();
+      return false;
+    } if ($("form").has(this).find("#adult").val() == "0명" && $("form").has(this).find("#student").val() == "0명" && $("form").has(this).find("#kid").val() == "0명") {
+      alert("승차 인원을 선택해주세요.");
+      $("form").has(this).find("#adult").focus();
+      return false;
+    } else { location.href = "sub01_ticket_reservation_step2.html"; }
+  });
+  $(".return_box button.tk_reserve").click(function () {
+    if ($("#depart_input").val() == "") {
+      alert("출발지를 입력해주세요.");
+      $("#depart_input").focus();
+      return false;
+    } if ($("#arrive_input").val() == "") {
+      alert("도착지를 입력해주세요.");
+      $("#arrive_input").focus();
+      return false;
+    } if ($("form").has(this).find("#adult").val() == "0명" && $("form").has(this).find("#student").val() == "0명" && $("form").has(this).find("#kid").val() == "0명") {
+      alert("승차 인원을 선택해주세요.");
+      $("form").has(this).find("#adult").focus();
+      return false;
+    } else { location.href = "sub01_ticket_reservation_step2.html"; }
+  });
+
+
 });
