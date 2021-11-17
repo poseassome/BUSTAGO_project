@@ -80,7 +80,7 @@ ul.certification_type h5{text-align: center; font-family: 'hangeulNuri-regular';
 li.phone_certify {background: url(../images/certification_image_phone.jpg) center bottom 85px no-repeat,#fff; margin-right: 50px;}
 li.ipin_certify {background: url(../images/certification_image_ipin.jpg) center bottom 85px no-repeat,#fff;}
 li.phone_certify:hover,
-li.ipin_certify:hover {border:2px solid #ffe44e;}
+li.ipin_certify:hover {border:2px solid #ffe44e; cursor: pointer;}
 
 /* 2단계 약관동의 */
 section.membership_terms{width:1200px; margin: 0 auto 70px;
@@ -109,16 +109,25 @@ div.agreement_all_wrap {width:1090px; height:72px; border-radius: 5px; border: 2
 .agreement_all_wrap input[type=checkbox]+label {width:126px; height: 31px; background: url(../images/sub_agree_check.png) left center no-repeat; background-size: contain; display: block; text-align: right; line-height: 28px;}
 .agreement_all_wrap input[type=checkbox]:checked+label {background: url(../images/sub_agree_check_act.png) left center no-repeat; background-size: contain;}
 
-div.step_button{width:490px; height:51px; margin:0 auto;}
-
+div.step_button{width:490px; height:51px; margin:30px auto 0;}
 a.button_prev{width:235px; height:51px; background: #fff; font-family: 'GmarketSansMedium'; font-size:25px; line-height: 51px; margin:0 auto 70px; display: block; text-align: center; border-radius: 5px; border:5px solid #ffe44e; float: left;}
-
 a.button_next,
 button.button_membership_submmit{width:235px; height:51px; background: url(../images/sub_button_seatend.png) no-repeat; font-family: 'GmarketSansMedium'; font-size:25px; line-height: 55px; margin:0 auto 70px; display: block; text-align: center; float:right;}
 a.button_next:hover,
 button.button_membership_submmit:hover{background: url(../images/sub_button_seatend_act.png) no-repeat;}
 
+.term_subtitle {font-family: 'GmarketSansMedium';}
+.term_title {font-family: 'GmarketSansBold';}
+ol.circle_number {counter-reset: ol-counter; list-style: none; padding: 0; margin: 0; font-size: 16px;}
+ol.circle_number>li {font-size: 16px; padding-left: 18px; position: relative;}
+ol.circle_number>li:before {content: counter(ol-counter); counter-increment: ol-counter;background-color: #fff; border: 0.5px solid #272343; border-radius: 50%; height: 12px; width: 12px; color: #272343; font-size: 10px; line-height: 16px; position: absolute; top: 3px; left: 0; text-align: center;}
+ol.decimal_number>li {list-style: decimal; list-style-position: inside;}
+ul.dash>li {list-style: "- ";list-style-position: inside;}
+
+a.a_blue{color:#0000ff;}
+
 /* 회원 정보 입력 */
+.error {display: block; width:100%; height: fit-content; color: red; font-weight: bold; font-style: italic; font-size: 12px; text-indent: 157px;}
 section.membership_userinform{width:1200px; margin: 0 auto 70px;
   border: 1px solid #2d334a; border-radius: 5px;box-shadow:3px -3px 8px 0 #c9c9c9; background: #fff; padding:60px 197px; color: #272343;}
 .user_input_form legend {display:block; width:120px; height:40px; text-align: center; margin:0 auto 50px; background: linear-gradient(0deg, #ffe44e 50%, transparent 50%); font-size: 30px; font-family: 'hangeulNuri-Bold';}
@@ -136,12 +145,14 @@ li.list_user_birth input[type=radio] {display: none;}
 .list_user_birth input[type=text]:nth-child(2) {width:120px; height:30px;}
 .list_user_birth input[type=text] {width:85px; height:30px;}
 .list_user_birth input[type=text]+label{width:35px; height:30px; text-align: left; margin-left:5px; display: block;}
-.list_user_phone input[type=text] {width:90px; height:30px;}
+.list_user_phone input[type=text] {width:320px; height:30px;}
 .list_user_email input[type=text],
-div.domain_option_select {width:200px; height:30px;}
+div.domain_option_select {width:200px; height:30px; padding-right: 0;}
 li.list_user_email {position:relative;}
-ul.email_domain_list {width:200px; height:180px; background: #fff; border: 1px solid #2d334a; color:#2d334a; font-family: 'GmarketSansMedium'; font-size: 16px; border-radius: 5px; padding: 5px 10px; position: absolute; top:30px; right:0;}
-div.domain_option_select {line-height: 30px; margin-left: 7px;}
+ul.email_domain_list {width:200px; height:180px; background: #fff; border: 1px solid #2d334a; color:#2d334a; font-family: 'GmarketSansMedium'; font-size: 16px; border-radius: 5px; padding: 5px 10px; position: absolute; top:29px; right:0; display: none;}
+.email_domain_list a {width:100%; height:100%; display: block; color: #8a8b8c;}
+div.domain_option_select {line-height: 30px; margin-left: 7px; cursor: pointer; box-shadow: none;}
+.down_icon{background: url(../images/down_icon.jpg) center no-repeat; display: block; width:30px; height:28px; float: right; border-left: 1px solid #2d334a; text-indent: -9999px;}
 
 
 ul.all_input_wrap>li{width:804px; height:32px; margin: 0 auto 30px;}

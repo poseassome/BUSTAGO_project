@@ -1,9 +1,9 @@
 /* 공지사항 */
 div.type_searching h4 {width:130px; height:31px; background:#fff; border-radius: 5px; border:1px solid #2d334a; padding:5px; text-align: left; line-height: 23px; background: url(../images/sub_type_selectdown.jpg) right center no-repeat; border-right: 0;}
-div.type_searching ul {width:130px; height:80px; background: #fff; border-radius: 5px; border:1px solid #2d334a; padding:5px; font-family: 'GmarketSansMedium'; font-size:18px; position:absolute; top:31px;}
+div.type_searching ul {width:130px; height:80px; background: #fff; border-radius: 5px; border:1px solid #2d334a; padding:5px; font-family: 'GmarketSansMedium'; font-size:18px; position:absolute; top:30px; display: none;}
 .type_searching {position: relative; float: left;}
 .type_searching ul li {height:21px;}
-.type_searching ul a {color:#adb2c4;}
+.type_searching ul a {color:#adb2c4; display: block; width: 100%; height:100%;}
 
 a.notice_search_icon{display: block; width:19px; height:19px; background: url(../images/srch_icon.jpg) no-repeat; background-size: cover; text-indent: -9999px; float: right;}
 div.notice_input_wrap input{border:0; color:#2d334a; background:#fff; float:left; width:250px; height:19px; font-family: 'GmarketSansMedium'; font-size: 18px; padding-top:5px;}

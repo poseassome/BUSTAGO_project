@@ -55,6 +55,9 @@
       height: 82px;
     }
   </style>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="./script/sub05.js"></script>
+  <script type="text/javascript" src="./script/sub_layout.js"></script>
 </head>
 
 <body>
@@ -64,27 +67,27 @@
     <nav class="gnb">
       <h2 class="blind">주요메뉴</h2>
       <ul>
-        <li class="menu1"><a href="sub01_ticket_reservation_step1.html">승차권</a>
+        <li class="menu1"><a href="javascript:void(0);">승차권</a>
           <ul class="submenu">
-            <li><a href="sub01_ticket_reservation_step1.html">예매하기</a></li>
+            <li><a href="javascript:void(0);">예매하기</a></li>
             <li><a href="sub05_login.html">조회/변경/취소</a></li>
           </ul>
         </li>
-        <li class="menu2"><a href="sub02_route_search.html">운행정보</a>
+        <li class="menu2"><a href="javascript:void(0);">운행정보</a>
           <ul class="submenu">
             <li><a href="sub02_route_search.html">노선안내</a></li>
             <li><a href="sub02_terminal_search .html">터미널안내</a></li>
             <li><a href="sub02_company_search.html">버스회사 안내</a></li>
           </ul>
         </li>
-        <li class="menu3"><a href="sub03_introduce_service.html">이용안내</a>
+        <li class="menu3"><a href="javascript:void(0);">이용안내</a>
           <ul class="submenu">
             <li><a href="sub03_introduce_service.html">서비스 소개</a></li>
             <li><a href="sub03_cancellation_fee.html">취소 수수료 안내</a></li>
             <li><a href="sub03_moblieservice.html">모바일 이용</a></li>
           </ul>
         </li>
-        <li class="menu4"><a href="sub04_notice.html">고객지원</a>
+        <li class="menu4"><a href="javascript:void(0);">고객지원</a>
           <ul class="submenu">
             <li><a href="sub04_notice.html">공지사항</a></li>
             <li><a href="sub04_faq.html">자주묻는질문(FAQ)</a></li>
@@ -114,13 +117,13 @@
           <li><a href="index.html" class="homepage">메인페이지 이동</a></li>
           <li>
             <div class="menu_on">
-              <a href="sub05_login.html" class="menu_1depth_on">회원정보</a>
+              <a href="javascript:void(0);" class="menu_1depth_on">회원정보</a>
             </div>
           </li>
           <li>
             <div class="menu_2depth">
-              <a href="sub05_joinmember_step1.html" class="menu_2depth_on">회원가입</a>
-              <ul class="blind">
+              <a href="javascript:void(0);" class="menu_2depth_on">회원가입</a>
+              <ul>
                 <li><a href="sub05_login.html">로그인</a></li>
                 <li><a href="sub05_joinmember_step1.html">회원가입</a></li>
                 <li><a href="sub05_login_lostid.html">아이디 찾기</a></li>
@@ -144,7 +147,8 @@
     </section>
 
     <section class="membership_userinform">
-      <form name="" action="" method="" class="user_input_form">
+      <form name="join_membership" action="" method="post" onsubmit="return validate();" class="user_input_form"
+        id="join">
         <fieldset>
           <legend>회원정보</legend>
           <ul class="all_input_wrap">
@@ -153,6 +157,7 @@
               <input type="text" id="membership_id">
               <button type="submit" class="userid_check">중복확인</button>
               <span class="add_desc">(영문/숫자, 6~20자)</span>
+              <span class="error"></span>
             </li>
             <li>
               <label for="membership_pw">비밀번호 *</label>
@@ -180,11 +185,12 @@
             </li>
             <li class="list_user_phone">
               <label for="membership_phone">휴대폰 번호</label>
-              <input type="text" id="membership_phone" maxlength="3">
+              <input type="text" id="membership_phone">
+              <!-- <input type="text" id="membership_phone" maxlength="3">
               <span class="connect_word"> - </span>
               <input type="text" id="membership_phone" maxlength="4">
               <span class="connect_word"> - </span>
-              <input type="text" id="membership_phone" maxlength="4">
+              <input type="text" id="membership_phone" maxlength="4"> -->
             </li>
             <li>
               <label for="membership_veteranno">보훈번호</label>
@@ -197,24 +203,26 @@
               <input type="text" id="membership_emailid">
               <span class="connect_word"> @ </span>
               <input type="text" id="membership_emaildomain">
-              <div class="domain_option_select">직접 입력</div>
-              <ul class="email_domain_list">
-                <li><a href="">직접 입력</a></li>
-                <li><a href="">naver.com</a></li>
-                <li><a href="">hanmail.net</a></li>
-                <li><a href="">daum.net</a></li>
-                <li><a href="">nate.com</a></li>
-                <li><a href="">gmail.com</a></li>
-                <li><a href="">korea.com</a></li>
-              </ul>
+              <div class="email_adr">
+                <div class="domain_option_select"><span></span><span class="down_icon">도메인 선택</span></div>
+                <ul class="email_domain_list">
+                  <li><a href="javascript:void(0);">직접 입력</a></li>
+                  <li><a href="javascript:void(0);">naver.com</a></li>
+                  <li><a href="javascript:void(0);">hanmail.net</a></li>
+                  <li><a href="javascript:void(0);">daum.net</a></li>
+                  <li><a href="javascript:void(0);">nate.com</a></li>
+                  <li><a href="javascript:void(0);">gmail.com</a></li>
+                  <li><a href="javascript:void(0);">korea.com</a></li>
+                </ul>
+              </div>
             </li>
           </ul>
         </fieldset>
       </form>
 
       <div class="step_button">
-        <a href="" class="button_prev">이전</a>
-        <button type="submit" class="button_membership_submmit">가입 완료</button>
+        <a href="sub05_joinmember_step2.html" class="button_prev">이전</a>
+        <button type="submit" form="join" class="button_membership_submmit">가입 완료</button>
       </div>
     </section>
 

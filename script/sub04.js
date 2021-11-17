@@ -30,4 +30,24 @@ $(document).ready(function () {
       container.slideUp(0);
     };
   });
+
+  //// 공지사항
+  $(".type_searching h4").click(function () {
+    $(".type_searching ul").fadeToggle(100);
+  });
+  $(".type_searching ul a").hover(function () {
+    $(this).css({ color: "#272343", "font-weight": "bold" });
+  }, function () {
+    $(this).css({ color: "" });
+  });
+  $(".type_searching ul a").click(function () {
+    $(".type_searching h4").text($(this).text());
+    $(this).parents("ul").fadeOut(100);
+  });
+  $(document).click(function (e) {
+    if (!$(e.target).is(".type_searching h4")) {
+      var container = $(".type_searching ul");
+      container.slideUp(0);
+    };
+  });
 });
