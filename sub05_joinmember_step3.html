@@ -163,14 +163,17 @@
               <label for="membership_pw">비밀번호 *</label>
               <input type="password" id="membership_pw">
               <span class="add_desc">(영문/숫자/특수문자 조합, 6~20자)</span>
+              <span class="error"></span>
             </li>
             <li>
               <label for="membership_pw_confirm">비밀번호 확인 *</label>
               <input type="password" id="membership_pw_confirm">
+              <span class="error"></span>
             </li>
             <li>
               <label for="membership_name">이름 *</label>
               <input type="text" id="membership_name">
+              <span class="error"></span>
             </li>
             <li class="list_user_birth">
               <label>생년월일 *</label>
@@ -182,10 +185,12 @@
               <ul></ul>
               <input type="radio" id="solar_cal" name="birth_cal_type"><label for="solar_cal">양력</label>
               <input type="radio" id="lunar_cal" name="birth_cal_type"><label for="lunar_cal">음력</label>
+              <span class="error"></span>
             </li>
             <li class="list_user_phone">
-              <label for="membership_phone">휴대폰 번호</label>
+              <label for="membership_phone">휴대폰 번호 *</label>
               <input type="text" id="membership_phone">
+              <span class="error"></span>
               <!-- <input type="text" id="membership_phone" maxlength="3">
               <span class="connect_word"> - </span>
               <input type="text" id="membership_phone" maxlength="4">
@@ -215,6 +220,7 @@
                   <li><a href="javascript:void(0);">korea.com</a></li>
                 </ul>
               </div>
+              <span class="error"></span>
             </li>
           </ul>
         </fieldset>

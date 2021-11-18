@@ -44,10 +44,32 @@ $(document).ready(function () {
 });
 function validate() {
   var uid = $("#membership_id");
+  var upw = $("#membership_pw");
+  var upw_c = $("#membership_pw_confirm");
+  var uname = $("#membership_name");
+  var uname = $("#membership_name"); // 생년울일
+  var uname = $("#membership_phone");
+  var uname = $("#membership_emailid");
+  var uname = $("#membership_emaildomain");
+
   if (uid.val() == "") {
-    uid.siblings(".error").text("입력하세요");
+    uid.siblings(".error").text("사용하실 아이디를 입력하세요.");
     uid.focus();
     return false;
-  };
-
+  } else { uid.siblings(".error").text(""); };
+  if (upw.val() == "") {
+    upw.siblings(".error").text("사용하실 비밀번호를 입력하세요.");
+    upw.focus();
+    return false;
+  } else { upw.siblings(".error").text(""); };
+  if (upw_c.val() == "" || upw_c.val() != upw.val()) {
+    upw_c.siblings(".error").text("비밀번호가 일치하지 않습니다.");
+    upw_c.focus();
+    return false;
+  } else { uid.siblings(".error").text(""); };
+  if (upw_c.val() == "") {
+    upw_c.siblings(".error").text("비밀번호가 일치하지 않습니다.");
+    upw_c.focus();
+    return false;
+  } else { uid.siblings(".error").text(""); };
 };
