@@ -140,11 +140,12 @@ span.connect_word{font-family: 'GmarketSansMedium'; font-size: 20px; color:#2d33
 line-height: 30px; padding-top:2px; margin: 0 10px;}
 
 li.list_user_birth input[type=radio] {display: none;}
-.list_user_birth input[type=radio]+label {width:65px; height:32px; font-size:18px; font-family: 'GmarketSansMedium'; color:#2d334a; text-align: right; line-height: 30px; display: block; padding-top:4px; background: url(../images/card_type_radio.jpg) left center no-repeat; margin-right: 20px;}
+.list_user_birth input[type=radio]+label {width:65px; height:32px; font-size:18px; font-family: 'GmarketSansMedium'; color:#2d334a; text-align: right; line-height: 30px; display: block; padding-top:4px; background: url(../images/card_type_radio.jpg) left center no-repeat; margin-left: 20px;}
 .list_user_birth input[type=radio]:checked+label {background: url(../images/card_type_radio_act.jpg) left center no-repeat;}
-.list_user_birth input[type=text]:nth-child(2) {width:120px; height:30px;}
+#membership_birth {width:160px;}
+/* .list_user_birth input[type=text]:nth-child(2) {width:120px; height:30px;}
 .list_user_birth input[type=text] {width:85px; height:30px;}
-.list_user_birth input[type=text]+label{width:35px; height:30px; text-align: left; margin-left:5px; display: block;}
+.list_user_birth input[type=text]+label{width:35px; height:30px; text-align: left; margin-left:5px; display: block;} */
 .list_user_phone input[type=text] {width:320px; height:30px;}
 .list_user_email input[type=text],
 div.domain_option_select {width:200px; height:30px; padding-right: 0;}

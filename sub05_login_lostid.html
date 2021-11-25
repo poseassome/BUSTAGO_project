@@ -8,7 +8,9 @@
   <title>BUSTAGO 아이디 찾기</title>
   <link rel="stylesheet" type="text/css" href="./css/layout.css">
   <link rel="stylesheet" type="text/css" href="./css/05sub_style.css">
-
+  <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="./script/sub05.js"></script>
+  <script type="text/javascript" src="./script/sub_layout.js"></script>
 </head>
 
 <body>
@@ -18,27 +20,27 @@
     <nav class="gnb">
       <h2 class="blind">주요메뉴</h2>
       <ul>
-        <li class="menu1"><a href="sub01_ticket_reservation_step1.html">승차권</a>
+        <li class="menu1"><a href="javascript:void(0);">승차권</a>
           <ul class="submenu">
             <li><a href="sub01_ticket_reservation_step1.html">예매하기</a></li>
             <li><a href="sub05_login.html">조회/변경/취소</a></li>
           </ul>
         </li>
-        <li class="menu2"><a href="sub02_route_search.html">운행정보</a>
+        <li class="menu2"><a href="javascript:void(0);">운행정보</a>
           <ul class="submenu">
             <li><a href="sub02_route_search.html">노선안내</a></li>
             <li><a href="sub02_terminal_search .html">터미널안내</a></li>
             <li><a href="sub02_company_search.html">버스회사 안내</a></li>
           </ul>
         </li>
-        <li class="menu3"><a href="sub03_introduce_service.html">이용안내</a>
+        <li class="menu3"><a href="javascript:void(0);">이용안내</a>
           <ul class="submenu">
             <li><a href="sub03_introduce_service.html">서비스 소개</a></li>
             <li><a href="sub03_cancellation_fee.html">취소 수수료 안내</a></li>
             <li><a href="sub03_moblieservice.html">모바일 이용</a></li>
           </ul>
         </li>
-        <li class="menu4"><a href="sub04_notice.html">고객지원</a>
+        <li class="menu4"><a href="javascript:void(0);">고객지원</a>
           <ul class="submenu">
             <li><a href="sub04_notice.html">공지사항</a></li>
             <li><a href="sub04_faq.html">자주묻는질문(FAQ)</a></li>
@@ -68,13 +70,13 @@
           <li><a href="index.html" class="homepage">메인페이지 이동</a></li>
           <li>
             <div class="menu_on">
-              <a href="sub05_login.html" class="menu_1depth_on">회원정보</a>
+              <a href="javascript:void(0);" class="menu_1depth_on">회원정보</a>
             </div>
           </li>
           <li>
             <div class="menu_2depth">
-              <a href="sub05_login_lostid.html" class="menu_2depth_on">아이디 찾기</a>
-              <ul class="blind">
+              <a href="javascript:void(0);" class="menu_2depth_on">아이디 찾기</a>
+              <ul>
                 <li><a href="sub05_login.html">로그인</a></li>
                 <li><a href="sub05_joinmember_step1.html">회원가입</a></li>
                 <li><a href="sub05_login_lostid.html">아이디 찾기</a></li>
@@ -90,7 +92,7 @@
     <section class="login_lost_id">
       <h3>본인 인증</h3>
       <p>회원 본인임을 확인하기 위해서, 본인인증이 필요합니다.</p>
-      <form name="" action="" method="" class="lost_idfind">
+      <form name="certification" action="" method="" class="lost_idfind">
         <fieldset>
           <legend class="blind">사용자 정보 입력</legend>
           <p>
@@ -99,13 +101,13 @@
           </p>
           <p>
             <label for="user_tel" class="input_list_name">휴대폰 번호</label>
-            <input type="text" id="user_tel" placeholder="(-) 제외하고 입력">
+            <input type="text" id="user_tel" placeholder="(-) 제외하고 입력" maxlength="13" oninput="autoHyphen_p(this)">
           </p>
           <p class="certify_type">
             <span class="user_cert input_list_name">인증방법</span>
-            <input type="radio" id="user_cert_tel" name="user_cert_type">
+            <input type="radio" id="user_cert_tel" name="user_cert_type" value="phone_cert">
             <label for="user_cert_tel">휴대폰 인증</label>
-            <input type="radio" id="user_cert_ipin" name="user_cert_type">
+            <input type="radio" id="user_cert_ipin" name="user_cert_type" value="ipin_cert">
             <label for="user_cert_ipin">아이핀(I-PIN) 인증</label>
           </p>
           <button type="submit" class="button_certify_check">확인</button>
@@ -137,7 +139,7 @@
 
       <div class="family_site">
         <h3>Family Site</h3>
-        <ul class="blind">
+        <ul>
           <li><a href="http://www.molit.go.kr/portal.do" target="_blank">국토교통부</a></li>
           <li><a href="http://www.visitkorea.or.kr/intro.html" target="_blank">한국관광공사</a></li>
           <li><a href="http://www.bus.or.kr/" target="_blank">전국버스운송사업조합연합회</a></li>

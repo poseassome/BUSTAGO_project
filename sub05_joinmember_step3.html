@@ -147,7 +147,7 @@
     </section>
 
     <section class="membership_userinform">
-      <form name="join_membership" action="" method="post" onsubmit="return validate();" class="user_input_form"
+      <form name="join_membership" action="join.php" method="post" onsubmit="return validate();" class="user_input_form"
         id="join">
         <fieldset>
           <legend>회원정보</legend>
@@ -156,13 +156,13 @@
               <label for="membership_id">아이디 *</label>
               <input type="text" id="membership_id">
               <button type="submit" class="userid_check">중복확인</button>
-              <span class="add_desc">(영문/숫자, 6~20자)</span>
+              <span class="add_desc">(영문/숫자, 6~12자)</span>
               <span class="error"></span>
             </li>
             <li>
               <label for="membership_pw">비밀번호 *</label>
               <input type="password" id="membership_pw">
-              <span class="add_desc">(영문/숫자/특수문자 조합, 6~20자)</span>
+              <span class="add_desc">(영문+숫자+특수문자 조합, 8~25자)</span>
               <span class="error"></span>
             </li>
             <li>
@@ -172,36 +172,34 @@
             </li>
             <li>
               <label for="membership_name">이름 *</label>
-              <input type="text" id="membership_name">
+              <input type="text" id="membership_name" placeholder="실명 입력">
               <span class="error"></span>
             </li>
             <li class="list_user_birth">
-              <label>생년월일 *</label>
-              <input type="text" id="membership_year" class="birth_year"><label for="membership_year">년</label>
+              <label for="membership_birth">생년월일 *</label>
+              <input type="text" class="birth_year" id="membership_birth" maxlength="8" oninput="autoHyphen_b(this)">
+              <!-- <input type="text" id="membership_year" class="birth_year"><label for="membership_year">년</label>
               <ul></ul>
               <input type="text" id="membership_month" class="birth_month"><label for="membership_month">월</label>
               <ul></ul>
               <input type="text" id="membership_day" class="birth_day"><label for="membership_day">일</label>
-              <ul></ul>
-              <input type="radio" id="solar_cal" name="birth_cal_type"><label for="solar_cal">양력</label>
-              <input type="radio" id="lunar_cal" name="birth_cal_type"><label for="lunar_cal">음력</label>
+              <ul></ul> -->
+              <input type="radio" id="solar_cal" name="birth_cal_type" value="solar"><label for="solar_cal">양력</label>
+              <input type="radio" id="lunar_cal" name="birth_cal_type" value="lunar"><label for="lunar_cal">음력</label>
+              <span class="add_desc">(숫자 8자리)</span>
               <span class="error"></span>
             </li>
             <li class="list_user_phone">
               <label for="membership_phone">휴대폰 번호 *</label>
-              <input type="text" id="membership_phone">
+              <input type="text" id="membership_phone" maxlength="13" oninput="autoHyphen_p(this)">
+              <span class="add_desc">'-' 없이 숫자만 입력하세요.</span>
               <span class="error"></span>
-              <!-- <input type="text" id="membership_phone" maxlength="3">
-              <span class="connect_word"> - </span>
-              <input type="text" id="membership_phone" maxlength="4">
-              <span class="connect_word"> - </span>
-              <input type="text" id="membership_phone" maxlength="4"> -->
             </li>
             <li>
               <label for="membership_veteranno">보훈번호</label>
               <input type="text" id="membershop_veteranno" maxlength="10" minlength="8">
               <button type="submit" class="userid_check">중복확인</button>
-              <span class="add_desc">(8~10자리)</span>
+              <span class="add_desc">(숫자 8~10자리)</span>
             </li>
             <li class="list_user_email">
               <label for="membership_emailid">이메일 *</label>
