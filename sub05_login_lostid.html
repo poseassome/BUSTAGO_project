@@ -90,25 +90,27 @@
 
 
     <section class="login_lost_id">
-      <h3>본인 인증</h3>
-      <p>회원 본인임을 확인하기 위해서, 본인인증이 필요합니다.</p>
-      <form name="certification" action="" method="" class="lost_idfind">
+      <h3>아이디 찾기</h3>
+      <p>가입 시 입력하신 정보를 통해 아이디를 찾습니다.</p>
+      <form name="certification" action="find_id.php" method="post" class="lost_idfind" onsubmit="return inputIDinfo()">
         <fieldset>
           <legend class="blind">사용자 정보 입력</legend>
           <p>
             <label for="user_name" class="input_list_name">이름</label>
-            <input type="text" id="user_name">
+            <input type="text" id="user_name" onkeyup="id_validate()" onclick="id_validate()" onchange="id_validate()">
+            <span class="alert"></span>
           </p>
           <p>
-            <label for="user_tel" class="input_list_name">휴대폰 번호</label>
-            <input type="text" id="user_tel" placeholder="(-) 제외하고 입력" maxlength="13" oninput="autoHyphen_p(this)">
+            <label for="user_tel" class="input_list_name">생년월일</label>
+            <input type="text" id="user_birth" placeholder="8자리 입력" maxlength="8" oninput="autoHyphen_b(this)"
+              onkeyup="birth_validate()" onclick="birth_validate()" onchange="birth_validate()">
+            <span class="alert"></span>
           </p>
           <p class="certify_type">
-            <span class="user_cert input_list_name">인증방법</span>
-            <input type="radio" id="user_cert_tel" name="user_cert_type" value="phone_cert">
-            <label for="user_cert_tel">휴대폰 인증</label>
-            <input type="radio" id="user_cert_ipin" name="user_cert_type" value="ipin_cert">
-            <label for="user_cert_ipin">아이핀(I-PIN) 인증</label>
+            <label for="user_tel" class="input_list_name">휴대폰 번호</label>
+            <input type="text" id="user_tel" placeholder="(-) 제외하고 입력" maxlength="13" oninput="autoHyphen_p(this)"
+              onkeyup="phone_validate()" onclick="phone_validate()" onchange="phone_validate()">
+            <span class="alert"></span>
           </p>
           <button type="submit" class="button_certify_check">확인</button>
         </fieldset>

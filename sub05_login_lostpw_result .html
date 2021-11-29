@@ -8,7 +8,9 @@
   <title>BUSTAGO 비밀번호 찾기</title>
   <link rel="stylesheet" type="text/css" href="./css/layout.css">
   <link rel="stylesheet" type="text/css" href="./css/05sub_style.css">
-
+  <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="./script/sub05.js"></script>
+  <script type="text/javascript" src="./script/sub_layout.js"></script>
 </head>
 
 <body>
@@ -18,27 +20,27 @@
     <nav class="gnb">
       <h2 class="blind">주요메뉴</h2>
       <ul>
-        <li class="menu1"><a href="sub01_ticket_reservation_step1.html">승차권</a>
+        <li class="menu1"><a href="javascript:void(0);">승차권</a>
           <ul class="submenu">
             <li><a href="sub01_ticket_reservation_step1.html">예매하기</a></li>
             <li><a href="sub05_login.html">조회/변경/취소</a></li>
           </ul>
         </li>
-        <li class="menu2"><a href="sub02_route_search.html">운행정보</a>
+        <li class="menu2"><a href="javascript:void(0);">운행정보</a>
           <ul class="submenu">
             <li><a href="sub02_route_search.html">노선안내</a></li>
             <li><a href="sub02_terminal_search .html">터미널안내</a></li>
             <li><a href="sub02_company_search.html">버스회사 안내</a></li>
           </ul>
         </li>
-        <li class="menu3"><a href="sub03_introduce_service.html">이용안내</a>
+        <li class="menu3"><a href="javascript:void(0);">이용안내</a>
           <ul class="submenu">
             <li><a href="sub03_introduce_service.html">서비스 소개</a></li>
             <li><a href="sub03_cancellation_fee.html">취소 수수료 안내</a></li>
             <li><a href="sub03_moblieservice.html">모바일 이용</a></li>
           </ul>
         </li>
-        <li class="menu4"><a href="sub04_notice.html">고객지원</a>
+        <li class="menu4"><a href="javascript:void(0);">고객지원</a>
           <ul class="submenu">
             <li><a href="sub04_notice.html">공지사항</a></li>
             <li><a href="sub04_faq.html">자주묻는질문(FAQ)</a></li>
@@ -65,16 +67,16 @@
     <section class="lnb">
       <div class="lnb_wrap">
         <ul>
-          <li><a href="#" class="homepage">메인페이지 이동</a></li>
+          <li><a href="index.html" class="homepage">메인페이지 이동</a></li>
           <li>
             <div class="menu_on">
-              <a href="sub05_login.html" class="menu_1depth_on">회원정보</a>
+              <a href="javascript:void(0);" class="menu_1depth_on">회원정보</a>
             </div>
           </li>
           <li>
             <div class="menu_2depth">
-              <a href="sub05_login_lostpw.html" class="menu_2depth_on">비밀번호 찾기</a>
-              <ul class="blind">
+              <a href="javascript:void(0);l" class="menu_2depth_on">비밀번호 찾기</a>
+              <ul>
                 <li><a href="sub05_login.html">로그인</a></li>
                 <li><a href="sub05_joinmember_step1.html">회원가입</a></li>
                 <li><a href="sub05_login_lostid.html">아이디 찾기</a></li>
@@ -91,17 +93,21 @@
       <h3>비밀번호 재설정</h3>
       <p>사용하실 비밀번호를 다시 입력해주세요.</p>
 
-      <form name="" action="" method="" class="lost_pwreset">
+      <form name="lost_pwreset" action="reset_pw.php" method="post" class="lost_pwreset" onsubmit="return resetPW()">
         <fieldset>
           <legend class="blind">새로운 비밀번호 입력</legend>
           <p>
             <label for="user_new_pw">비밀번호</label>
-            <input type="password" id="user_new_pw">
-            <span>(영문/숫자 조합, 8자리 이상)</span>
+            <input type="password" id="user_new_pw" onkeyup="pw_validate()" onclick="pw_validate()"
+              onchange="pw_validate()">
+            <span class="desc_pw">(영문/숫자 조합, 8자리 이상)</span>
+            <span class="alert_pw"></span>
           </p>
           <p>
             <label for="user_new_pw_check">비밀번호 확인</label>
-            <input type="password" id="user_new_pw_check">
+            <input type="password" id="user_new_pw_check" onkeyup="pwcheck_validate()" onclick="pwcheck_validate()"
+              onchange="pwcheck_validate()">
+            <span class="alert"></span>
           </p>
           <button type="submit" class="button_userpw_reset">확인</button>
         </fieldset>
@@ -132,7 +138,7 @@
 
       <div class="family_site">
         <h3>Family Site</h3>
-        <ul class="blind">
+        <ul>
           <li><a href="http://www.molit.go.kr/portal.do" target="_blank">국토교통부</a></li>
           <li><a href="http://www.visitkorea.or.kr/intro.html" target="_blank">한국관광공사</a></li>
           <li><a href="http://www.bus.or.kr/" target="_blank">전국버스운송사업조합연합회</a></li>

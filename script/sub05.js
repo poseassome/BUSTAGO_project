@@ -37,6 +37,20 @@ $(document).ready(function () {
       container.fadeOut(100);
     };
   });
+
+  $(".lost_idfind input[type='text']").blur(function () {
+    if ($(".lost_idfind input[type='text']").val() == "") {
+      $(".alert").text("");
+    };
+  });
+
+  $("#user_new_pw").blur(function () {
+    if ($("#user_new_pw").val() == "") {
+      $(".alert_pw").text("");
+      $(".alert").text("");
+    };
+  });
+
 });
 
 const autoHyphen_p = (target) => {
@@ -128,6 +142,55 @@ function validate() {
   if (!regemail.test(mail)) {
     uemailid.siblings(".error").text("이메일을 확인해주세요.");
     uemailid.focus();
+    return false;
+  };
+};
+
+
+//// 아이디 찾기
+function id_validate() {
+  var regname = /^[가-힣]+$/;
+  if (!regname.test($("#user_name").val())) {
+    $("#user_name").siblings(".alert").text("올바르지 않은 정보입니다.");
+  } else { $("#user_name").siblings(".alert").text(""); };
+};
+function birth_validate() {
+  var regbirth = /^(19[0-9][0-9]|20\d{2})-(0[0-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/;
+  if (!regbirth.test($("#user_birth").val())) {
+    $("#user_birth").siblings(".alert").text("올바르지 않은 정보입니다.");
+  } else { $("#user_birth").siblings(".alert").text(""); };
+};
+function phone_validate() {
+  var regphone = /^01(?:0|1|[6-9])-(?:\d{3}|\d{4})-\d{4}$/;
+  if (!regphone.test($("#user_tel").val())) {
+    $("#user_tel").siblings(".alert").text("올바르지 않은 정보입니다.");
+  } else { $("#user_tel").siblings(".alert").text(""); };
+};
+function inputIDinfo() {
+  id_validate();
+  birth_validate();
+  phone_validate();
+  if ($(".alert").text() != "") {
+    return false;
+  };
+};
+
+//// 비밀번호 재설정
+function pw_validate() {
+  var regpw = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
+  if (!regpw.test($("#user_new_pw").val())) {
+    $("#user_new_pw").siblings(".alert_pw").text("사용할 수 없는 비밀번호입니다.");
+  } else { $("#user_new_pw").siblings(".alert_pw").text(""); };
+};
+function pwcheck_validate() {
+  if ($("#user_new_pw_check").val() != $("#user_new_pw").val()) {
+    $("#user_new_pw_check").siblings(".alert").text("비밀번호가 일치하지 않습니다.");
+  } else { $("#user_new_pw_check").siblings(".alert").text(""); };;
+};
+function resetPW() {
+  pw_validate();
+  pwcheck_validate();
+  if ($(".alert").text() != "" || $(".alert_pw").text() != "") {
     return false;
   };
 };
