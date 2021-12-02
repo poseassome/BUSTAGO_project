@@ -8,6 +8,9 @@
   <title>BUSTAGO LOGIN</title>
   <link rel="stylesheet" type="text/css" href="./css/layout.css">
   <link rel="stylesheet" type="text/css" href="./css/05sub_style.css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="./script/sub05.js"></script>
+  <script type="text/javascript" src="./script/sub_layout.js"></script>
 </head>
 
 <body>
@@ -17,27 +20,27 @@
     <nav class="gnb">
       <h2 class="blind">주요메뉴</h2>
       <ul>
-        <li class="menu1"><a href="sub01_ticket_reservation_step1.html">승차권</a>
+        <li class="menu1"><a href="javascript:void(0);">승차권</a>
           <ul class="submenu">
             <li><a href="sub01_ticket_reservation_step1.html">예매하기</a></li>
             <li><a href="sub05_login.html">조회/변경/취소</a></li>
           </ul>
         </li>
-        <li class="menu2"><a href="sub02_route_search.html">운행정보</a>
+        <li class="menu2"><a href="javascript:void(0);">운행정보</a>
           <ul class="submenu">
             <li><a href="sub02_route_search.html">노선안내</a></li>
             <li><a href="sub02_terminal_search .html">터미널안내</a></li>
             <li><a href="sub02_company_search.html">버스회사 안내</a></li>
           </ul>
         </li>
-        <li class="menu3"><a href="sub03_introduce_service.html">이용안내</a>
+        <li class="menu3"><a href="javascript:void(0);">이용안내</a>
           <ul class="submenu">
             <li><a href="sub03_introduce_service.html">서비스 소개</a></li>
             <li><a href="sub03_cancellation_fee.html">취소 수수료 안내</a></li>
             <li><a href="sub03_moblieservice.html">모바일 이용</a></li>
           </ul>
         </li>
-        <li class="menu4"><a href="sub04_notice.html">고객지원</a>
+        <li class="menu4"><a href="javascript:void(0);">고객지원</a>
           <ul class="submenu">
             <li><a href="sub04_notice.html">공지사항</a></li>
             <li><a href="sub04_faq.html">자주묻는질문(FAQ)</a></li>
@@ -62,7 +65,8 @@
     </div>
 
     <section class="login_page">
-      <form name="member_login" action="" method="" class="member_login_part on">
+      <form name="member_login" action="login.php" method="post" class="member_login_part on"
+        onsubmit="return loginValidate()">
         <fieldset>
           <legend>회원 로그인</legend>
           <p class="login_desc">회원인 경우에는 로그인 후 승차권 예매를 진행해주세요.</p>
@@ -77,15 +81,15 @@
           <div class="login_option">
             <input type="checkbox" id="id_save"><label for="id_save" class="user_id_save">아이디 저장</label>
             <div class="find_account">
-              <a href="">아이디 찾기</a>
-              <a href="">비밀번호 찾기</a>
+              <a href="sub05_login_lostid.html">아이디 찾기</a>
+              <a href="sub05_login_lostpw.html">비밀번호 찾기</a>
             </div>
           </div>
           <button type="submit" class="member_login_button">로그인</button>
         </fieldset>
         <div class="creat_account">
           <p>회원가입을 하시면, 더욱 편리한 서비스 이용이 가능합니다.</p>
-          <a href="" class="creat_account_button">회원가입</a>
+          <a href="sub05_joinmember_step1.html" class="creat_account_button">회원가입</a>
         </div>
       </form>
 
@@ -114,8 +118,9 @@
                 </p>
                 <p class="private_phone">
                   <label for="cellphone">휴대폰번호</label>
-                  <input type="text" id="cellphone" maxlength="3"><span>-</span><input type="text" id="cellphone"
-                    maxlength="4"><span>-</span><input type="text" id="cellphone" maxlength="4">
+                  <input type="text" id="cellphone" name="cellphone">
+                  <!-- <input type="text" id="cellphone" maxlength="3"><span>-</span><input type="text" id="cellphone"
+                    maxlength="4"><span>-</span><input type="text" id="cellphone" maxlength="4"> -->
                 </p>
                 <button type="submit" class="user_check_button">조회하기</button>
               </div>
@@ -142,7 +147,7 @@
 
       <div class="family_site">
         <h3>Family Site</h3>
-        <ul class="blind">
+        <ul>
           <li><a href="http://www.molit.go.kr/portal.do" target="_blank">국토교통부</a></li>
           <li><a href="http://www.visitkorea.or.kr/intro.html" target="_blank">한국관광공사</a></li>
           <li><a href="http://www.bus.or.kr/" target="_blank">전국버스운송사업조합연합회</a></li>

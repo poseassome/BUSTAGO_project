@@ -155,7 +155,6 @@ ul.email_domain_list {width:200px; height:180px; background: #fff; border: 1px s
 div.domain_option_select {line-height: 30px; margin-left: 7px; cursor: pointer; box-shadow: none;}
 .down_icon{background: url(../images/down_icon.jpg) center no-repeat; display: block; width:30px; height:28px; float: right; border-left: 1px solid #2d334a; text-indent: -9999px;}
 
-
 ul.all_input_wrap>li{width:804px; height:32px; margin: 0 auto 30px;}
 ul.all_input_wrap>li>* {float:left;}
 
@@ -226,13 +225,22 @@ section.login_mypage{width:1200px; margin: 0 auto 180px; height:640px; border: 1
 form.user_change_inform label{width: 143px; height:30px; font-size: 20px; font-family: 'hangeulNuri-Bold'; display: block; float:left; line-height: 30px;}
 .user_change_inform input {width:320px; height:30px; border-radius:5px; border:1px solid #2d334a; box-shadow: 0 -5px 10px -5px #9c9fa9 inset; padding:0 10px; font-family: 'GmarketSansMedium'; color:#2d334a; font-size: 16px; float:left; background: #fff;}
 a.button_chgpw {width:115px; height:30px; background: #2d334a; font-family: 'hangeulNuri-regular'; font-size: 18px; color:#fff; border-radius: 5px; display: block; float:left; text-align: center;}
-.user_change_inform p {width:788px; height:30px; margin:0 auto 18px; line-height: 30px;}
+.user_change_inform p, div.mp_email_part {width:788px; height: 30px; margin:0 auto 18px; line-height: 30px;}
+#mp_user_name, #mp_user_birth, #mp_user_id {background: rgba(1,1,1,0.1);}
 
+div.mp_email_part {margin-bottom: 55px;}
 div.mp_email_part input{width:200px; height:30px;}
-.mp_email_part span {width:40px; height:30px; display: block; float:left; text-align: center; line-height: 30px;}
-div.email_domain_options {position:relative; margin:0 auto 50px; width:788px; height:30px;}
-div.email_domain_options button {width:200px; height:30px; border-radius:5px; border:1px solid #2d334a; box-shadow: 0 -5px 10px -5px #9c9fa9 inset; padding:0 10px; font-family: 'GmarketSansMedium'; color:#8a8b8c; font-size: 16px; float:left; background: #fff; text-align: left; margin-left:5px;}
-ul.domain_label_list {position:absolute; right:0px; top:30px; width:200px; height:180px;border-radius:5px; border:1px solid #2d334a; box-shadow: 0 -5px 10px -5px #9c9fa9 inset; padding:5px 10px; font-family: 'GmarketSansMedium'; color:#8a8b8c; font-size: 16px; background: #fff; text-align: left;}
+.email_icon {width:30px; height:30px; display: block; float:left; text-align: center; line-height: 30px;}
+/* div.email_domain_options {position:relative; margin:0 auto 50px; width:788px; height:30px;} */
+.email_dns {position:relative; width: 200px; float: left; margin-left: 5px;}
+.dns_option_select {display:block; width:200px; height:30px; border-radius:5px; border:1px solid #2d334a; box-shadow: 0 -5px 10px -5px #9c9fa9 inset;  font-family: 'GmarketSansMedium'; color:#8a8b8c; font-size: 16px; float:left; background: #fff; text-align: left; line-height: 30px; box-shadow: none;padding-left: 10px;}
+ul.email_dns_list {position:absolute; left:0px; top:30px; width:200px; height:180px;border-radius:5px; border:1px solid #2d334a; box-shadow: 0 -5px 10px -5px #9c9fa9 inset; padding:5px 10px; font-family: 'GmarketSansMedium'; color:#8a8b8c; font-size: 16px; background: #fff; text-align: left; display: none;}
+.email_dns_list li {line-height: 24px;}
+.email_dns_list a {width:100%; height:100%; display: block; color: #8a8b8c;}
+.select_icon{background: url(../images/down_icon.jpg) center no-repeat; display: block; width:30px; height:28px; float: right; border-left: 1px solid #2d334a; text-indent: -9999px;}
+
+.error_mp {display: block; width:100%; height: fit-content; color: red; font-weight: bold; font-style: italic; font-size: 12px; text-indent: 10px;}
+.error_mpe {display: block; width:100%; height: fit-content; color: red; font-weight: bold; font-style: italic; font-size: 12px; text-indent: 143px;}
 
 div.button_mp,
 div.button_wd {margin:0 auto; width:420px; height:50px;}

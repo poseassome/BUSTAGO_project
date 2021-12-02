@@ -8,7 +8,9 @@
   <title>BUSTAGO 회원탈퇴</title>
   <link rel="stylesheet" type="text/css" href="./css/layout.css">
   <link rel="stylesheet" type="text/css" href="./css/05sub_style.css">
-
+  <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="./script/sub05.js"></script>
+  <script type="text/javascript" src="./script/sub_layout.js"></script>
 </head>
 
 <body>
@@ -18,27 +20,27 @@
     <nav class="gnb">
       <h2 class="blind">주요메뉴</h2>
       <ul>
-        <li class="menu1"><a href="sub01_ticket_reservation_step1.html">승차권</a>
+        <li class="menu1"><a href="javascript:void(0);">승차권</a>
           <ul class="submenu">
             <li><a href="sub01_ticket_reservation_step1.html">예매하기</a></li>
             <li><a href="sub05_login.html">조회/변경/취소</a></li>
           </ul>
         </li>
-        <li class="menu2"><a href="sub02_route_search.html">운행정보</a>
+        <li class="menu2"><a href="javascript:void(0);">운행정보</a>
           <ul class="submenu">
             <li><a href="sub02_route_search.html">노선안내</a></li>
             <li><a href="sub02_terminal_search .html">터미널안내</a></li>
             <li><a href="sub02_company_search.html">버스회사 안내</a></li>
           </ul>
         </li>
-        <li class="menu3"><a href="sub03_introduce_service.html">이용안내</a>
+        <li class="menu3"><a href="javascript:void(0);">이용안내</a>
           <ul class="submenu">
             <li><a href="sub03_introduce_service.html">서비스 소개</a></li>
             <li><a href="sub03_cancellation_fee.html">취소 수수료 안내</a></li>
             <li><a href="sub03_moblieservice.html">모바일 이용</a></li>
           </ul>
         </li>
-        <li class="menu4"><a href="sub04_notice.html">고객지원</a>
+        <li class="menu4"><a href="javascript:void(0);">고객지원</a>
           <ul class="submenu">
             <li><a href="sub04_notice.html">공지사항</a></li>
             <li><a href="sub04_faq.html">자주묻는질문(FAQ)</a></li>
@@ -65,15 +67,15 @@
     <section class="lnb">
       <div class="lnb_wrap">
         <ul>
-          <li><a href="#" class="homepage">메인페이지 이동</a></li>
+          <li><a href="index.html" class="homepage">메인페이지 이동</a></li>
           <li>
             <div class="menu_on">
-              <a href="sub05_login_mypage.html" class="menu_1depth_on">마이페이지</a>
+              <a href="javascript:void(0);" class="menu_1depth_on">마이페이지</a>
             </div>
           </li>
           <li>
             <div class="menu_2depth">
-              <a href="sub05_login_withdraw_membership.html" class="menu_2depth_on">회원탈퇴</a>
+              <a href="javascript:void(0);" class="menu_2depth_on">회원탈퇴</a>
               <ul class="blind">
                 <li><a href="sub05_login_mypage.html">회원정보 변경</a></li>
                 <li><a href="sub05_login_withdraw_membership.html">회원탈퇴</a></li>
@@ -89,14 +91,18 @@
 
     <section class="withdraw_membership_wrap">
       <h3>탈퇴 사유</h3>
-      <form name="" action="" method="" class="reason_wrap">
+      <form name="withdraw_member" action="withdraw.php" method="post" class="reason_wrap" onsubmit="return withdraw()">
         <fieldset>
           <legend class="blind">탈퇴 사유 작성</legend>
-          <input type="radio" id="reason1" name="membership_reason"><label for="reason1">사이트 이용 불편</label>
-          <input type="radio" id="reason2" name="membership_reason"><label for="reason2">개인정보유출 우려</label>
-          <input type="radio" id="reason3" name="membership_reason"><label for="reason3">서비스 불만</label>
-          <input type="radio" id="reason4" name="membership_reason"><label for="reason4" class="reason4">재가입</label><br>
-          <textarea placeholder="기타 의견을 작성해주세요."></textarea>
+          <input type="radio" id="reason1" name="membership_reason" value="inconvenient"><label for="reason1">사이트 이용
+            불편</label>
+          <input type="radio" id="reason2" name="membership_reason" value="privacy"><label for="reason2">개인정보유출
+            우려</label>
+          <input type="radio" id="reason3" name="membership_reason"><label for="reason3" value="complaint">서비스
+            불만</label>
+          <input type="radio" id="reason4" name="membership_reason"><label for="reason4" class="reason4"
+            value="rejoin">재가입</label><br>
+          <textarea placeholder="기타 의견을 작성해주세요." name="opinion" id="opinion"></textarea>
         </fieldset>
         <div class="button_wd">
           <button type="button" class="wd_cancel">취소</button>
@@ -104,8 +110,6 @@
         </div>
       </form>
     </section>
-
-
 
     <aside class="quickmenu">
       <a href="sub01_ticket_reservation_step1.html" class="quick_tk">승차권 예매</a>
@@ -130,7 +134,7 @@
 
       <div class="family_site">
         <h3>Family Site</h3>
-        <ul class="blind">
+        <ul>
           <li><a href="http://www.molit.go.kr/portal.do" target="_blank">국토교통부</a></li>
           <li><a href="http://www.visitkorea.or.kr/intro.html" target="_blank">한국관광공사</a></li>
           <li><a href="http://www.bus.or.kr/" target="_blank">전국버스운송사업조합연합회</a></li>

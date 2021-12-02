@@ -34,7 +34,7 @@
 }
 
 * {box-sizing: border-box;}
-*:focus{outline: none;}
+/* *:focus{outline: none;} */
 body {font-family: "GmarketSansLight"; font-size: 18pt; line-height: 1.5;}
 button {cursor: pointer;}
 ul::-webkit-scrollbar, div::-webkit-scrollbar{width:10px;}

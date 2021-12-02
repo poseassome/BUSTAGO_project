@@ -14,7 +14,7 @@ $(document).ready(function () {
   //// 회원정보 입력
   $("#membership_id").focus();
 
-  // 이메일
+  // 회원가입_이메일
   $(".domain_option_select span:eq(0)").text($(".email_domain_list a").eq(0).text()).css({ color: "#8a8b8c" });
   $(".domain_option_select").click(function () {
     $(this).next("ul").fadeToggle(200);
@@ -32,24 +32,53 @@ $(document).ready(function () {
     $(".email_domain_list").fadeOut(200);
   });
   $(document).click(function (e) {
-    if (!$(e.target).is(".domain_option_select")) {
+    if (!$(e.target).is(".domain_option_select, .domain_option_select span")) {
       var container = $(".email_domain_list");
       container.fadeOut(100);
     };
   });
 
-  $(".lost_idfind input[type='text']").blur(function () {
-    if ($(".lost_idfind input[type='text']").val() == "") {
-      $(".alert").text("");
+  // 로그인
+  $("#member_id").focus();
+  if ($("form input").focus()) {
+    $(this).parents("form").addClass("on");
+  }
+
+  // 마이페이지_이메일
+  $(".dns_option_select span:eq(0)").text($(".email_dns_list a").eq(0).text()).css({ color: "#8a8b8c" });
+  $(".dns_option_select").click(function () {
+    $(this).next("ul").fadeToggle(200);
+  });
+  $(".email_dns_list a").hover(function () {
+    $(this).css({ color: "#272343", "font-weight": "bold" });
+  }, function () {
+    $(this).css({ color: "" });
+  });
+  $(".email_dns_list a").click(function () {
+    $(".dns_option_select span:eq(0)").text($(this).text());
+    if ($(this).text() == "직접 입력") {
+      $("#mp_user_emaildns").val("").focus();
+    } else { $("#mp_user_emaildns").val($(this).text()); };
+    $(".email_dns_list").fadeOut(200);
+  });
+  $(document).click(function (e) {
+    if (!$(e.target).is(".dns_option_select, .dns_option_select span")) {
+      var container = $(".email_dns_list");
+      container.fadeOut(100);
     };
   });
 
+  // 비밀번호 찾기 정보입력
   $("#user_new_pw").blur(function () {
     if ($("#user_new_pw").val() == "") {
       $(".alert_pw").text("");
       $(".alert").text("");
     };
   });
+
+  // 회원탈퇴
+  $("#reason1").prop("checked", true);
+  $("#opinion").focus();
 
 });
 
@@ -129,7 +158,7 @@ function validate() {
     return false;
   } else { uphone.siblings(".error").text(""); };
   if (uemailid.val() == "") {
-    uemailid.siblings(".error").text("이메일 주소를 입력하세요.");
+    uemailid.siblings(".error").text("이메일 아이디를 입력하세요.");
     uemailid.focus();
     return false;
   } else if (uemaildmn.val() == "") {
@@ -138,7 +167,7 @@ function validate() {
     uemaildmn.focus();
     return false;
   };
-  var mail = uemailid + "@" + uemaildmn;
+  var mail = uemailid.val() + "@" + uemaildmn.val();
   if (!regemail.test(mail)) {
     uemailid.siblings(".error").text("이메일을 확인해주세요.");
     uemailid.focus();
@@ -150,30 +179,55 @@ function validate() {
 //// 아이디 찾기
 function id_validate() {
   var regname = /^[가-힣]+$/;
-  if (!regname.test($("#user_name").val())) {
+  if ($("#user_name").val() == "") {
+    $("#user_name").siblings(".alert").text("");
+  } else if (!regname.test($("#user_name").val())) {
     $("#user_name").siblings(".alert").text("올바르지 않은 정보입니다.");
   } else { $("#user_name").siblings(".alert").text(""); };
 };
 function birth_validate() {
   var regbirth = /^(19[0-9][0-9]|20\d{2})-(0[0-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/;
-  if (!regbirth.test($("#user_birth").val())) {
+  if ($("#user_birth").val() == "") {
+    $("#user_birth").siblings(".alert").text("");
+  } else if (!regbirth.test($("#user_birth").val())) {
     $("#user_birth").siblings(".alert").text("올바르지 않은 정보입니다.");
   } else { $("#user_birth").siblings(".alert").text(""); };
 };
 function phone_validate() {
   var regphone = /^01(?:0|1|[6-9])-(?:\d{3}|\d{4})-\d{4}$/;
-  if (!regphone.test($("#user_tel").val())) {
+  if ($("#user_tel").val() == "") {
+    $("#user_tel").siblings(".alert").text("");
+  } else if (!regphone.test($("#user_tel").val())) {
     $("#user_tel").siblings(".alert").text("올바르지 않은 정보입니다.");
   } else { $("#user_tel").siblings(".alert").text(""); };
 };
 function inputIDinfo() {
-  id_validate();
-  birth_validate();
-  phone_validate();
-  if ($(".alert").text() != "") {
+  if ($("#user_name").val() == "" || $("#user_birth").val() == "" || $("#user_tel").val() == "") {
+    alert("정보를 입력해주세요.");
+    return false;
+  } else if ($(".alert").text() != "") {
     return false;
   };
 };
+
+//// 비밀번호 찾기
+function uid_validate() {
+  var regid = /^[a-zA-z0-9]{6,12}$/;
+  if ($("#user_id").val() == "") {
+    $("#user_id").siblings(".alert").text("");
+  } else if (!regid.test($("#user_id").val())) {
+    $("#user_id").siblings(".alert").text("올바르지 않은 정보입니다.");
+  } else { $("#user_id").siblings(".alert").text(""); };
+};
+function inputPWinfo() {
+  if ($("#user_name").val() == "" || $("#user_id").val() == "" || $("#user_tel").val() == "") {
+    alert("정보를 입력해주세요.");
+    return false;
+  } else if ($(".alert").text() != "" || $(".alert_pw").text() != "") {
+    return false;
+  };
+};
+
 
 //// 비밀번호 재설정
 function pw_validate() {
@@ -191,6 +245,52 @@ function resetPW() {
   pw_validate();
   pwcheck_validate();
   if ($(".alert").text() != "" || $(".alert_pw").text() != "") {
+    return false;
+  };
+};
+
+
+//// 마이페이지 회워정보 수정
+function mypage_validate() {
+  var uemailid = $("#mp_user_email");
+  var uemaildmn = $("#mp_user_emaildns");
+  var uphone = $("#mp_user_tel");
+  var regphone = /^01(?:0|1|[6-9])-(?:\d{3}|\d{4})-\d{4}$/;
+  var regemail = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+
+  if (uphone.val() == "" || !regphone.test(uphone.val())) {
+    uphone.siblings(".error_mp").text("올바른 휴대폰 번호를 입력해주세요.");
+    uphone.focus();
+    return false;
+  } else { uphone.siblings(".error_mp").text(""); };
+  if (uemailid.val() == "") {
+    uemailid.siblings(".error_mpe").text("이메일 아이디를 입력하세요.");
+    uemailid.focus();
+    return false;
+  } else if (uemaildmn.val() == "") {
+    uemailid.siblings(".error_mpe").text("이메일 주소를 입력하세요.");
+    $(".email_domain_list").fadeIn('fast');
+    uemaildmn.focus();
+    return false;
+  };
+  var mail = uemailid.val() + "@" + uemaildmn.val();
+  if (!regemail.test(mail)) {
+    uemailid.siblings(".error_mpe").text("이메일을 확인해주세요.");
+    uemailid.focus();
+    return false;
+  };
+  if (confirm("회원 정보를 수정하시겠습니까?") == true) {
+    document.form.submit();
+  } else {
+    return false;
+  };
+};
+
+//// 회원탈퇴
+function withdraw() {
+  if (confirm("버스타고 회원 탈퇴를 진행하시겠습니까?") == true) {
+    document.form.submit();
+  } else {
     return false;
   };
 };

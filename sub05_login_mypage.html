@@ -8,7 +8,9 @@
   <title>BUSTAGO 마이페이지</title>
   <link rel="stylesheet" type="text/css" href="./css/layout.css">
   <link rel="stylesheet" type="text/css" href="./css/05sub_style.css">
-
+  <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="./script/sub05.js"></script>
+  <script type="text/javascript" src="./script/sub_layout.js"></script>
 </head>
 
 <body>
@@ -18,27 +20,27 @@
     <nav class="gnb">
       <h2 class="blind">주요메뉴</h2>
       <ul>
-        <li class="menu1"><a href="sub01_ticket_reservation_step1.html">승차권</a>
+        <li class="menu1"><a href="javascript:void(0);">승차권</a>
           <ul class="submenu">
             <li><a href="sub01_ticket_reservation_step1.html">예매하기</a></li>
             <li><a href="sub05_login.html">조회/변경/취소</a></li>
           </ul>
         </li>
-        <li class="menu2"><a href="sub02_route_search.html">운행정보</a>
+        <li class="menu2"><a href="javascript:void(0);">운행정보</a>
           <ul class="submenu">
             <li><a href="sub02_route_search.html">노선안내</a></li>
             <li><a href="sub02_terminal_search .html">터미널안내</a></li>
             <li><a href="sub02_company_search.html">버스회사 안내</a></li>
           </ul>
         </li>
-        <li class="menu3"><a href="sub03_introduce_service.html">이용안내</a>
+        <li class="menu3"><a href="javascript:void(0);">이용안내</a>
           <ul class="submenu">
             <li><a href="sub03_introduce_service.html">서비스 소개</a></li>
             <li><a href="sub03_cancellation_fee.html">취소 수수료 안내</a></li>
             <li><a href="sub03_moblieservice.html">모바일 이용</a></li>
           </ul>
         </li>
-        <li class="menu4"><a href="sub04_notice.html">고객지원</a>
+        <li class="menu4"><a href="javascript:void(0);">고객지원</a>
           <ul class="submenu">
             <li><a href="sub04_notice.html">공지사항</a></li>
             <li><a href="sub04_faq.html">자주묻는질문(FAQ)</a></li>
@@ -68,13 +70,13 @@
           <li><a href="index.html" class="homepage">메인페이지 이동</a></li>
           <li>
             <div class="menu_on">
-              <a href="sub05_login_mypage.html" class="menu_1depth_on">마이페이지</a>
+              <a href="javascript:void(0);" class="menu_1depth_on">마이페이지</a>
             </div>
           </li>
           <li>
             <div class="menu_2depth">
-              <a href="sub05_login_mypage.html" class="menu_2depth_on">회원정보 변경</a>
-              <ul class="blind">
+              <a href="javascript:void(0);" class="menu_2depth_on">회원정보 변경</a>
+              <ul>
                 <li><a href="sub05_login_mypage.html">회원정보 변경</a></li>
                 <li><a href="sub05_login_withdraw_membership.html">회원탈퇴</a></li>
               </ul>
@@ -84,63 +86,67 @@
       </div>
     </section>
 
-
     <section class="login_mypage">
       <h3>회원정보 변경</h3>
-      <form name="" action="" method="" class="user_change_inform">
+      <form name="mypage_info" action="mypage.php" method="post" id="mypage" class="user_change_inform"
+        onsubmit="return mypage_validate()">
         <fieldset>
           <legend class="blind">사용자 입력 정보</legend>
           <p>
             <label for="mp_user_id">아이디</label>
-            <input type="text" value="abc5432" disabled>
+            <input type="text" value="" id="mp_user_id" name="mp_user_id" disabled>
           </p>
           <p>
             <label>비밀번호</label>
-            <a href="#" class="button_chgpw">변경하기</a>
+            <a href="sub05_login_lostpw_result .html" class="button_chgpw">변경하기</a>
           </p>
           <p>
             <label for="mp_user_name">이름</label>
-            <input type="text" valune="name" value="name" disabled>
+            <input type="text" value="" id="mp_user_name" name="mp_user_name" disabled>
           </p>
           <p>
-            <label>
+            <label for="mp_user_birth">
               생년월일
             </label>
-            <span>1999년 11월 30일(양력)</span>
+            <input type="text" value="" id="mp_user_birth" name="mp_user_birth" disabled>
           </p>
           <p>
             <label for="mp_user_tel">휴대폰 번호</label>
-            <input type="text">
+            <input type="text" id="mp_user_tel" name="mp_user_tel" oninput="autoHyphen_p(this)" maxlength="13">
+            <span class="error_mp"></span>
           </p>
           <p>
             <label for="mp_user_veteranno">보훈번호</label>
-            <input type="text" id="mp_user_veteranno">
+            <input type="text" id="mp_user_veteranno" name="mp_user_veteranno">
           </p>
           <div class="mp_email_part">
             <label for="mp_user_email">이메일</label>
-            <input type="text" id="mp_user_email"><span>@</span><input type="text">
-            <div class="email_domain_options">
-              <button type="button" class="email_domain_label">직접입력</button>
-              <ul class="domain_label_list">
-                <li class="domain_item">직접 입력</li>
-                <li class="domain_item">naver.com</li>
-                <li class="domain_item">hanmail.net</li>
-                <li class="domain_item">daum.net</li>
-                <li class="domain_item">nate.com</li>
-                <li class="domain_item">gmail.com</li>
-                <li class="domain_item">korea.com</li>
+            <input type="text" id="mp_user_email" value="" name="mp_user_email">
+            <span class="email_icon">@</span>
+            <input type="text" id="mp_user_emaildns" name="mp_user_emaildns">
+            <div class="email_dns">
+              <a href="javascript:void(0);" class="dns_option_select"><span></span><span class="select_icon">도메인
+                  선택</span></a>
+              <ul class="email_dns_list">
+                <li><a href="javascript:void(0);">직접 입력</a></li>
+                <li><a href="javascript:void(0);">naver.com</a></li>
+                <li><a href="javascript:void(0);">hanmail.net</a></li>
+                <li><a href="javascript:void(0);">daum.net</a></li>
+                <li><a href="javascript:void(0);">nate.com</a></li>
+                <li><a href="javascript:void(0);">gmail.com</a></li>
+                <li><a href="javascript:void(0);">korea.com</a></li>
               </ul>
             </div>
+            <span class="error_mpe"></span>
           </div>
         </fieldset>
       </form>
       <div class="button_mp">
         <button type="button" class="mp_chg_cancel">취소</button>
-        <button type="submit" class="mp_user_chg">변경</button>
+        <button type="submit" class="mp_user_chg" form="mypage">변경</button>
       </div>
-      <a href="#" class="withdraw_membership">회원 탈퇴</a>
+      <a href="sub05_login_withdraw_membership.html" class="withdraw_membership">회원 탈퇴</a>
     </section>
-
 
     <aside class="quickmenu">
       <a href="sub01_ticket_reservation_step1.html" class="quick_tk">승차권 예매</a>
@@ -165,7 +171,7 @@
 
       <div class="family_site">
         <h3>Family Site</h3>
-        <ul class="blind">
+        <ul>
           <li><a href="http://www.molit.go.kr/portal.do" target="_blank">국토교통부</a></li>
           <li><a href="http://www.visitkorea.or.kr/intro.html" target="_blank">한국관광공사</a></li>
           <li><a href="http://www.bus.or.kr/" target="_blank">전국버스운송사업조합연합회</a></li>
