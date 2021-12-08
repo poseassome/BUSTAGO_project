@@ -38,11 +38,46 @@ $(document).ready(function () {
     };
   });
 
-  // 로그인
+  // 로그인 화면
   $("#member_id").focus();
-  if ($("form input").focus()) {
+  $(".login_page input").focus(function () {
+    $(".login_page form").removeClass("on");
     $(this).parents("form").addClass("on");
-  }
+  });
+  $(".login_page label").click(function () {
+    $(".login_page form").removeClass("on");
+    $(this).parents("form").addClass("on");
+  });
+
+  // 비회원 로그인 처음화면
+  $("#card_no").first().prop("checked", true);
+  $(".user_card_no").show();
+  $("#birth, #cellphone").prop("disabled", true);
+  $(".nonmember_login_part input[type=radio]").change(function () {
+    $("#birth, #cellphone").prop("disabled", false);
+    $(".nonmember_login_part input[type=radio]").each(function () {
+      if ($(this).prop("checked")) {
+        $(this).parent().next("div").show();
+      } else {
+        $(this).parent().next("div").hide();
+      };
+    });
+  });
+  $(document).click(function (e) {
+    if (!$(e.target).is(".user_check_button")) {
+      $(".error_mg1").text("");
+    };
+    if (!$(e.target).is(".member_login_button")) {
+      $(".error_mg").text("");
+    };
+  });
+  $(".user_card_no input").keyup(function () {
+    var charLimit = $(this).attr("maxlength");
+    if (this.value.length >= charLimit) {
+      $(this).next('input').focus();
+      return false;
+    };
+  });
 
   // 마이페이지_이메일
   $(".dns_option_select span:eq(0)").text($(".email_dns_list a").eq(0).text()).css({ color: "#8a8b8c" });
@@ -175,6 +210,46 @@ function validate() {
   };
 };
 
+//// 회원로그인
+function loginValidate() {
+  var uid = $("#member_id");
+  var upw = $("#member_pw");
+  if (!uid.val()) {
+    $(".member_login_part .error_mg").text("아이디를 입력하세요.");
+    uid.focus();
+    return false;
+  };
+  if (!upw.val()) {
+    $(".member_login_part .error_mg").text("비밀번호를 입력하세요.");
+    upw.focus();
+    return false;
+  };
+};
+
+//// 비회원 조회
+function nonmemberCheck() {
+  if ($("#card_no").prop("checked")) {
+    var card = $(".user_card_no input");
+    if (card.val("").length > 0) {
+      $(".nonmember_login_part .error_mg1").css({ top: "50px" }).text("카드번호를 입력하세요.");
+      card.first().focus();
+      return false;
+    };
+  } else {
+    var birth = $("#birth");
+    var mobile = $("#cellphone");
+    if (!birth.val()) {
+      $(".nonmember_login_part .error_mg1").css({ top: "95px" }).text("생년월일을 입력하세요.");
+      birth.focus();
+      return false;
+    };
+    if (!mobile.val()) {
+      $(".nonmember_login_part .error_mg1").text("휴대폰번호를 입력하세요.");
+      mobile.focus();
+      return false;
+    };
+  };
+};
 
 //// 아이디 찾기
 function id_validate() {
@@ -248,7 +323,6 @@ function resetPW() {
     return false;
   };
 };
-
 
 //// 마이페이지 회워정보 수정
 function mypage_validate() {

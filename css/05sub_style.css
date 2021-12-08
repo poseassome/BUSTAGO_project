@@ -24,7 +24,7 @@ p.member_id_wrap input,
 p.member_pw_wrap input {width:320px; height:40px; padding:15px 15px; border:1px solid #9c9fa9; border-radius: 5px; box-shadow: 0 -5px 10px -5px #9c9fa9 inset; float: right; margin: 5px 0; font-family: 'GmarketSansMedium'; font-size:18px; color:#2d334a}
 p.member_id_wrap,
 p.member_pw_wrap {width:390px; height:50px; margin: 0 auto 12px;}
-.member_login_button{width:390px; height: 40px; font-family: 'hangeulNuri-Bold'; font-size: 24px; color:#fff; background: #2d334a; border-radius: 5px; letter-spacing: 5px; text-indent: 5px; margin: 20px auto; display: block;}
+.member_login_button{width:390px; height: 40px; font-family: 'hangeulNuri-Bold'; font-size: 24px; color:#fff; background: #2d334a; border-radius: 5px; letter-spacing: 5px; text-indent: 5px; margin: 10px auto; display: block;}
 
 div.login_option{width:390px; height: 23px; margin: 0 auto;}
 .login_option input[type=checkbox]{display: none;}
@@ -42,27 +42,26 @@ ul.nonmember_user_wrap {font-size: 19px; position:relative;}
 /* .nonmember_user_wrap li:first-child{height:139px;} */
 /* .nonmember_user_wrap li:nth-child(2){position: relative;} */
 .nonmember_user_wrap input[type=radio]{display: none;}
-.nonmember_user_wrap input[type=radio]+label{display: block; width:200px; line-height:20px; text-align: right; background: url(../images/card_type_radio.jpg) left center no-repeat; padding-top: 3px; font-family: 'GmarketSansMedium'; color:#272343; margin-bottom: 40px;}
+.nonmember_user_wrap input[type=radio]+label{display: block; width:200px; line-height:20px; text-align: right; background: url(../images/card_type_radio.jpg) left center no-repeat; padding-top: 3px; font-family: 'GmarketSansMedium'; color:#272343; margin-bottom: 30px;}
 .nonmember_user_wrap input[type=radio]:checked+label{background: url(../images/card_type_radio_act.jpg) left center no-repeat;}
 div.user_input_info {position:absolute; top: 0; right: 0;}
 
 div.user_card_no,
-div.user_private_info{width:390px; height:40px; margin: 0 auto;}
-.user_card_no label {font-family: 'hangeulNuri-Bold'; color:#2d334a; width:80px; line-height:40px; text-align: left; display:block; float:left}
-.user_card_no input{width:70px; height:40px; text-align: center; color:#2d334a; box-shadow: 0 -5px 10px -5px #9c9fa9 inset; border-radius: 5px; border:1px solid #9c9fa9; float: left; font-family: 'GmarketSansMedium'; font-size:18px; color:#2d334a;}
-.user_card_no span{font-family: 'hangeulNuri-Bold'; color:#2d334a; width:10px; line-height:40px; float:left; text-align: center;}
+div.user_private_info{width:390px; height:40px; margin: 0 auto;  display: none;}
+.user_card_no label {font-family: 'hangeulNuri-Bold'; color:#2d334a; width:80px; line-height:40px; text-align: left; display:block; float:left;}
+.user_card_no input{width:70px; height:40px; text-align: center; color:#2d334a; box-shadow: 0 -5px 10px -5px #9c9fa9 inset; border-radius: 5px; border:1px solid #9c9fa9; float: left; font-family: 'GmarketSansMedium'; font-size:18px; color:#2d334a; margin-right: 10px;}
+.user_card_no .last_input {margin-right: 0;}
 .user_card_no p {font-family: 'GmarketSansLight'; text-indent: 80px; color: #9c9c9c; margin-top:10px; line-height: 40px; clear: both;}
-
-.user_check_button{width:390px; height: 40px; font-family: 'hangeulNuri-Bold'; font-size: 24px; color:#fff; background: #2d334a; border-radius: 5px; letter-spacing: 5px; text-indent: 5px; margin: 16px auto; display: block;}
+.user_check_button{width:390px; height: 40px; font-family: 'hangeulNuri-Bold'; font-size: 24px; color:#fff; background: #2d334a; border-radius: 5px; letter-spacing: 5px; text-indent: 5px; margin: 0 auto;  position:relative; top:50px; display: block;}
 
 div.user_private_info label {font-family: 'hangeulNuri-Bold'; color:#2d334a; width:100px; line-height:40px; text-align: left; display:block; float:left}
 .private_birth,
 .private_phone {width:390px; height:40px; margin-bottom: 20px;}
-.private_birth input{width:135px; height:40px; text-align: center; color:#2d334a; box-shadow: 0 -5px 10px -5px #9c9fa9 inset; border-radius: 5px; border:1px solid #9c9fa9; float: left; font-family: 'GmarketSansMedium'; font-size:18px; color:#2d334a; margin-right: 10px;}
+.private_birth input, .private_phone input{width:290px; height:40px;  color:#2d334a; box-shadow: 0 -5px 10px -5px #9c9fa9 inset; border-radius: 5px; border:1px solid #9c9fa9; float: left; font-family: 'GmarketSansMedium'; font-size:18px; color:#2d334a; padding:0 15px;}
 .private_birth span{line-height: 40px; color: #9c9c9c;}
-.private_phone input{width:85px; height:40px; text-align: center; color:#2d334a; box-shadow: 0 -5px 10px -5px #9c9fa9 inset; border-radius: 5px; border:1px solid #9c9fa9; float: left; font-family: 'GmarketSansMedium'; font-size:18px; color:#2d334a;}
 .private_phone span{font-family: 'hangeulNuri-Bold'; color:#2d334a; width:10px; line-height:40px; float:left; text-align: center; margin:0 3px;}
-
+.error_mg{display: block; width: 390px; color: red; font-weight: bold; font-style: italic; font-size: 14px; height:15px; line-height: 15px; margin: 0 auto; position: relative; top: 8px;}
+.error_mg1{display: block; width: 390px; color: red; font-weight: bold; font-style: italic; font-size: 14px; height:15px; line-height: 15px; margin: 0 auto; position: relative;}
 
 
 /* 회원가입 */
