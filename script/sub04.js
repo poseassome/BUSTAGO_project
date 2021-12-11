@@ -50,4 +50,16 @@ $(document).ready(function () {
       container.slideUp(0);
     };
   });
+
+
+  $("#attach-file").change(function () {
+    var fileName = $("#attach-file").val();
+    $(".upload-name").val(fileName);
+    $('#delete-file').css('display', 'inline');
+  });
+  $('#delete-file').click(function () {
+    $('#delete-file').css('display', 'none');
+    $(".upload-name").val('');
+    $('#attach-file').val('');
+  });
 });

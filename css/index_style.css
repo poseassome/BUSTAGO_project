@@ -84,25 +84,25 @@ img.ui-datepicker-trigger{float:right;}
 .people_wrap {background-color: white; width: 90px; height: 33px; border: 1px solid #2d334a; border-radius: 5px; padding-left: 5px; float: left; margin-right: 51px; margin-left: 19px;}
 .people div.kid {margin-right: 0px;}
 .people_wrap input {font-size: 16px; font-family: 'GmarketSansMedium'; color: #272343; width: 50px; height: 23px; line-height: 23px; border: none; background: transparent; margin-top: 6px; float: left;}
-.people label {width: fit-content;}
+.people label.adult, label.kid {width: 35px;}
+.people label.student {width: 52px;}
 .people_down {width: 30px; height: 31px; background: url(../images/people_down_icon.png) center no-repeat; display: block; border-left: 1px solid #2d334a; text-indent: -9999px; float: right;}
 .people_select {position: relative;}
 .number_list {width: 90px; height: 130px; background: white; border: 1px solid #2d334a; border-radius: 5px; font-size: 16px; padding: 7px; line-height: 21px; z-index:2; overflow-y: scroll; display: none;}
 .number_list a {font-family: 'GmarketSansMedium'; color: #9aa0b7; display: block; width: 100%;}
-.opt1 {position: absolute; top: 32px; left: 53.5px;}
-.opt2 {position: absolute; top: 32px; left: 265.5px;}
-.opt3 {position: absolute; top: 32px; left: 460.5px;}
+.opt1 {position: absolute; top: 32px; left: 54px;}
+.opt2 {position: absolute; top: 32px; left: 266px;}
+.opt3 {position: absolute; top: 32px; left: 461px;}
 
 .tk_button, .tk_button_get {clear: both; position: absolute; bottom: 24px;}
 .tk_reserve {width: 553px; height: 55px; background: url(../images/tk_reserve_button.png) no-repeat; display: block; text-indent: -9999px; border:none;}
 .tk_reserve:hover {background: url(../images/tk_reserve_button_act.png);}
 
-.card_inform input {width: 81px; height: 33px; border: 1px solid #2d334a; border-radius: 5px; background: white; text-align: center; font-size: 16px; font-family: 'GmarketSansMedium'; color: #272343; padding: 5px;}
-.birth {width: 140px; height: 33px; border: 1px solid #2d334a; border-radius: 5px; background: white; font-size: 16px; font-family: 'GmarketSansMedium'; color: #272343; padding: 5px;}
-.phone_no {width: 60px; height: 33px; border: 1px solid #2d334a; border-radius: 5px; background: white; font-size: 16px; font-family: 'GmarketSansMedium'; color: #272343; padding: 5px; text-align: center;}
+.card_inform input {width: 90px; height: 33px; border: 1px solid #2d334a; border-radius: 5px; background: white; font-size: 16px; font-family: 'GmarketSansMedium'; color: #272343; padding: 5px 5px 0; margin-right: 12px;}
+.birth {width: 415px; height: 33px; border: 1px solid #2d334a; border-radius: 5px; background: white; font-size: 16px; font-family: 'GmarketSansMedium'; color: #272343; padding: 5px 5px 0;}
+.phone_no {width: 415px; height: 33px; border: 1px solid #2d334a; border-radius: 5px; background: white; font-size: 16px; font-family: 'GmarketSansMedium'; color: #272343; padding: 5px 5px 0;}
 .confirm_box1 label, .confirm_box2 label {display: inline-block; font-size: 16px; width: 96px; margin-left: 14px;}
 
-.card_inform span, .hyphen {font-size: 20px; margin: 0 5px;}
 .tk_check hr {border-top: 2px solid #555f88; margin: 25px 0;}
 .birth_info {margin-bottom: 13px;}
 .tk_confirm {width: 553px; height: 55px; background: url(../images/tk_search_button.png) no-repeat; display: block; border:0; text-indent: -9999px;}

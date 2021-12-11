@@ -5,6 +5,9 @@ div.type_searching ul {width:130px; height:80px; background: #fff; border-radius
 .type_searching ul li {height:21px;}
 .type_searching ul a {color:#adb2c4; display: block; width: 100%; height:100%;}
 
+.btnwrap{width:1200px; margin: 0 auto; }
+.btn_write{display: block; width:145px; height: 30px; background: #2d334a; color: #fff; text-align: center; line-height: 30px; font-size: 18px; font-weight: bold; padding-top: 2px; border-radius: 5px; float: right; position: relative; top:40px;}
+
 a.notice_search_icon{display: block; width:19px; height:19px; background: url(../images/srch_icon.jpg) no-repeat; background-size: cover; text-indent: -9999px; float: right;}
 div.notice_input_wrap input{border:0; color:#2d334a; background:#fff; float:left; width:250px; height:19px; font-family: 'GmarketSansMedium'; font-size: 18px; padding-top:5px;}
 div.notice_input_wrap {width:410px; height:30px; background-color: #fff; border: 1px solid #2d334a; border-radius: 5px; padding:5px 8px; float: left;;}
@@ -30,6 +33,29 @@ a.move_firstpage {text-indent: -9999px; display: block; width:14px; height:17px;
 .board_paging ul {float: left;}
 a.page_no.on{font-family: 'GmarketSansBold';}
 
+/* 공지사항 작성 */
+.write_form{width:1200px; margin: 0 auto;}
+.write_t {width:1200px; border-collapse: collapse; border-top:1px solid #c9c9c9;}
+.write_t th, .write_t td {font-size: 18px; font-weight: bold; font-family: 'hangeulNuri-regular'; color: #272343; border-bottom: 1px solid #c9c9c9; border-left: 1px solid #c9c9c9; padding:5px 10px;}
+.write_t th {border-left: none; width: 200px;}
+.write_t th {height: 100%;}
+.write_t tr:nth-child(3) {height: 500px;}
+.write_t tr:last-child {height: 40px;}
+.notice_cont {height: inherit;}
+.write_t input{width:100%; height: 100%; padding: 2px 5px; font-family:'GmarketSansLight'; font-size: 14px; border:1px solid #2d334a; vertical-align: middle;}
+.write_t textarea{resize: none; width: 100%; height: 100%; padding: 5px; font-family:'GmarketSansLight'; font-size: 14px; line-height: 20px; vertical-align: middle; border:1px solid #2d334a;}
+.write_t textarea::-webkit-scrollbar{width:10px;}
+.write_t textarea::-webkit-scrollbar-thumb{background: #c9c9c9; border-radius: 5px; border:2px solid transparent; background-clip: padding-box;}
+.write_t textarea::-webkit-scrollbar-track{background: transparent;}
+.attachFile{position: relative;}
+#delete-file {display:none; cursor: pointer; margin-left: 10px; color: red; position: absolute; right: 170px; top:7px;}
+input.upload-name{display: inline-block; height: 30px; padding: 0 10px; vertical-align: middle; border: 1px solid #dddddd; width: 85%; color: #999999;}
+.attachFile label{display: inline-block; padding: 10px 20px; color: #fff; vertical-align: middle; background-color: #2d334a; cursor: pointer; height: 30px; margin-left: 25px; border-radius: 5px; line-height: 13px; font-size: 16px;}
+#attach-file{ position: absolute; width: 0; height: 0; padding: 0; overflow: hidden; border: 0;}
+.btnSet {margin: 0 auto; width: 420px; margin-top: 50px;}
+.btnSet button:first-child{display: block; width: 200px; height:43px; line-height: 43px; float: left; font-family: 'GmarketSansMedium'; font-size:25px; background:#fff; border-radius: 5px; border: 3px solid #ffe44e;}
+.btnSet button:last-child{display: block; ;background: url(../images/sub_button_seatend.png) no-repeat; background-size: contain; font-family: 'GmarketSansMedium'; font-size:25px; line-height: 45px; width: 200px; height: 43px; float: left; margin-left: 20px;}
+.btnSet button:last-child:hover{background: url(../images/sub_button_seatend_act.png) no-repeat; background-size: contain;}
 
 /* 공지사항 내용 */
 section.notice_content_page{width:1200px; margin: 0 auto 70px; font-size: 20px;}

@@ -158,7 +158,7 @@
                 <fieldset>
                   <legend class="blind">인원선택</legend>
 
-                  <label for="adult">성인</label>
+                  <label for="adult" class="adult">성인</label>
                   <div class="people_select">
                     <div class="people_wrap">
                       <input type="text" class="adult" id="adult" value="0명" readonly>
@@ -179,7 +179,7 @@
                     </ul>
                   </div>
 
-                  <label for="student">중고생</label>
+                  <label for="student" class="student">중고생</label>
                   <div class="people_select">
                     <div class="people_wrap">
                       <input type="text" class="student" id="student" value="0명" readonly>
@@ -200,7 +200,7 @@
                     </ul>
                   </div>
 
-                  <label for="kid">아동</label>
+                  <label for="kid" class="kid">아동</label>
                   <div class="people_select">
                     <div class="people_wrap kid">
                       <input type="text" class="kid" id="kid" value="0명" readonly>
@@ -347,7 +347,7 @@
                 <fieldset>
                   <legend class="blind">인원선택</legend>
 
-                  <label for="adult">성인</label>
+                  <label for="adult" class="adult">성인</label>
                   <div class="people_select">
                     <div class="people_wrap">
                       <input type="text" class="adult" value="0명" id="adult" readonly>
@@ -368,7 +368,7 @@
                     </ul>
                   </div>
 
-                  <label for="student">중고생</label>
+                  <label for="student" class="student">중고생</label>
                   <div class="people_select">
                     <div class="people_wrap">
                       <input type="text" class="student" id="student" value="0명" readonly>
@@ -389,7 +389,7 @@
                     </ul>
                   </div>
 
-                  <label for="kid">아동</label>
+                  <label for="kid" class="kid">아동</label>
                   <div class="people_select">
                     <div class="people_wrap kid">
                       <input type="text" class="kid" id="kid" value="0명" readonly>
@@ -422,39 +422,34 @@
         <li class="tk_check"><a href="javascript:void(0);" class="confirm_on tk_off">조회/변경</a>
           <ul class="form_off">
             <li class="card_inform">
-              <form class="confirm_box1" name="" aciton="" method="">
+              <form class="confirm_box1" name="confirm_box1" id="confirm_box1" aciton="check1.php" method="post"
+                onsubmit="return confirmCheck1()">
                 <fieldset>
                   <legend>카드번호로 조회하기</legend>
                   <label for="card_no">카드번호</label>
                   <input type="text" id="card_no" class="card_no" maxlength="4" title="카드번호 첫번째 4자리">
-                  <span>-</span>
-                  <input type="text" class="card_no" maxlength="4" title="카드번호 두번째 4자리">
-                  <span>-</span>
-                  <input type="text" class="card_no" maxlength="4" title="카드번호 세번째 4자리">
-                  <span>-</span>
-                  <input type="text" class="card_no" maxlength="4" title="카드번호 네번째 4자리">
+                  <input type="text" id="card2" class="card_no" maxlength="4" title="카드번호 두번째 4자리">
+                  <input type="text" id="card3" class="card_no" maxlength="4" title="카드번호 세번째 4자리">
+                  <input type="text" id="card4" class="card_no" maxlength="4" title="카드번호 네번째 4자리">
                 </fieldset>
               </form>
             </li>
             <hr>
 
             <li class="get_inform">
-              <form class="confirm_box2" name="" action="" method="">
+              <form class="confirm_box2" name="confirm_box2" id="confirm_box2" action="check2.php" method="post"
+                onsubmit="return confirmCheck2()">
                 <fieldset>
                   <legend>발권정보로 조회하기</legend>
-
                   <div class="birth_info">
                     <label for="birth">생년월일</label>
-                    <input type="text" id="birth" class="birth" maxlength="6" placeholder="예) 860508">
+                    <input type="text" id="birth" class="birth" placeholder="숫자 8자리 입력" maxlength="8"
+                      oninput="autoHyphen_b(this)">
                   </div>
-
                   <div class="phone_info">
                     <label for="phone_no">휴대폰번호</label>
-                    <input type="text" id="phone_no" class="phone_no" maxlength="3">
-                    <span class="hyphen">-</span>
-                    <input type="text" class="phone_no" maxlength="4">
-                    <span class="hyphen">-</span>
-                    <input type="text" class="phone_no" maxlength="4">
+                    <input type="text" id="phone_no" class="phone_no" name="phone_no" oninput="autoHyphen_p(this)"
+                      maxlength="13" placeholder="(-) 제외하고 입력">
                   </div>
                 </fieldset>
               </form>

@@ -62,16 +62,16 @@ $(document).ready(function () {
   });
 
   $("#depart_date").datepicker({
-    showOn: "button", buttonImage: "./images/icon_date.jpg", showOtherMonths: true,
+    showOn: "both", buttonImage: "./images/icon_date.jpg", showOtherMonths: true,
   });
   $("#depart_date_r").datepicker({
-    showOn: "button", buttonImage: "./images/icon_date.jpg", showOtherMonths: true,
+    showOn: "both", buttonImage: "./images/icon_date.jpg", showOtherMonths: true,
     onClose: function (selectedDate) {
       $("#back_date").datepicker("option", "minDate", selectedDate)
     }
   });
   $("#back_date").datepicker({
-    showOn: "button", buttonImage: "./images/icon_date.jpg", showOtherMonths: true,
+    showOn: "both", buttonImage: "./images/icon_date.jpg", showOtherMonths: true,
     onClose: function (selectedDate) {
       $("#depart_date_r").datepicker("option", "maxDate", selectedDate)
     }
@@ -116,10 +116,32 @@ $(document).ready(function () {
     } else { location.href = "sub01_ticket_reservation_step2.html"; }
   });
 
+  $(".confirm_box1 input").keyup(function () {
+    var charLimit = $(this).attr("maxlength");
+    if (this.value.length >= charLimit) {
+      $(this).next('input').focus();
+      $(this).css({ "text-align": "center" });
+      return false;
+    };
+  });
+
+  $(".tk_confirm").click(function () {
+    if (!$("#birth").val() && !$("#phone_no").val()) {
+      if (!$("#card_no").val() && !$("#card2").val() && !$("#card3").val() && !$("#card4").val()) {
+        alert("카드번호 또는 발권정보를 입력해주세요.");
+      } else if (!$("#card_no").val() || !$("#card2").val() || !$("#card3").val() || !$("#card4").val()) {
+        alert("카드번호를 모두 입력해주세요.");
+      } else { $(this).attr("form", "confirm_box1"); }
+    } else if (!$("#card_no").val() && !$("#card2").val() && !$("#card3").val() && !$("#card4").val()) {
+      if (!$("#birth").val() || !$("#phone_no").val()) {
+        alert("발권정보를 모두 입력해주세요.");
+      } else { $(this).attr("form", "confirm_box2"); }
+    } else { alert("카드번호 또는 발권정보를 입력해주세요."); }
+  })
+
 
   // Cont2
   var width = $(".event_wrap ul li").width();
-  var height = $(".event_wrap ul li").height();
   var length = $(".event_wrap ul li").length;
   $(".event_wrap ul").css("width", width * length);
   setInterval(function () {
@@ -173,3 +195,35 @@ $(document).ready(function () {
   });
 
 });
+
+const autoHyphen_p = (target) => {
+  target.value = target.value
+    .replace(/[^0-9]/, '')
+    .replace(/^(\d{2,3})(\d{3,4})(\d{4})$/, `$1-$2-$3`);
+};
+const autoHyphen_b = (target) => {
+  target.value = target.value
+    .replace(/[^0-9]/, '')
+    .replace(/^(\d{4})(\d{2})(\d{2})$/, `$1-$2-$3`);
+};
+
+function confirmCheck1() {
+  var regCard = /[^0-9]{4}/;
+  if (!regCard.test($("#card_no").val()) || !regCard.test($("#card2").val()) || !regCard.test($("#card3").val()) || !regCard.test($("#card4").val())) {
+    alert("카드번호가 올바르지 않습니다.");
+    return false;
+  }
+};
+
+function confirmCheck2() {
+  var regphone = /^01(?:0|1|[6-9])-(?:\d{3}|\d{4})-\d{4}$/;
+  var regbirth = /^(19[0-9][0-9]|20\d{2})-(0[0-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/;
+  if (!regbirth.test($("#birth").val())) {
+    alert("생년월일이 올바르지 않습니다.");
+    return false;
+  };
+  if (!regphone.test($("#phone_no").val())) {
+    alert("휴대폰 번호가 올바르지 않습니다.");
+    return false;
+  };
+};

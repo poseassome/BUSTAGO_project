@@ -151,7 +151,7 @@ li.menubox.end{margin:0;}
 .map_row2 .menubox{float:left;}
 
 /* footer */
-.footer {height: 383px; background: #fffceb; position: relative; margin-top: 40px;}
+.footer {height: 383px; background: #fffceb; position: relative; margin-top: 100px;}
 .footer_top {position: relative; width: 1200px; margin: auto; z-index: 2;}
 .footer_bottom {position: relative; width: 1200px; margin: auto; font-family: 'hangeulNuri-regular'; color: #696969; font-size: 12px;}
 .footer_top .footer_law li {font-family: 'GmarketSansMedium'; font-size: 16px; float: left; line-height: 93px; margin: 0 90px;}

@@ -20,7 +20,7 @@
     <nav class="gnb">
       <h2 class="blind">주요메뉴</h2>
       <ul>
-        <li class="menu1"><a href="javascript:void(0);">">승차권</a>
+        <li class="menu1"><a href="javascript:void(0);">승차권</a>
           <ul class="submenu">
             <li><a href="sub01_ticket_reservation_step1.html">예매하기</a></li>
             <li><a href="sub05_login.html">조회/변경/취소</a></li>
@@ -94,126 +94,42 @@
       </div>
     </section>
 
-    <div class="menu_introduce">버스타고(전국시외버스 통합전산망)의 새로운 소식을 알려드립니다.</div>
+    <div class="menu_introduce">새로운 공지사항을 작성합니다.</div>
 
-    <div class="btnwrap">
-      <a href="sub04_notice_write.html" class="btn_write">글 작성</a>
-
-    </div>
-    <div class="search_keyword">
-      <div class="type_searching">
-        <h4>제목</h4>
-        <ul>
-          <li><a href="javascript:void(0);">제목</a></li>
-          <li><a href="javascript:void(0);">내용</a></li>
-          <li><a href="javascript:void(0);">제목+내용</a></li>
-        </ul>
-      </div>
-      <div class="notice_input_wrap">
-        <input type="text" placeholder="검색어를 입력해주세요.">
-        <a href="#" class="notice_search_icon">검색</a>
-      </div>
-    </div>
-
-
-    <section class="notice_list ">
-      <table summary="등록된 공지사항" class="table_notice_list">
-        <caption class="blind">공지사항</caption>
-        <thead>
-          <tr>
-            <th class="list_number">번호</th>
-            <th class="list_title">제목</th>
-            <th class="list_update">등록일</th>
-            <th class="list_view">조회수</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>356</td>
-            <td><a href="#">2021 추석특송인터넷예매 - 행복한 추석 되세요</a></td>
-            <td>2021-09-01</td>
-            <td>258</td>
-          </tr>
-          <tr>
-            <td>355</td>
-            <td><a href="#">신라면세점 손소독제 교환권 바로가기</a></td>
-            <td>2021-08-03</td>
-            <td>95</td>
-          </tr>
-          <tr>
-            <td>354</td>
-            <td><a href="#">신라면세점 1만원 상당 포인트 증정</a></td>
-            <td>2021-02-25</td>
-            <td>592</td>
-          </tr>
-          <tr>
-            <td>353</td>
-            <td><a href="#">시외우등버스 할인제도 폐지</a></td>
-            <td>2021-01-27</td>
-            <td>1727</td>
-          </tr>
-          <tr>
-            <td>352</td>
-            <td><a href="#">공항노선 예약하면 면세점 선불카드 1만원 !</a></td>
-            <td>2020-12-14</td>
-            <td>1923</td>
-          </tr>
-          <tr>
-            <td>351</td>
-            <td><a href="#">2021 추석특송인터넷예매 - 행복한 추석 되세요</a></td>
-            <td>2020-09-09</td>
-            <td>2473</td>
-          </tr>
-          <tr>
-            <td>350</td>
-            <td><a href="#">시외우등버스 뒷좌석 할인제도 폐지</a></td>
-            <td>2020-07-21</td>
-            <td>2973</td>
-          </tr>
-          <tr>
-            <td>349</td>
-            <td><a href="#">노선버스 이용 시 소득공제율 2배로 확대</a></td>
-            <td>2020-04-13</td>
-            <td>2875</td>
-          </tr>
-          <tr>
-            <td>348</td>
-            <td><a href="#">버스타고 “개인정보처리방침” 개정 안내</a></td>
-            <td>2020-01-30</td>
-            <td>1701</td>
-          </tr>
-          <tr>
-            <td>347</td>
-            <td><a href="#">버스타고와 함께 새해 복 많이 받으세요</a></td>
-            <td>2020-01-14</td>
-            <td>2650</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-
-    <section class="board_paging">
-      <ul>
-        <li><a href="#" class="move_firstpage">처음 페이지</a></li>
-        <li><a href="#" class="move_prevpage">이전 페이지</a></li>
-      </ul>
-      <ul>
-        <li><a href="#" class="page_no on">1</a></li>
-        <li><a href="#" class="page_no">2</a></li>
-        <li><a href="#" class="page_no">3</a></li>
-        <li><a href="#" class="page_no">4</a></li>
-        <li><a href="#" class="page_no">5</a></li>
-        <li><a href="#" class="page_no">6</a></li>
-        <li><a href="#" class="page_no">7</a></li>
-        <li><a href="#" class="page_no">8</a></li>
-        <li><a href="#" class="page_no">9</a></li>
-        <li><a href="#" class="page_no">10</a></li>
-      </ul>
-      <ul>
-        <li><a href="#" class="move_nextpage">다음 페이지</a></li>
-        <li><a href="#" class="move_lastpage">마지막 페이지</a></li>
-      </ul>
+    <section class="write_form">
+      <form name="notice_write" action="write.php" method="post" enctype="multipart/form-data"
+        onsubmit="return noticeCheck()">
+        <fieldset>
+          <legend class="blind">공지사항 작성</legend>
+          <table class="write_t">
+            <tr>
+              <th><label for="wr_title">제목</label></th>
+              <td><input type="text" name="wr_title" id="wr_title"></td>
+            </tr>
+            <tr>
+              <th>작성자</th>
+              <td>관리자</td>
+            </tr>
+            <tr>
+              <th><label for="wr_cont">내용</label></th>
+              <td class="notice_cont"><textarea name="wr_cont" id="wr_cont"></textarea></td>
+            </tr>
+            <tr>
+              <th>파일 첨부</th>
+              <td class="attachFile">
+                <input class="upload-name" value="첨부파일" placeholder="첨부파일" readonly>
+                <span id="delete-file">X</span>
+                <label for="attach-file">파일찾기</label>
+                <input type="file" name="file" id="attach-file">
+              </td>
+            </tr>
+          </table>
+          <div class="btnSet">
+            <button type="button" onclick="history.back()">취소</button>
+            <button type="submit">저장</button>
+          </div>
+        </fieldset>
+      </form>
     </section>
 
 
@@ -240,7 +156,7 @@
 
       <div class="family_site">
         <h3>Family Site</h3>
-        <ul class="blind">
+        <ul>
           <li><a href="http://www.molit.go.kr/portal.do" target="_blank">국토교통부</a></li>
           <li><a href="http://www.visitkorea.or.kr/intro.html" target="_blank">한국관광공사</a></li>
           <li><a href="http://www.bus.or.kr/" target="_blank">전국버스운송사업조합연합회</a></li>
